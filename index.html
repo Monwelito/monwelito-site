@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Monwelito Bolandres | Meta Ads Specialist for Lead Generation</title>
-<meta name="description" content="Meta Ads that turn into booked appointments, not just clicks. Lead-gen campaigns for dental clinics, coaches, insurance agents and local and international businesses.">
-<meta property="og:title" content="Monwelito Bolandres | Meta Ads Specialist">
-<meta property="og:description" content="52 leads in 3 days at under ₱5 each, starting from ₱100/day. Book a free 20-minute strategy call.">
+<title>Monwelito Bolandres | Meta Ads, Bookkeeping &amp; Client Support</title>
+<meta name="description" content="Meta Ads and lead generation, bookkeeping (QuickBooks or manual), client support and operations help for local and international businesses. 7+ years of experience.">
+<meta property="og:title" content="Monwelito Bolandres | Meta Ads, Bookkeeping &amp; Client Support">
+<meta property="og:description" content="Leads, books and customers handled. Meta Ads, bookkeeping, client support and operations. Book a free 20-minute call.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -311,6 +311,41 @@ footer{padding:40px 0 48px}
   .wrap{padding:0 20px}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
+
+/* ---- Additions: services lists, resume, about extras ---- */
+.svc .cat{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin:0 0 6px 14px;vertical-align:middle}
+.svc ul.bul{list-style:none;display:grid;gap:9px;margin-top:16px}
+.svc-note{margin-top:28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 28px;box-shadow:var(--shadow)}
+.svc-note p{font-weight:600;font-size:18px}
+ul.bul li{display:flex;gap:12px;color:var(--ink-2);font-size:15.5px}
+ul.bul li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--blue);margin-top:10px}
+.mlabel{margin-top:22px;font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.metrics+.mlabel{margin-top:26px}
+.mlabel+.metrics{margin-top:10px}
+.sec-head .btn{margin-top:22px}
+.resume-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:start}
+.tl{display:grid;gap:18px}
+.tl-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 30px;box-shadow:var(--shadow);position:relative}
+.tl-date{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.tl-item h3{font-size:22px;margin-bottom:4px}
+.tl-org{color:var(--muted);font-size:14.5px;margin-bottom:14px}
+.tl-item ul.bul{display:grid;gap:9px}
+.side{display:grid;gap:18px;position:sticky;top:100px}
+.side-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.side-card h4{font-family:'Figtree';font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.sk-group+.sk-group{margin-top:18px}
+.sk-group b{display:block;font-size:14px;margin-bottom:8px}
+.sk-chips{display:flex;gap:7px;flex-wrap:wrap}
+.sk-chips span{padding:6px 12px;border-radius:99px;background:var(--bg);border:1px solid var(--line);font-size:13px;font-weight:600;color:var(--ink-2)}
+.edu-item+.edu-item{margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+.edu-item b{display:block;font-size:15.5px;line-height:1.35}
+.edu-item span{font-size:14px;color:var(--muted)}
+.dl-card{background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff;border-color:var(--navy)}
+.dl-card h4{color:#6fa3ff}
+.dl-card p{color:#b8c5e0;font-size:15px;margin-bottom:18px}
+.dl-card .btn{width:100%}
+@media(max-width:1020px){.resume-grid{grid-template-columns:1fr}.side{position:static}}
+@media(max-width:760px){.tl-item{padding:22px 20px}.svc .cat{display:block;margin:0 0 4px}}
 </style>
 </head>
 <body>
@@ -335,10 +370,10 @@ footer{padding:40px 0 48px}
         <button type="button" aria-expanded="false">Services
           <svg class="chev" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3l4 4 4-4"/></svg></button>
         <ul class="dd">
-          <li><a href="#svc-1"><span class="ic">1</span><span><b>Strategy &amp; Setup</b><small>Structure, targeting, budget planning</small></span></a></li>
-          <li><a href="#svc-2"><span class="ic">2</span><span><b>Lead Generation Campaigns</b><small>Instant Forms and funnels</small></span></a></li>
-          <li><a href="#svc-3"><span class="ic">3</span><span><b>Management &amp; Optimization</b><small>Testing and budget reallocation</small></span></a></li>
-          <li><a href="#svc-4"><span class="ic">4</span><span><b>Reporting &amp; Insights</b><small>Clear, no-fluff numbers</small></span></a></li>
+          <li><a href="#svc-1"><span class="ic">1</span><span><b>Meta Ads &amp; Lead Generation</b><small>Strategy, campaigns, optimization</small></span></a></li>
+          <li><a href="#svc-2"><span class="ic">2</span><span><b>Bookkeeping &amp; Finance Support</b><small>QuickBooks or manual processes</small></span></a></li>
+          <li><a href="#svc-3"><span class="ic">3</span><span><b>Client Support &amp; CRM</b><small>Email, chat and account handling</small></span></a></li>
+          <li><a href="#svc-4"><span class="ic">4</span><span><b>Operations &amp; Team Leadership</b><small>KPIs, coaching and process improvement</small></span></a></li>
         </ul>
       </li>
       <li class="has-dd">
@@ -346,29 +381,39 @@ footer{padding:40px 0 48px}
           <svg class="chev" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3l4 4 4-4"/></svg></button>
         <ul class="dd">
           <li><a href="#step-1"><span class="ic">1</span><span><b>Discovery Call</b><small>Free, 20 minutes, online</small></span></a></li>
-          <li><a href="#step-2"><span class="ic">2</span><span><b>Strategy &amp; Setup</b><small>Campaign structure and creative</small></span></a></li>
-          <li><a href="#step-3"><span class="ic">3</span><span><b>Launch &amp; Test</b><small>Controlled test budget</small></span></a></li>
-          <li><a href="#step-4"><span class="ic">4</span><span><b>Scale &amp; Optimize</b><small>Back what's proven</small></span></a></li>
+          <li><a href="#step-2"><span class="ic">2</span><span><b>Plan &amp; Setup</b><small>Scope, tools and workflow</small></span></a></li>
+          <li><a href="#step-3"><span class="ic">3</span><span><b>Launch &amp; Deliver</b><small>A small, clearly scoped start</small></span></a></li>
+          <li><a href="#step-4"><span class="ic">4</span><span><b>Review &amp; Improve</b><small>Keep what works, refine the rest</small></span></a></li>
         </ul>
       </li>
       <li class="has-dd">
         <button type="button" aria-expanded="false">About
           <svg class="chev" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3l4 4 4-4"/></svg></button>
         <ul class="dd">
-          <li><a href="#about"><span class="ic">MB</span><span><b>Who I am</b><small>Meta Ads specialist</small></span></a></li>
+          <li><a href="#about"><span class="ic">MB</span><span><b>Who I am</b><small>Background and what I bring</small></span></a></li>
           <li><a href="#who"><span class="ic">→</span><span><b>Who I work with</b><small>Clinics, coaches, agents and more</small></span></a></li>
           <li><a href="#about-metrics"><span class="ic">#</span><span><b>Numbers I track</b><small>CPL, cost per booking, ROAS</small></span></a></li>
+        </ul>
+      </li>
+      <li class="has-dd">
+        <button type="button" aria-expanded="false">Resume
+          <svg class="chev" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3l4 4 4-4"/></svg></button>
+        <ul class="dd">
+          <li><a href="#experience"><span class="ic">XP</span><span><b>Experience</b><small>7+ years in operations and support</small></span></a></li>
+          <li><a href="#skills"><span class="ic">SK</span><span><b>Skills &amp; tools</b><small>Ads, bookkeeping, CRM, Office</small></span></a></li>
+          <li><a href="#education"><span class="ic">ED</span><span><b>Education &amp; certifications</b><small>Financial Management, QuickBooks</small></span></a></li>
+          <li><a href="data:application/pdf;base64,JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUgo+PgplbmRvYmoKMiAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYSAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjEgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iagozIDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhLUJvbGQgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YyIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKNCAwIG9iago8PAovQSA8PAovUyAvVVJJIC9UeXBlIC9BY3Rpb24gL1VSSSAoaHR0cHM6Ly9tb253ZWxpdG8uZ2l0aHViLmlvL21vbndlbGl0by1zaXRlLykKPj4gL0JvcmRlciBbIDAgMCAwIF0gL1JlY3QgWyAxMzcuODg1NSA3MDcuNDc1NCAyNzEuODgzMSA3MTguMDM1NCBdIC9TdWJ0eXBlIC9MaW5rIC9UeXBlIC9Bbm5vdAo+PgplbmRvYmoKNSAwIG9iago8PAovQW5ub3RzIFsgNCAwIFIgXSAvQ29udGVudHMgMTEgMCBSIC9NZWRpYUJveCBbIDAgMCA1OTUuMjc1NiA4NDEuODg5OCBdIC9QYXJlbnQgMTAgMCBSIC9SZXNvdXJjZXMgPDwKL0ZvbnQgMSAwIFIgL1Byb2NTZXQgWyAvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJIF0KPj4gL1JvdGF0ZSAwIAogIC9UcmFucyA8PAoKPj4gL1R5cGUgL1BhZ2UKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL0EgPDwKL1MgL1VSSSAvVHlwZSAvQWN0aW9uIC9VUkkgKGh0dHBzOi8vbW9ud2VsaXRvLmdpdGh1Yi5pby9tb253ZWxpdG8tc2l0ZS8pCj4+IC9Cb3JkZXIgWyAwIDAgMCBdIC9SZWN0IFsgMjAwLjI4MjMgNDk5LjM5NTQgMzQwLjM3MDcgNTEwLjQzNTQgXSAvU3VidHlwZSAvTGluayAvVHlwZSAvQW5ub3QKPj4KZW5kb2JqCjcgMCBvYmoKPDwKL0Fubm90cyBbIDYgMCBSIF0gL0NvbnRlbnRzIDEyIDAgUiAvTWVkaWFCb3ggWyAwIDAgNTk1LjI3NTYgODQxLjg4OTggXSAvUGFyZW50IDEwIDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAKICAvVHJhbnMgPDwKCj4+IC9UeXBlIC9QYWdlCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9QYWdlTW9kZSAvVXNlTm9uZSAvUGFnZXMgMTAgMCBSIC9UeXBlIC9DYXRhbG9nCj4+CmVuZG9iago5IDAgb2JqCjw8Ci9BdXRob3IgKE1vbndlbGl0byBBLiBCb2xhbmRyZXMpIC9DcmVhdGlvbkRhdGUgKEQ6MjAyNjEwMTYxMTQ0NDQrMDgnMDAnKSAvQ3JlYXRvciAoXCh1bnNwZWNpZmllZFwpKSAvS2V5d29yZHMgKCkgL01vZERhdGUgKEQ6MjAyNjEwMTYxMTQ0NDQrMDgnMDAnKSAvUHJvZHVjZXIgKFJlcG9ydExhYiBQREYgTGlicmFyeSAtIFwob3BlbnNvdXJjZVwpKSAKICAvU3ViamVjdCAoXCh1bnNwZWNpZmllZFwpKSAvVGl0bGUgKE1vbndlbGl0byBBLiBCb2xhbmRyZXMgXDIwNCBSZXN1bWUpIC9UcmFwcGVkIC9GYWxzZQo+PgplbmRvYmoKMTAgMCBvYmoKPDwKL0NvdW50IDIgL0tpZHMgWyA1IDAgUiA3IDAgUiBdIC9UeXBlIC9QYWdlcwo+PgplbmRvYmoKMTEgMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggMzIxMQo+PgpzdHJlYW0KR2IiLyk+QmVkbCZxODAxVzJDVWpAcT1ESDQ+IlE0Ykpeamk0KG1ecl5HSmdqKkQ6LkEkXWF1NURjTzdsS09ZRUgtRjgwUmpJRmtZXi9UTidxbDE+PDlgL1wqSXRKVHJDXlInVigwRUlnaz90aVQkZSVgYzo+XkpIQjM7VihxKXBGZTo9alY+MEtjZ1dnNW1yRC0jMHBAbyppN2txOz1UXkBLK0hebnUuVC1kOTQwUitOKmE5U3I7Py9lKjVPRHJxK0VAUV1Bb1Q8W2okb3BkV1RzRy88a1xjYSgrdDlPaGFBYWxKIkMsKyRZOGkoUVRrI3VkRHJndEAsXWkwR3JTPTxDckknckphbTlqXmBccUVQU1tGV0NfYlNvJmBJLms0MVFSOW1APF0zbmFUZ0crKzFDdT1aaj9EV2x0XSY5IVppVkJFclJtKFEyOVFkP049ZVRDVlstU14zbDw7QDdocFBTL29eUmQsLT1WW2RTUjBzSS1sbF9IUF1lSWRWOnE6Jz4+U3BTYkxZVl4rV28xYkdjNnAsZ1ZXR3NaMnRrS2RNP11JbTE5Z1cqVCMlXiM1cDYucE1lNVcjYlFAWTtqSWZaXmd0Q2RfJzUkJylZLFs1bipgOERNLkU7JSRtTk5PKixcZz1OZ0UwXUxPOG1FRV89NzlPRHQrKCVGYVI5I25fJS9uMCYiajZBc1JZLywxaU5hWWo/aERxR0MiUm9JdW5GSCpILz0ocjdbclFaVVlUUD5pbmJubUEnaSRLYT09RUZWUjkrZCFxV2VjXDRGR3FhKWJsNGwnUj4/ZWVgcTs5c2IjWDZqLDJEZHRcT3FFPUJYRTZdKlUkcS1SLThSVm08LyZNcCYuT1xXTlMycSwkdSpBNmNkYVE9Wls5V3JyTVJBOk41NDBKX3JPPyVec2BrWzc/QHM8a2E1JixGPyhhaGNwUjtQTDdXdHJ0NltZXSI3MGZzNEQmYUwocUFcZTVCQ15XV3VmJGdURmVWWEE7QClTJDRgN2MkLF1Ib3BZJV9ROiQtbWI6YCg4PjVrMWZrRTBdJGIiWzI6aCwoPjkkVCdQKihgRF9bLThNbCRBMz9OIVRec1pyRWdDO1smcy41bVMzV19MLFYpbkdSSEVlNVM/bD1nYTQiaVI8a25jWTVoX1VzMWY9LVA7dXRaVSdmM0w1OEhHYWA3TjxGIS9lU2NbLmgjKyghcTBdXmpmLTEwcCRGO14pOVkicFs2RUsuK0QocVdiOD5wbkpcaCpnWkgiTlowaFNySkFcYlc1RSpGTystWXAtXG1YblBYTS0iPixlOV0pJSNWOTZQMWAlJVBvRlYtP2oyNDtQXCRNU1gqYDZKZEtsJ2tEVy1IKiRCQmIkMlwvKWhNMz08NDdCMD0/Zk5EUz8+OU1yQm9wPm8+dCNxVD1pXmtHO3IiX24wQVswIVInPV1qVSFsQDpPQSNqcyxyQWFQJC9STDoxIiYyPjVxWldZNVMlXlNYaTY1c2NiSlA+QmZvNDlEMGBLSiJkbkItUUIkX0ZBJjtNNihQTGtJWzkjb1xPXSUpOFBFOSVRbnNQayVyPXF1a0FdbzMraiZILUlGNilGPjJqSCEhSkVGYXBjQypOLy9IWUUlO1BjJDBNWGNfSlwsYVdbIj8oZEM1PDwqY0Q7Rj5oOzdYOkQ2NmE5KFFeVVpcK2tIc04oVWhxNHNRbExVWE1idUVUNDdcKEtBWigjJCxHIlhBPFNjQVBdRjZLN3I0cmQ/Z1BMOSckU1VkSCIlKGtoTWMtKWBrNkQqI0JCVyRPMV0iJmlBcWJ0X1AnPEtuKFVbLnBQQCg8aUBSYUFBTG4pMEdvPCU7K2ppVD44L0Q7QT9jJV1IYVpmPUc+alZqS0xjLSFBTz9dam84JVBWJSRKVllmPylhUmgkPUJwQShYN2NQQiY5OjZeMmpDOiFRaGBsdFkzYyYwP1dvRzsqMyJBdGJxOikoW1FCTygubVJMdDljKVhcWy0jNHEyUSY4TCgwK3BfTD06aU9URjZbcSNITzFkdEBzIV9WOzg5K0RBIkktJSUkaTxnITZZVUBYL2BFSFRIZj1dRlY1LHNnYWU+aDVVJVZEWjNkQnRSPWAiNF1uRFBhLC1Ocz04dUg7VS9QRzUzQ0pcJFlwR0k+Qis4M1RvNyFZWmEiR1ZkYyRQWiRUOltqM08lbENfKW9UJiheUiFkOC0wQDJVZlZNY1dpR19II2QvbjRAQ1FYLi5WayhyUj5aZUApYm5mKy0+VFlbWDdiV1NIZzREK2lbXT1jN1JtVFRScVMoIzQsYm90QVFYRk00JCFLMidiLDdZVCorOExYLz1sYlZRVEZVRiI+ZyRvR0w/IUczX2djMCEqPVpBVVYlI19aQHRnUGpOX0g/N3M0SVFOY1lObCswRj8wO1QtJyNtOV4+WFw3Ljh1bDAhcVgzTkNFTSc5WmxkODFHNz06VEA7P15TUCJjbEwtdCRMRzMvKmswPFw/XU9YYldfY2MuOVsmNmYkNC5PKSlrZ1ZGKktwPk5KKWlVa051akNyT05mXkVhPSlFbFVMcCxabmw8OyViYGhdW0h1LFRwWWIzQUY6J04zPENvV1M+RGpoV0siWTRsNS1aJUNtRytUYTxVZERwcT9jTGdxX0E6JUoiUy0jO2k9LWdlOXVwKDNPIVojJFVUPDVfYS1DRzJEL00mI2hhVk8vSShUdXBkOiNiNEA1bEZVSEdFW1ttTktHdUppZltgY0FcZVxELiNFXlJTIi5DW1ptMj4mVUsmakE5VUVPZlY3KlJeImoiLiE/O01OUSJaLEthIktNWjM6VVomRTAkOFo+KlxuV2dMLCMrMSc0OygnKEp1XUwlS09LTGlLU0E+JT9RQjMuajFbNnRmbW0iYGVSZm5gTyVcVyhsKW41JCRGbFAtKjdBIlBBblJHaD1UMitIXDlcIlxiNUYiYG5zJjV1LTIhQC9QKyt1KihKMlZebFFRRU5edEJlV1RSTzhPI09VaksnPWRqW005LGxQVC5gMklGQz5jW1o5J1omLzU0UisjQyMnIy1iJ2VvWEpbK1w3X0N0K0wqV1FkRD9CYyVFPkhFPDtUdUVoJ2U9RS8vNDFbYVYnJCJOQ2k+PGloaFkyUzE1JTgsK3JRVkU/RTR1IkNodGonVk42RGpRKFlDUFNFRFUoKnE4QSlEN15hSkhAPm5nRW9ubCVwN1o8Q2ZsM0w6bEFEdVYuYj1UQzxHLXE2WXJbbCVvOUYoW0N0JXJ0RUJgT2RPKFhqVkVFMnJRVmVwPGdnMF5NMFpeU29iZCtBQUpNV0JeYmZdPDdaNnEyMl9WLmMocmBYLy5PMGo+PlNhLyJVam9gMSdCYnJtLSxtUyN0SVVCJWojZlsobC5SXiJlYGQkckdWOCwrUWxQX1JDO1YrLVA5aCtZYUpQZmZ0TD1pXywxKlRzUDlNQ1kqTj5jTDJuYXEhTT4/NFFFZ2hpQD9lPlwyU0dxU0xAT1dTcitQIVkjN1RGLlMlYVE0QUpdbEZudVsocGRjJWcxT00iMWBeOmo2TVIhPEttIWB1RVBgZ085OUpkayVXSTZgayQrW14lbDFpTSxjVmo8UVMvbHA9byc4KFJKYTVGQCVfUXBFZzJ1SmU7QGo4VG9tYzhPRTpJQDxxZCcvZTxTOCM1WD4kc3JdTWMyLzRhNzoxMWs4VjIzOj9yIiNaTEBLc3NUXDBhSChHXjg8KUY+bChwWGo7c2ZCNCw6VlZWW14ncVlBOGJ0PSZdRG5MJmJUalguIy8qP1ZzYWNqRCUwWUc4NDstO2UoJFFXWFpyZGxmZjxcZVtAKjRnVDElNzxtKlI6bWxPLklQdDdgaEddLDddVlxPZF9vNiZVU3Aybic4cXBuWmY1SDEkTTdXNCNCZj1AV1ksM0BRYlVgOlNvUlRkQlgoPE8kUCoqPlFbcVtJLnRaQSRLRW42ZGJfQCJVcWItcnE1MXFiblBFLjcpKlFfJy51X2o6OTtrMFpFZUojal9MTmlnQ2VGZTJiRENiO2w7cDtoVDReKjpYMihlL1YqYmQ7PkYmZUFRMS5iW0pZZ3FuSl5XSE4kQ1hCLD9lRGBkJ1leZG1xLTtqWE9ndXJhUTM6VilPWkxPNlpDRFNMQDZgI3FXNW9cMk1BUVVWZVdZLSdFTUUvWXRTNm5HNTI2XUhLTmk8bFhIbCQ1bTUkYFBBNDlhNykvJCQ6UW5uKilmSicuKiI+JlpXdDNER1pdaVo2XUEqJ2Y/RWs5QHQwQEJdX2E/RlQuUEJ+PmVuZHN0cmVhbQplbmRvYmoKMTIgMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggMTU2MQo+PgpzdHJlYW0KR2IhI1w5MmpTOSZBSWBkcVFzZzNjQ2MmZ3BQJy4mSD1MRiI5J3E+VStIPVZLOGBQYVQjbGZAIyxbMU5aKV9Yc2QoOTBXXz5NV1k5cj5cYj9uPF9eVWlzXTwsXzklSzdBSiErOzNsSFNfIXBAdFlwRU4hQkZoSj9CaXMxVD1KW2VIZzEha2lSXVJKVEU/LEQhQCFzYzJgcTFrYDEuXEY0Pz0xRC1yQ21UaGNeQCMqSGE7Rm8jWFk7R0Q6bkZpOjM0Oz1ELU8+NzVgMiw7YCY3czUjOyMta1dBWj1VUF5kK19ZOlVETU1ET0JTaD5rM1JLRnB1YldMY3VZSzxzWkI7a2I7QSdbX1dJbEVVYVs0aCcxZDRYaGFaVVg4XVUwPTddbk9dV2RcOnFMVXEhUE47dUxGK0AqNW5MWTdXbzlmIVYpXC0lWilqYTtoQ291LEQuWFMnYi0/RT1TUls8UzJeYj9OInJlNCFOYl1fQDtlIWYtSz4tcHQqQSIsZU1KbktSXCRVYTpAMiQtQ0NhIjRtOUBFXGhkWkleM19eNkVAZT8jPHRyazByb2BIbGBRdUc6JD1rJENMPFFSKk9rTSg0QTBDMTs5XFRNLzo8KUJlKj0sNWpmUi9pM0VqUCVQRDtJSkI8OF8iQD90c0BxJEtlWm5eXywmYkt0Pm4oMmVYZzpvISo2TVYjVitecHFDXERUQG9HNjRhR24uWktNPS4uLlFVKD05ZCE5USZVM2wjY2RWOWtWXUBCITZYTUYtRzVHYS47MWdyW01VbjJSUi1PLlhLNyo4KEB0cmA5ZEJRLXRONUgmNEFyV0M2Sig8YHJKYjE8KjNoR2xdQzVSQWxmRC41VTwrcTIxUy5uPiplUWEqbTVyZ3UjVDhSOyRkL1JWblNOJEBIcVpyOU1PTkdXTEUva09FKDxnQlJhKjYmVTc7J29zZDhwVTJEcnJGc2Y4MU40cSRcL3BOME9NWWgnSVpOMidyVnJTN3E7STNxW3Q4PU9cRStyT29VLHIsUEMha1BQVThRJjEtcTxxSS0qRVcxLlg+ND9BT2NeQmk3MnA4QGY+bF1JNWYmY3EqQzBsZmBGRTRXK2EsRSpGVXI7PTs7NEpTMzJDZWpYQSVENnJuXTk0ODZuXSJdJWpCaEoiLihoJSU+WiQ7YXRCQitkOkVFMS1VaEI1KTgxUy5cIzwpUzo9bGFnISRMZkdNPjwmUzxwbDZRTENBY0E/NV1VS3JpMzFRTXRvYF5MNlgtUURUYkk6JkdSbGxAZSk5M0xSPHVTXCI+NDk/QzQoVG1MLU0yclRZZXNGPzhLVFJtOHVmQ3Usc20wMCc+PCd0OzJQZCJIQyolR2snLitlMkxBNmQyTi1gYmBgYSpsP0VPTGpnW3IvKW1OdDZfNUBUYkxRV2ZjTFRdOklxSG9dM0I4MnFBJDJJNjknRjUyUCNZWT8/aDxMSTxCbTMlJlhMSyFfN1c8TDlJOiM2W1peKDF0SVorPE5GUj5URFhmcHJbZCFoWDJeZHJ0UV8ucTFcQUMhKEBaWHBdN1wwN1FGJzA0a2IlRE9QKDI3QEddSlEwVXIuaGw3Yl8ra1hDKFxZN09rMVRzTnJBalVaUms0V2VROFUwck9HVClSPj9hKVslY2BhLDZCXF9EMzBpSGlDLWYvYl1XTWxTZXMwLSJLSkIpalg8PmxaOVIpUVQmP2ppLFglJyUwXDBFbFFaJC50L1Q5RDxHN0lEWmp0V1ltLHJSc0htWWJYU3JFNGA2VVg2aGc1OFdxKXFkcEdLdHVkMDh0I1MlRXVmRTtRR1Y7VzFyayVuKj1McHB0dUNdMD5TRnJFSWp0azZWSU44UjJ1bTFzPSh0bSUpIzNCO2krSS5YImtUMUkpa2ssPWYwcVFDJChkQkpjOT1WdSlqKU09Vlw4aFswN0FyYHJcVkwsITRgW083WilsPC9xZDJEV1k3KVtpaidCXGImaTVdJ15HR2RjW1JPaSZEPUttSztYPShyIXIwKkR1I1B0NGRNI3JQcGteWCVGOltmMyJQL0ZgOjJoJUhcXmcxTUteUHJGbUFOckIydWAhYnJ+PmVuZHN0cmVhbQplbmRvYmoKeHJlZgowIDEzCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDA2MSAwMDAwMCBuIAowMDAwMDAwMTAyIDAwMDAwIG4gCjAwMDAwMDAyMDkgMDAwMDAgbiAKMDAwMDAwMDMyMSAwMDAwMCBuIAowMDAwMDAwNTE2IDAwMDAwIG4gCjAwMDAwMDA3MzkgMDAwMDAgbiAKMDAwMDAwMDkzNCAwMDAwMCBuIAowMDAwMDAxMTU3IDAwMDAwIG4gCjAwMDAwMDEyMjYgMDAwMDAgbiAKMDAwMDAwMTUzNiAwMDAwMCBuIAowMDAwMDAxNjAyIDAwMDAwIG4gCjAwMDAwMDQ5MDUgMDAwMDAgbiAKdHJhaWxlcgo8PAovSUQgCls8YWMzNmFkODE3Y2IwYTczN2EwMzQ2NTIyNDgyYjU0NmY+PGFjMzZhZDgxN2NiMGE3MzdhMDM0NjUyMjQ4MmI1NDZmPl0KJSBSZXBvcnRMYWIgZ2VuZXJhdGVkIFBERiBkb2N1bWVudCAtLSBkaWdlc3QgKG9wZW5zb3VyY2UpCgovSW5mbyA5IDAgUgovUm9vdCA4IDAgUgovU2l6ZSAxMwo+PgpzdGFydHhyZWYKNjU1OAolJUVPRgo=" download="Monwelito_Bolandres_Resume.pdf"><span class="ic">PDF</span><span><b>Download resume</b><small>Full resume as a PDF</small></span></a></li>
         </ul>
       </li>
       <li class="has-dd">
         <button type="button" aria-expanded="false">FAQ
           <svg class="chev" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3l4 4 4-4"/></svg></button>
         <ul class="dd">
+          <li><a href="#faq" data-faq="2"><span class="ic">?</span><span><b>What services do you offer?</b></span></a></li>
+          <li><a href="#faq" data-faq="3"><span class="ic">?</span><span><b>Can you do bookkeeping without QuickBooks?</b></span></a></li>
           <li><a href="#faq" data-faq="0"><span class="ic">?</span><span><b>Do I need a big ad budget?</b></span></a></li>
-          <li><a href="#faq" data-faq="1"><span class="ic">?</span><span><b>How quickly will I see leads?</b></span></a></li>
-          <li><a href="#faq" data-faq="2"><span class="ic">?</span><span><b>What businesses do you work with?</b></span></a></li>
-          <li><a href="#faq" data-faq="3"><span class="ic">?</span><span><b>What happens on the free call?</b></span></a></li>
-          <li><a href="#faq" data-faq="4"><span class="ic">?</span><span><b>Will I understand my results?</b></span></a></li>
+          <li><a href="#faq" data-faq="5"><span class="ic">?</span><span><b>What happens on the free call?</b></span></a></li>
+          <li><a href="#faq" data-faq="6"><span class="ic">?</span><span><b>Will I understand my results?</b></span></a></li>
         </ul>
       </li>
       <li class="m-cta"><a class="btn btn-primary" href="https://calendly.com/monbolandres-metaads/new-meeting" target="_blank" rel="noopener">Book a Free Strategy Call</a></li>
@@ -385,24 +430,24 @@ footer{padding:40px 0 48px}
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="pill"><span class="dot"></span> Meta Ads Specialist · Now accepting new clients</div>
-      <h1>Meta Ads that turn into <em>booked appointments</em>, not just clicks.</h1>
-      <p class="lead">I build and run lead-gen ad campaigns for dental clinics, coaches, and local and international businesses that need a predictable flow of qualified leads, not vanity metrics. My last dental campaign brought in <strong>52 leads in 3 days at under ₱5 each</strong>, starting from just ₱100/day.</p>
+      <div class="pill"><span class="dot"></span> Meta Ads · Bookkeeping · Client Support · Now accepting new clients</div>
+      <h1>Reliable help to grow your business, from <em>lead generation</em> to the back office.</h1>
+      <p class="lead">I'm Monwelito, a Meta Ads specialist with 7+ years in operations, client support and team leadership. I help businesses bring in qualified leads, keep their books and invoices in order, and look after their customers, so you can focus on running the business. <strong>My latest dental campaign brought in 52 leads in 3 days at under ₱5 each.</strong></p>
       <ul class="checks">
-        <li><span class="tick">✓</span>Start with a small test budget</li>
+        <li><span class="tick">✓</span>Ads, bookkeeping and client support from one person</li>
         <li><span class="tick">✓</span>Clear, honest reporting</li>
-        <li><span class="tick">✓</span>Scale only what's working</li>
+        <li><span class="tick">✓</span>Start small, scale what's working</li>
       </ul>
       <div class="cta-row">
         <a class="btn btn-primary" href="https://calendly.com/monbolandres-metaads/new-meeting" target="_blank" rel="noopener">Book My Free Strategy Call →</a>
-        <a class="btn btn-ghost" href="#work">See the results ↓</a>
+        <a class="btn btn-ghost" href="#services">See what I offer ↓</a>
       </div>
       <div class="cta-note"><div class="avatar" role="img" aria-label="Monwelito Bolandres"></div><span>Free 20-minute call with Monwelito.<br>No pressure, no obligation. You leave with a clear plan either way.</span></div>
     </div>
 
     <div style="position:relative">
       <div class="readout">
-        <div class="ro-top"><span><b>Campaign readout</b><br>Dental clinic · 3-day test</span><span class="tag">Live results</span></div>
+        <div class="ro-top"><span><b>Featured Meta Ads result</b><br>Dental clinic · 3-day test</span><span class="tag">Live results</span></div>
         <div class="ro-main">Average cost per lead</div>
         <div class="ro-big">₱4.96</div>
         <div class="ro-sub">Cold audience · ₱100/day</div>
@@ -413,7 +458,7 @@ footer{padding:40px 0 48px}
         </div>
         <div class="ro-foot"><span>Ad 2 delivered 39 of 52 leads</span><span>Instant Form · 3 fields</span></div>
       </div>
-      <div class="float"><i>↗</i>Ad 2 delivered 39 of 52 leads</div>
+      <div class="float"><i>↗</i>7+ years in ops &amp; client support</div>
     </div>
   </div>
 </section>
@@ -438,17 +483,17 @@ footer{padding:40px 0 48px}
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Sound familiar?</span>
-      <h2>You're spending on ads. Your calendar is still empty.</h2>
-      <p>Most businesses don't have an ad problem. They have a system problem: the wrong audience, the wrong offer, and no one watching the numbers.</p>
+      <h2>Growth gets stuck when the basics aren't covered.</h2>
+      <p>Most small businesses don't lack effort. They lack a system: ads that don't convert, books that fall behind, and customers who wait too long for a reply.</p>
     </div>
     <div class="problem-grid">
-      <div class="pcard rv"><div class="x">✕</div><h3>Likes, not leads</h3><p>Boosted posts that get likes, not leads. Engagement looks nice in reports but doesn't pay the bills.</p></div>
-      <div class="pcard rv"><div class="x">✕</div><h3>Budget burned early</h3><p>Big spend on day one, with no idea which ad is actually working.</p></div>
-      <div class="pcard rv"><div class="x">✕</div><h3>Jargon-filled reports</h3><p>You can't tell what you paid for each lead or each booking.</p></div>
+      <div class="pcard rv"><div class="x">✕</div><h3>Ads without a plan</h3><p>Boosted posts that get likes, not leads. Engagement looks nice in reports but doesn't pay the bills.</p></div>
+      <div class="pcard rv"><div class="x">✕</div><h3>Books falling behind</h3><p>Invoices, receipts and reconciliations pile up until month-end turns into a scramble.</p></div>
+      <div class="pcard rv"><div class="x">✕</div><h3>Slow customer replies</h3><p>Messages and questions sit unanswered, so leads go cold and customers quietly leave.</p></div>
     </div>
     <div class="approach rv">
       <div class="ok">✓</div>
-      <p><strong>My approach:</strong> test small, find the winning audience and ad, then put your money behind what's proven, with every peso tracked to a lead.</p>
+      <p><strong>My approach:</strong> set up a simple system for each area, start small, track every number, and keep communication clear, so nothing slips through the cracks.</p>
     </div>
   </div>
 </section>
@@ -639,14 +684,42 @@ footer{padding:40px 0 48px}
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Services</span>
-      <h2>How I can help</h2>
-      <p>Everything you need to go from "we tried Facebook ads once" to a steady, measurable pipeline of leads.</p>
+      <h2>What I can do for you</h2>
+      <p>Four areas of support, from bringing in new leads to keeping the business running smoothly. Hire me for one area, or combine them.</p>
     </div>
     <div class="svc-grid">
-      <div class="svc rv" id="svc-1"><div class="num">01</div><h3>Meta Ads Strategy &amp; Setup</h3><p>Campaign structure, audience targeting, and budget planning built around your business goals.</p></div>
-      <div class="svc rv" id="svc-2"><div class="num">02</div><h3>Lead Generation Campaigns</h3><p>Instant Forms, landing page funnels, and cold and warm audience targeting engineered to produce booked calls and appointments, not just clicks.</p></div>
-      <div class="svc rv" id="svc-3"><div class="num">03</div><h3>Campaign Management &amp; Optimization</h3><p>Ongoing monitoring, A/B testing, and budget reallocation to keep cost per lead low as campaigns scale.</p></div>
-      <div class="svc rv" id="svc-4"><div class="num">04</div><h3>Reporting &amp; Insights</h3><p>Clear, no-fluff performance reporting so you always know what your ad spend is producing.</p></div>
+      <div class="svc rv" id="svc-1"><div class="num">01</div><h3>Meta Ads &amp; Lead Generation</h3><p>Campaigns built to produce booked calls and appointments, not just clicks.</p>
+        <ul class="bul">
+          <li>Strategy, setup and cold or warm audience targeting</li>
+          <li>Instant Forms and funnel-based lead generation</li>
+          <li>Creative and audience A/B testing, ABO/CBO budgeting</li>
+          <li>Clear reporting on cost per lead and cost per booking</li>
+        </ul></div>
+      <div class="svc rv" id="svc-2"><div class="num">02</div><h3>Bookkeeping &amp; Finance Support</h3><p>Tidy, up-to-date records, in QuickBooks or through a simple manual process.</p>
+        <ul class="bul">
+          <li>Bookkeeping in QuickBooks, or ledger and spreadsheet systems</li>
+          <li>Invoicing, split invoices, discounts and currency changes</li>
+          <li>Refunds and account reconciliation</li>
+          <li>Excel reporting and financial data entry</li>
+        </ul></div>
+      <div class="svc rv" id="svc-3"><div class="num">03</div><h3>Client Support &amp; CRM Management</h3><p>Fast, friendly and accurate handling of your customers and accounts.</p>
+        <ul class="bul">
+          <li>Email and chat support for customers and clients</li>
+          <li>CRM updates and record keeping (Salesforce, Oracle Service Cloud)</li>
+          <li>Billing, product and technical inquiries</li>
+          <li>Escalation handling with quality standards in mind</li>
+        </ul></div>
+      <div class="svc rv" id="svc-4"><div class="num">04</div><h3>Operations &amp; Team Leadership</h3><p>Processes and people that run smoothly, backed by 5+ years leading a team.</p>
+        <ul class="bul">
+          <li>KPI tracking, scorecards and performance reporting</li>
+          <li>Coaching, training and performance reviews</li>
+          <li>Workforce scheduling and process improvement</li>
+          <li>Documentation and admin coordination</li>
+        </ul></div>
+    </div>
+    <div class="svc-note rv">
+      <p>Not sure which service you need? Let's talk it through.</p>
+      <a class="btn btn-primary" href="https://calendly.com/monbolandres-metaads/new-meeting" target="_blank" rel="noopener">Book a free call →</a>
     </div>
   </div>
 </section>
@@ -660,10 +733,10 @@ footer{padding:40px 0 48px}
       <p>Four simple steps, starting with a free conversation.</p>
     </div>
     <div class="steps-grid">
-      <div class="step rv" id="step-1"><span class="s">Step 1</span><h3>Discovery Call</h3><p>We talk through your business, goals, and current lead flow.</p></div>
-      <div class="step rv" id="step-2"><span class="s">Step 2</span><h3>Strategy &amp; Setup</h3><p>I build the campaign structure, audience targeting, and creative direction.</p></div>
-      <div class="step rv" id="step-3"><span class="s">Step 3</span><h3>Launch &amp; Test</h3><p>Campaigns go live with a controlled test budget to validate performance.</p></div>
-      <div class="step rv" id="step-4"><span class="s">Step 4</span><h3>Scale &amp; Optimize</h3><p>Once we see what's working, we scale spend and refine for lower cost per lead.</p></div>
+      <div class="step rv" id="step-1"><span class="s">Step 1</span><h3>Discovery Call</h3><p>We talk through your business, your goals and where you need support: leads, books, customers or all three.</p></div>
+      <div class="step rv" id="step-2"><span class="s">Step 2</span><h3>Plan &amp; Setup</h3><p>I map out the scope and set up what's needed: a campaign structure, a bookkeeping workflow or a support process.</p></div>
+      <div class="step rv" id="step-3"><span class="s">Step 3</span><h3>Launch &amp; Deliver</h3><p>We begin with a small, clearly scoped start, like a test ad budget or a month of books, to confirm the fit.</p></div>
+      <div class="step rv" id="step-4"><span class="s">Step 4</span><h3>Review &amp; Improve</h3><p>We review the numbers together, keep what works and refine the rest before expanding the work.</p></div>
     </div>
     <div class="start-free rv">
       <div><b>Start with Step 1, it's free</b><span>20 minutes · online · no obligation</span></div>
@@ -675,13 +748,103 @@ footer{padding:40px 0 48px}
 <!-- ABOUT -->
 <section id="about">
   <div class="wrap about-grid">
-    <div class="portrait rv" role="img" aria-label="Portrait of Monwelito Bolandres, Meta Ads and lead generation specialist"></div>
+    <div class="portrait rv" role="img" aria-label="Portrait of Monwelito Bolandres, Meta Ads specialist and operations professional"></div>
     <div class="rv">
       <span class="eyebrow">About</span>
-      <h2>One focus: turning ad spend into booked appointments.</h2>
-      <p>I'm Monwelito Bolandres, a Meta Ads specialist. I work primarily with dental clinics, coaches, and local and international businesses that need a predictable, measurable lead pipeline, not just impressions.</p>
-      <p>Every campaign I run is built around real numbers, not guesswork. I start lean, prove what works with data, and only then scale your budget, so you never pay to learn the same lesson twice. You'll always know exactly what your ad spend is producing.</p>
+      <h2>Operations discipline, paid-ads skills and a finance background.</h2>
+      <p>I'm Monwelito Bolandres, based in Valencia, Negros Oriental, Philippines. I have 7+ years in operations, client support and team leadership across international publishing and telecommunications, including client support for an Elsevier account at Straive, leading a team at SPI Global Technologies, and customer service on the PLDT and Straight Talk accounts.</p>
+      <p>That experience taught me KPI management, CRM systems, high-volume queue work and clear, patient communication. Today I put it to work as a Meta Ads and lead-generation specialist: I start campaigns lean, prove what works with data, and only then scale the budget.</p>
+      <p>I'm also a Financial Management graduate (BS Business Administration, Foundation University) and QuickBooks-certified, so I can keep your books, invoices and reconciliations in order, in QuickBooks or through a simple manual process. I'm comfortable with remote, shifting and graveyard schedules, so working across time zones isn't a problem.</p>
+      <div class="metrics" id="about-background"><span>7+ years of experience</span><span>Team Leader, 2016–2021</span><span>QuickBooks certified</span><span>Financial Management graduate</span></div>
+      <div class="mlabel">Numbers I track on every campaign</div>
       <div class="metrics" id="about-metrics"><span>Cost per lead</span><span>Cost per booking</span><span>Return on ad spend</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Resume</span>
+      <h2>Experience that backs the work.</h2>
+      <p>A snapshot of my background in operations, client support, team leadership and paid advertising.</p>
+      <a class="btn btn-primary" href="data:application/pdf;base64,JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUgo+PgplbmRvYmoKMiAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYSAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjEgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iagozIDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhLUJvbGQgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YyIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKNCAwIG9iago8PAovQSA8PAovUyAvVVJJIC9UeXBlIC9BY3Rpb24gL1VSSSAoaHR0cHM6Ly9tb253ZWxpdG8uZ2l0aHViLmlvL21vbndlbGl0by1zaXRlLykKPj4gL0JvcmRlciBbIDAgMCAwIF0gL1JlY3QgWyAxMzcuODg1NSA3MDcuNDc1NCAyNzEuODgzMSA3MTguMDM1NCBdIC9TdWJ0eXBlIC9MaW5rIC9UeXBlIC9Bbm5vdAo+PgplbmRvYmoKNSAwIG9iago8PAovQW5ub3RzIFsgNCAwIFIgXSAvQ29udGVudHMgMTEgMCBSIC9NZWRpYUJveCBbIDAgMCA1OTUuMjc1NiA4NDEuODg5OCBdIC9QYXJlbnQgMTAgMCBSIC9SZXNvdXJjZXMgPDwKL0ZvbnQgMSAwIFIgL1Byb2NTZXQgWyAvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJIF0KPj4gL1JvdGF0ZSAwIAogIC9UcmFucyA8PAoKPj4gL1R5cGUgL1BhZ2UKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL0EgPDwKL1MgL1VSSSAvVHlwZSAvQWN0aW9uIC9VUkkgKGh0dHBzOi8vbW9ud2VsaXRvLmdpdGh1Yi5pby9tb253ZWxpdG8tc2l0ZS8pCj4+IC9Cb3JkZXIgWyAwIDAgMCBdIC9SZWN0IFsgMjAwLjI4MjMgNDk5LjM5NTQgMzQwLjM3MDcgNTEwLjQzNTQgXSAvU3VidHlwZSAvTGluayAvVHlwZSAvQW5ub3QKPj4KZW5kb2JqCjcgMCBvYmoKPDwKL0Fubm90cyBbIDYgMCBSIF0gL0NvbnRlbnRzIDEyIDAgUiAvTWVkaWFCb3ggWyAwIDAgNTk1LjI3NTYgODQxLjg4OTggXSAvUGFyZW50IDEwIDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAKICAvVHJhbnMgPDwKCj4+IC9UeXBlIC9QYWdlCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9QYWdlTW9kZSAvVXNlTm9uZSAvUGFnZXMgMTAgMCBSIC9UeXBlIC9DYXRhbG9nCj4+CmVuZG9iago5IDAgb2JqCjw8Ci9BdXRob3IgKE1vbndlbGl0byBBLiBCb2xhbmRyZXMpIC9DcmVhdGlvbkRhdGUgKEQ6MjAyNjEwMTYxMTQ0NDQrMDgnMDAnKSAvQ3JlYXRvciAoXCh1bnNwZWNpZmllZFwpKSAvS2V5d29yZHMgKCkgL01vZERhdGUgKEQ6MjAyNjEwMTYxMTQ0NDQrMDgnMDAnKSAvUHJvZHVjZXIgKFJlcG9ydExhYiBQREYgTGlicmFyeSAtIFwob3BlbnNvdXJjZVwpKSAKICAvU3ViamVjdCAoXCh1bnNwZWNpZmllZFwpKSAvVGl0bGUgKE1vbndlbGl0byBBLiBCb2xhbmRyZXMgXDIwNCBSZXN1bWUpIC9UcmFwcGVkIC9GYWxzZQo+PgplbmRvYmoKMTAgMCBvYmoKPDwKL0NvdW50IDIgL0tpZHMgWyA1IDAgUiA3IDAgUiBdIC9UeXBlIC9QYWdlcwo+PgplbmRvYmoKMTEgMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggMzIxMQo+PgpzdHJlYW0KR2IiLyk+QmVkbCZxODAxVzJDVWpAcT1ESDQ+IlE0Ykpeamk0KG1ecl5HSmdqKkQ6LkEkXWF1NURjTzdsS09ZRUgtRjgwUmpJRmtZXi9UTidxbDE+PDlgL1wqSXRKVHJDXlInVigwRUlnaz90aVQkZSVgYzo+XkpIQjM7VihxKXBGZTo9alY+MEtjZ1dnNW1yRC0jMHBAbyppN2txOz1UXkBLK0hebnUuVC1kOTQwUitOKmE5U3I7Py9lKjVPRHJxK0VAUV1Bb1Q8W2okb3BkV1RzRy88a1xjYSgrdDlPaGFBYWxKIkMsKyRZOGkoUVRrI3VkRHJndEAsXWkwR3JTPTxDckknckphbTlqXmBccUVQU1tGV0NfYlNvJmBJLms0MVFSOW1APF0zbmFUZ0crKzFDdT1aaj9EV2x0XSY5IVppVkJFclJtKFEyOVFkP049ZVRDVlstU14zbDw7QDdocFBTL29eUmQsLT1WW2RTUjBzSS1sbF9IUF1lSWRWOnE6Jz4+U3BTYkxZVl4rV28xYkdjNnAsZ1ZXR3NaMnRrS2RNP11JbTE5Z1cqVCMlXiM1cDYucE1lNVcjYlFAWTtqSWZaXmd0Q2RfJzUkJylZLFs1bipgOERNLkU7JSRtTk5PKixcZz1OZ0UwXUxPOG1FRV89NzlPRHQrKCVGYVI5I25fJS9uMCYiajZBc1JZLywxaU5hWWo/aERxR0MiUm9JdW5GSCpILz0ocjdbclFaVVlUUD5pbmJubUEnaSRLYT09RUZWUjkrZCFxV2VjXDRGR3FhKWJsNGwnUj4/ZWVgcTs5c2IjWDZqLDJEZHRcT3FFPUJYRTZdKlUkcS1SLThSVm08LyZNcCYuT1xXTlMycSwkdSpBNmNkYVE9Wls5V3JyTVJBOk41NDBKX3JPPyVec2BrWzc/QHM8a2E1JixGPyhhaGNwUjtQTDdXdHJ0NltZXSI3MGZzNEQmYUwocUFcZTVCQ15XV3VmJGdURmVWWEE7QClTJDRgN2MkLF1Ib3BZJV9ROiQtbWI6YCg4PjVrMWZrRTBdJGIiWzI6aCwoPjkkVCdQKihgRF9bLThNbCRBMz9OIVRec1pyRWdDO1smcy41bVMzV19MLFYpbkdSSEVlNVM/bD1nYTQiaVI8a25jWTVoX1VzMWY9LVA7dXRaVSdmM0w1OEhHYWA3TjxGIS9lU2NbLmgjKyghcTBdXmpmLTEwcCRGO14pOVkicFs2RUsuK0QocVdiOD5wbkpcaCpnWkgiTlowaFNySkFcYlc1RSpGTystWXAtXG1YblBYTS0iPixlOV0pJSNWOTZQMWAlJVBvRlYtP2oyNDtQXCRNU1gqYDZKZEtsJ2tEVy1IKiRCQmIkMlwvKWhNMz08NDdCMD0/Zk5EUz8+OU1yQm9wPm8+dCNxVD1pXmtHO3IiX24wQVswIVInPV1qVSFsQDpPQSNqcyxyQWFQJC9STDoxIiYyPjVxWldZNVMlXlNYaTY1c2NiSlA+QmZvNDlEMGBLSiJkbkItUUIkX0ZBJjtNNihQTGtJWzkjb1xPXSUpOFBFOSVRbnNQayVyPXF1a0FdbzMraiZILUlGNilGPjJqSCEhSkVGYXBjQypOLy9IWUUlO1BjJDBNWGNfSlwsYVdbIj8oZEM1PDwqY0Q7Rj5oOzdYOkQ2NmE5KFFeVVpcK2tIc04oVWhxNHNRbExVWE1idUVUNDdcKEtBWigjJCxHIlhBPFNjQVBdRjZLN3I0cmQ/Z1BMOSckU1VkSCIlKGtoTWMtKWBrNkQqI0JCVyRPMV0iJmlBcWJ0X1AnPEtuKFVbLnBQQCg8aUBSYUFBTG4pMEdvPCU7K2ppVD44L0Q7QT9jJV1IYVpmPUc+alZqS0xjLSFBTz9dam84JVBWJSRKVllmPylhUmgkPUJwQShYN2NQQiY5OjZeMmpDOiFRaGBsdFkzYyYwP1dvRzsqMyJBdGJxOikoW1FCTygubVJMdDljKVhcWy0jNHEyUSY4TCgwK3BfTD06aU9URjZbcSNITzFkdEBzIV9WOzg5K0RBIkktJSUkaTxnITZZVUBYL2BFSFRIZj1dRlY1LHNnYWU+aDVVJVZEWjNkQnRSPWAiNF1uRFBhLC1Ocz04dUg7VS9QRzUzQ0pcJFlwR0k+Qis4M1RvNyFZWmEiR1ZkYyRQWiRUOltqM08lbENfKW9UJiheUiFkOC0wQDJVZlZNY1dpR19II2QvbjRAQ1FYLi5WayhyUj5aZUApYm5mKy0+VFlbWDdiV1NIZzREK2lbXT1jN1JtVFRScVMoIzQsYm90QVFYRk00JCFLMidiLDdZVCorOExYLz1sYlZRVEZVRiI+ZyRvR0w/IUczX2djMCEqPVpBVVYlI19aQHRnUGpOX0g/N3M0SVFOY1lObCswRj8wO1QtJyNtOV4+WFw3Ljh1bDAhcVgzTkNFTSc5WmxkODFHNz06VEA7P15TUCJjbEwtdCRMRzMvKmswPFw/XU9YYldfY2MuOVsmNmYkNC5PKSlrZ1ZGKktwPk5KKWlVa051akNyT05mXkVhPSlFbFVMcCxabmw8OyViYGhdW0h1LFRwWWIzQUY6J04zPENvV1M+RGpoV0siWTRsNS1aJUNtRytUYTxVZERwcT9jTGdxX0E6JUoiUy0jO2k9LWdlOXVwKDNPIVojJFVUPDVfYS1DRzJEL00mI2hhVk8vSShUdXBkOiNiNEA1bEZVSEdFW1ttTktHdUppZltgY0FcZVxELiNFXlJTIi5DW1ptMj4mVUsmakE5VUVPZlY3KlJeImoiLiE/O01OUSJaLEthIktNWjM6VVomRTAkOFo+KlxuV2dMLCMrMSc0OygnKEp1XUwlS09LTGlLU0E+JT9RQjMuajFbNnRmbW0iYGVSZm5gTyVcVyhsKW41JCRGbFAtKjdBIlBBblJHaD1UMitIXDlcIlxiNUYiYG5zJjV1LTIhQC9QKyt1KihKMlZebFFRRU5edEJlV1RSTzhPI09VaksnPWRqW005LGxQVC5gMklGQz5jW1o5J1omLzU0UisjQyMnIy1iJ2VvWEpbK1w3X0N0K0wqV1FkRD9CYyVFPkhFPDtUdUVoJ2U9RS8vNDFbYVYnJCJOQ2k+PGloaFkyUzE1JTgsK3JRVkU/RTR1IkNodGonVk42RGpRKFlDUFNFRFUoKnE4QSlEN15hSkhAPm5nRW9ubCVwN1o8Q2ZsM0w6bEFEdVYuYj1UQzxHLXE2WXJbbCVvOUYoW0N0JXJ0RUJgT2RPKFhqVkVFMnJRVmVwPGdnMF5NMFpeU29iZCtBQUpNV0JeYmZdPDdaNnEyMl9WLmMocmBYLy5PMGo+PlNhLyJVam9gMSdCYnJtLSxtUyN0SVVCJWojZlsobC5SXiJlYGQkckdWOCwrUWxQX1JDO1YrLVA5aCtZYUpQZmZ0TD1pXywxKlRzUDlNQ1kqTj5jTDJuYXEhTT4/NFFFZ2hpQD9lPlwyU0dxU0xAT1dTcitQIVkjN1RGLlMlYVE0QUpdbEZudVsocGRjJWcxT00iMWBeOmo2TVIhPEttIWB1RVBgZ085OUpkayVXSTZgayQrW14lbDFpTSxjVmo8UVMvbHA9byc4KFJKYTVGQCVfUXBFZzJ1SmU7QGo4VG9tYzhPRTpJQDxxZCcvZTxTOCM1WD4kc3JdTWMyLzRhNzoxMWs4VjIzOj9yIiNaTEBLc3NUXDBhSChHXjg8KUY+bChwWGo7c2ZCNCw6VlZWW14ncVlBOGJ0PSZdRG5MJmJUalguIy8qP1ZzYWNqRCUwWUc4NDstO2UoJFFXWFpyZGxmZjxcZVtAKjRnVDElNzxtKlI6bWxPLklQdDdgaEddLDddVlxPZF9vNiZVU3Aybic4cXBuWmY1SDEkTTdXNCNCZj1AV1ksM0BRYlVgOlNvUlRkQlgoPE8kUCoqPlFbcVtJLnRaQSRLRW42ZGJfQCJVcWItcnE1MXFiblBFLjcpKlFfJy51X2o6OTtrMFpFZUojal9MTmlnQ2VGZTJiRENiO2w7cDtoVDReKjpYMihlL1YqYmQ7PkYmZUFRMS5iW0pZZ3FuSl5XSE4kQ1hCLD9lRGBkJ1leZG1xLTtqWE9ndXJhUTM6VilPWkxPNlpDRFNMQDZgI3FXNW9cMk1BUVVWZVdZLSdFTUUvWXRTNm5HNTI2XUhLTmk8bFhIbCQ1bTUkYFBBNDlhNykvJCQ6UW5uKilmSicuKiI+JlpXdDNER1pdaVo2XUEqJ2Y/RWs5QHQwQEJdX2E/RlQuUEJ+PmVuZHN0cmVhbQplbmRvYmoKMTIgMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggMTU2MQo+PgpzdHJlYW0KR2IhI1w5MmpTOSZBSWBkcVFzZzNjQ2MmZ3BQJy4mSD1MRiI5J3E+VStIPVZLOGBQYVQjbGZAIyxbMU5aKV9Yc2QoOTBXXz5NV1k5cj5cYj9uPF9eVWlzXTwsXzklSzdBSiErOzNsSFNfIXBAdFlwRU4hQkZoSj9CaXMxVD1KW2VIZzEha2lSXVJKVEU/LEQhQCFzYzJgcTFrYDEuXEY0Pz0xRC1yQ21UaGNeQCMqSGE7Rm8jWFk7R0Q6bkZpOjM0Oz1ELU8+NzVgMiw7YCY3czUjOyMta1dBWj1VUF5kK19ZOlVETU1ET0JTaD5rM1JLRnB1YldMY3VZSzxzWkI7a2I7QSdbX1dJbEVVYVs0aCcxZDRYaGFaVVg4XVUwPTddbk9dV2RcOnFMVXEhUE47dUxGK0AqNW5MWTdXbzlmIVYpXC0lWilqYTtoQ291LEQuWFMnYi0/RT1TUls8UzJeYj9OInJlNCFOYl1fQDtlIWYtSz4tcHQqQSIsZU1KbktSXCRVYTpAMiQtQ0NhIjRtOUBFXGhkWkleM19eNkVAZT8jPHRyazByb2BIbGBRdUc6JD1rJENMPFFSKk9rTSg0QTBDMTs5XFRNLzo8KUJlKj0sNWpmUi9pM0VqUCVQRDtJSkI8OF8iQD90c0BxJEtlWm5eXywmYkt0Pm4oMmVYZzpvISo2TVYjVitecHFDXERUQG9HNjRhR24uWktNPS4uLlFVKD05ZCE5USZVM2wjY2RWOWtWXUBCITZYTUYtRzVHYS47MWdyW01VbjJSUi1PLlhLNyo4KEB0cmA5ZEJRLXRONUgmNEFyV0M2Sig8YHJKYjE8KjNoR2xdQzVSQWxmRC41VTwrcTIxUy5uPiplUWEqbTVyZ3UjVDhSOyRkL1JWblNOJEBIcVpyOU1PTkdXTEUva09FKDxnQlJhKjYmVTc7J29zZDhwVTJEcnJGc2Y4MU40cSRcL3BOME9NWWgnSVpOMidyVnJTN3E7STNxW3Q4PU9cRStyT29VLHIsUEMha1BQVThRJjEtcTxxSS0qRVcxLlg+ND9BT2NeQmk3MnA4QGY+bF1JNWYmY3EqQzBsZmBGRTRXK2EsRSpGVXI7PTs7NEpTMzJDZWpYQSVENnJuXTk0ODZuXSJdJWpCaEoiLihoJSU+WiQ7YXRCQitkOkVFMS1VaEI1KTgxUy5cIzwpUzo9bGFnISRMZkdNPjwmUzxwbDZRTENBY0E/NV1VS3JpMzFRTXRvYF5MNlgtUURUYkk6JkdSbGxAZSk5M0xSPHVTXCI+NDk/QzQoVG1MLU0yclRZZXNGPzhLVFJtOHVmQ3Usc20wMCc+PCd0OzJQZCJIQyolR2snLitlMkxBNmQyTi1gYmBgYSpsP0VPTGpnW3IvKW1OdDZfNUBUYkxRV2ZjTFRdOklxSG9dM0I4MnFBJDJJNjknRjUyUCNZWT8/aDxMSTxCbTMlJlhMSyFfN1c8TDlJOiM2W1peKDF0SVorPE5GUj5URFhmcHJbZCFoWDJeZHJ0UV8ucTFcQUMhKEBaWHBdN1wwN1FGJzA0a2IlRE9QKDI3QEddSlEwVXIuaGw3Yl8ra1hDKFxZN09rMVRzTnJBalVaUms0V2VROFUwck9HVClSPj9hKVslY2BhLDZCXF9EMzBpSGlDLWYvYl1XTWxTZXMwLSJLSkIpalg8PmxaOVIpUVQmP2ppLFglJyUwXDBFbFFaJC50L1Q5RDxHN0lEWmp0V1ltLHJSc0htWWJYU3JFNGA2VVg2aGc1OFdxKXFkcEdLdHVkMDh0I1MlRXVmRTtRR1Y7VzFyayVuKj1McHB0dUNdMD5TRnJFSWp0azZWSU44UjJ1bTFzPSh0bSUpIzNCO2krSS5YImtUMUkpa2ssPWYwcVFDJChkQkpjOT1WdSlqKU09Vlw4aFswN0FyYHJcVkwsITRgW083WilsPC9xZDJEV1k3KVtpaidCXGImaTVdJ15HR2RjW1JPaSZEPUttSztYPShyIXIwKkR1I1B0NGRNI3JQcGteWCVGOltmMyJQL0ZgOjJoJUhcXmcxTUteUHJGbUFOckIydWAhYnJ+PmVuZHN0cmVhbQplbmRvYmoKeHJlZgowIDEzCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDA2MSAwMDAwMCBuIAowMDAwMDAwMTAyIDAwMDAwIG4gCjAwMDAwMDAyMDkgMDAwMDAgbiAKMDAwMDAwMDMyMSAwMDAwMCBuIAowMDAwMDAwNTE2IDAwMDAwIG4gCjAwMDAwMDA3MzkgMDAwMDAgbiAKMDAwMDAwMDkzNCAwMDAwMCBuIAowMDAwMDAxMTU3IDAwMDAwIG4gCjAwMDAwMDEyMjYgMDAwMDAgbiAKMDAwMDAwMTUzNiAwMDAwMCBuIAowMDAwMDAxNjAyIDAwMDAwIG4gCjAwMDAwMDQ5MDUgMDAwMDAgbiAKdHJhaWxlcgo8PAovSUQgCls8YWMzNmFkODE3Y2IwYTczN2EwMzQ2NTIyNDgyYjU0NmY+PGFjMzZhZDgxN2NiMGE3MzdhMDM0NjUyMjQ4MmI1NDZmPl0KJSBSZXBvcnRMYWIgZ2VuZXJhdGVkIFBERiBkb2N1bWVudCAtLSBkaWdlc3QgKG9wZW5zb3VyY2UpCgovSW5mbyA5IDAgUgovUm9vdCA4IDAgUgovU2l6ZSAxMwo+PgpzdGFydHhyZWYKNjU1OAolJUVPRgo=" download="Monwelito_Bolandres_Resume.pdf">Download full resume (PDF) ↓</a>
+    </div>
+    <div class="resume-grid">
+      <div class="tl" id="experience">
+        <div class="tl-item rv">
+          <div class="tl-date">April 2023 – June 2025</div>
+          <h3>Researcher &amp; Support Specialist</h3>
+          <div class="tl-org">Straive (Remote) · Elsevier client</div>
+          <ul class="bul">
+            <li>Handled high-volume researcher and author queries by email and chat using Oracle Service Cloud.</li>
+            <li>Processed invoices, address revisions, discounts, split invoicing and currency changes in Salesforce CRM.</li>
+            <li>Processed refunds and reconciled accounts with Finance teams.</li>
+            <li>Administered article license changes and publication model changes in the Production Tracking System.</li>
+            <li>Produced ad hoc reports and data entry in Microsoft Excel.</li>
+          </ul>
+        </div>
+        <div class="tl-item rv">
+          <div class="tl-date">March 2016 – December 2021</div>
+          <h3>Team Leader</h3>
+          <div class="tl-org">SPI Global Technologies Inc., Dumaguete City</div>
+          <ul class="bul">
+            <li>Led a team handling publishing operations: journal orders, claims and client queries.</li>
+            <li>Monitored and reported team KPIs, productivity, quality metrics and attendance.</li>
+            <li>Ran coaching sessions, performance evaluations and new-hire training.</li>
+            <li>Managed workforce scheduling in Darwinbox and prepared billing reports and KPI scorecards.</li>
+            <li>Proposed and contributed to automating Corrective and Preventive Action (CAPA) reporting.</li>
+          </ul>
+        </div>
+        <div class="tl-item rv">
+          <div class="tl-date">2015 – 2016</div>
+          <h3>Customer Service Representative</h3>
+          <div class="tl-org">Inspiro · PLDT account, Dumaguete City</div>
+          <ul class="bul">
+            <li>Handled inbound billing, product and technical support inquiries.</li>
+            <li>Processed service applications and upsold relevant product offerings.</li>
+          </ul>
+        </div>
+        <div class="tl-item rv">
+          <div class="tl-date">2013 – 2015</div>
+          <h3>Customer Service Representative</h3>
+          <div class="tl-org">Qualfon Inc. · Straight Talk account, Dumaguete City</div>
+          <ul class="bul">
+            <li>Assisted international customers with account inquiries, airtime refills and troubleshooting.</li>
+            <li>Managed escalations under the Executive Resolution Department while maintaining quality metrics.</li>
+          </ul>
+        </div>
+        <div class="tl-item rv">
+          <div class="tl-date">2012 – 2013</div>
+          <h3>Administrative Clerk</h3>
+          <div class="tl-org">Diocos Law Office, Dumaguete City</div>
+          <ul class="bul">
+            <li>Managed legal documents, office files and permit processing with high accuracy.</li>
+            <li>Coordinated client communications on documentation timelines and deadlines.</li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="side">
+        <div class="side-card rv" id="skills">
+          <h4>Skills &amp; tools</h4>
+          <div class="sk-group"><b>Paid advertising</b><div class="sk-chips"><span>Meta Ads Manager</span><span>Lead generation</span><span>Audience targeting</span><span>A/B testing</span><span>Instant Forms</span><span>ABO / CBO</span></div></div>
+          <div class="sk-group"><b>Bookkeeping &amp; finance</b><div class="sk-chips"><span>QuickBooks</span><span>Manual ledger</span><span>Invoicing</span><span>Reconciliation</span><span>Excel reporting</span></div></div>
+          <div class="sk-group"><b>CRM &amp; support</b><div class="sk-chips"><span>Salesforce CRM</span><span>Oracle Service Cloud</span><span>Production Tracking System</span></div></div>
+          <div class="sk-group"><b>Office &amp; collaboration</b><div class="sk-chips"><span>Excel · Word · Outlook</span><span>Google Workspace</span><span>MS Teams</span><span>Trello</span><span>Darwinbox</span></div></div>
+        </div>
+        <div class="side-card rv" id="education">
+          <h4>Education &amp; certifications</h4>
+          <div class="edu-item"><b>BS Business Administration, Major in Financial Management</b><span>Foundation University, Dumaguete City · Graduate</span></div>
+          <div class="edu-item"><b>QuickBooks Bookkeeping</b><span>Certificate of Completion</span></div>
+        </div>
+        <div class="side-card dl-card rv">
+          <h4>Take it with you</h4>
+          <p>Download the full resume as a PDF to share with your team.</p>
+          <a class="btn btn-primary" href="data:application/pdf;base64,JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUgo+PgplbmRvYmoKMiAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYSAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjEgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iagozIDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhLUJvbGQgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YyIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKNCAwIG9iago8PAovQSA8PAovUyAvVVJJIC9UeXBlIC9BY3Rpb24gL1VSSSAoaHR0cHM6Ly9tb253ZWxpdG8uZ2l0aHViLmlvL21vbndlbGl0by1zaXRlLykKPj4gL0JvcmRlciBbIDAgMCAwIF0gL1JlY3QgWyAxMzcuODg1NSA3MDcuNDc1NCAyNzEuODgzMSA3MTguMDM1NCBdIC9TdWJ0eXBlIC9MaW5rIC9UeXBlIC9Bbm5vdAo+PgplbmRvYmoKNSAwIG9iago8PAovQW5ub3RzIFsgNCAwIFIgXSAvQ29udGVudHMgMTEgMCBSIC9NZWRpYUJveCBbIDAgMCA1OTUuMjc1NiA4NDEuODg5OCBdIC9QYXJlbnQgMTAgMCBSIC9SZXNvdXJjZXMgPDwKL0ZvbnQgMSAwIFIgL1Byb2NTZXQgWyAvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJIF0KPj4gL1JvdGF0ZSAwIAogIC9UcmFucyA8PAoKPj4gL1R5cGUgL1BhZ2UKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL0EgPDwKL1MgL1VSSSAvVHlwZSAvQWN0aW9uIC9VUkkgKGh0dHBzOi8vbW9ud2VsaXRvLmdpdGh1Yi5pby9tb253ZWxpdG8tc2l0ZS8pCj4+IC9Cb3JkZXIgWyAwIDAgMCBdIC9SZWN0IFsgMjAwLjI4MjMgNDk5LjM5NTQgMzQwLjM3MDcgNTEwLjQzNTQgXSAvU3VidHlwZSAvTGluayAvVHlwZSAvQW5ub3QKPj4KZW5kb2JqCjcgMCBvYmoKPDwKL0Fubm90cyBbIDYgMCBSIF0gL0NvbnRlbnRzIDEyIDAgUiAvTWVkaWFCb3ggWyAwIDAgNTk1LjI3NTYgODQxLjg4OTggXSAvUGFyZW50IDEwIDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAKICAvVHJhbnMgPDwKCj4+IC9UeXBlIC9QYWdlCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9QYWdlTW9kZSAvVXNlTm9uZSAvUGFnZXMgMTAgMCBSIC9UeXBlIC9DYXRhbG9nCj4+CmVuZG9iago5IDAgb2JqCjw8Ci9BdXRob3IgKE1vbndlbGl0byBBLiBCb2xhbmRyZXMpIC9DcmVhdGlvbkRhdGUgKEQ6MjAyNjEwMTYxMTQ0NDQrMDgnMDAnKSAvQ3JlYXRvciAoXCh1bnNwZWNpZmllZFwpKSAvS2V5d29yZHMgKCkgL01vZERhdGUgKEQ6MjAyNjEwMTYxMTQ0NDQrMDgnMDAnKSAvUHJvZHVjZXIgKFJlcG9ydExhYiBQREYgTGlicmFyeSAtIFwob3BlbnNvdXJjZVwpKSAKICAvU3ViamVjdCAoXCh1bnNwZWNpZmllZFwpKSAvVGl0bGUgKE1vbndlbGl0byBBLiBCb2xhbmRyZXMgXDIwNCBSZXN1bWUpIC9UcmFwcGVkIC9GYWxzZQo+PgplbmRvYmoKMTAgMCBvYmoKPDwKL0NvdW50IDIgL0tpZHMgWyA1IDAgUiA3IDAgUiBdIC9UeXBlIC9QYWdlcwo+PgplbmRvYmoKMTEgMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggMzIxMQo+PgpzdHJlYW0KR2IiLyk+QmVkbCZxODAxVzJDVWpAcT1ESDQ+IlE0Ykpeamk0KG1ecl5HSmdqKkQ6LkEkXWF1NURjTzdsS09ZRUgtRjgwUmpJRmtZXi9UTidxbDE+PDlgL1wqSXRKVHJDXlInVigwRUlnaz90aVQkZSVgYzo+XkpIQjM7VihxKXBGZTo9alY+MEtjZ1dnNW1yRC0jMHBAbyppN2txOz1UXkBLK0hebnUuVC1kOTQwUitOKmE5U3I7Py9lKjVPRHJxK0VAUV1Bb1Q8W2okb3BkV1RzRy88a1xjYSgrdDlPaGFBYWxKIkMsKyRZOGkoUVRrI3VkRHJndEAsXWkwR3JTPTxDckknckphbTlqXmBccUVQU1tGV0NfYlNvJmBJLms0MVFSOW1APF0zbmFUZ0crKzFDdT1aaj9EV2x0XSY5IVppVkJFclJtKFEyOVFkP049ZVRDVlstU14zbDw7QDdocFBTL29eUmQsLT1WW2RTUjBzSS1sbF9IUF1lSWRWOnE6Jz4+U3BTYkxZVl4rV28xYkdjNnAsZ1ZXR3NaMnRrS2RNP11JbTE5Z1cqVCMlXiM1cDYucE1lNVcjYlFAWTtqSWZaXmd0Q2RfJzUkJylZLFs1bipgOERNLkU7JSRtTk5PKixcZz1OZ0UwXUxPOG1FRV89NzlPRHQrKCVGYVI5I25fJS9uMCYiajZBc1JZLywxaU5hWWo/aERxR0MiUm9JdW5GSCpILz0ocjdbclFaVVlUUD5pbmJubUEnaSRLYT09RUZWUjkrZCFxV2VjXDRGR3FhKWJsNGwnUj4/ZWVgcTs5c2IjWDZqLDJEZHRcT3FFPUJYRTZdKlUkcS1SLThSVm08LyZNcCYuT1xXTlMycSwkdSpBNmNkYVE9Wls5V3JyTVJBOk41NDBKX3JPPyVec2BrWzc/QHM8a2E1JixGPyhhaGNwUjtQTDdXdHJ0NltZXSI3MGZzNEQmYUwocUFcZTVCQ15XV3VmJGdURmVWWEE7QClTJDRgN2MkLF1Ib3BZJV9ROiQtbWI6YCg4PjVrMWZrRTBdJGIiWzI6aCwoPjkkVCdQKihgRF9bLThNbCRBMz9OIVRec1pyRWdDO1smcy41bVMzV19MLFYpbkdSSEVlNVM/bD1nYTQiaVI8a25jWTVoX1VzMWY9LVA7dXRaVSdmM0w1OEhHYWA3TjxGIS9lU2NbLmgjKyghcTBdXmpmLTEwcCRGO14pOVkicFs2RUsuK0QocVdiOD5wbkpcaCpnWkgiTlowaFNySkFcYlc1RSpGTystWXAtXG1YblBYTS0iPixlOV0pJSNWOTZQMWAlJVBvRlYtP2oyNDtQXCRNU1gqYDZKZEtsJ2tEVy1IKiRCQmIkMlwvKWhNMz08NDdCMD0/Zk5EUz8+OU1yQm9wPm8+dCNxVD1pXmtHO3IiX24wQVswIVInPV1qVSFsQDpPQSNqcyxyQWFQJC9STDoxIiYyPjVxWldZNVMlXlNYaTY1c2NiSlA+QmZvNDlEMGBLSiJkbkItUUIkX0ZBJjtNNihQTGtJWzkjb1xPXSUpOFBFOSVRbnNQayVyPXF1a0FdbzMraiZILUlGNilGPjJqSCEhSkVGYXBjQypOLy9IWUUlO1BjJDBNWGNfSlwsYVdbIj8oZEM1PDwqY0Q7Rj5oOzdYOkQ2NmE5KFFeVVpcK2tIc04oVWhxNHNRbExVWE1idUVUNDdcKEtBWigjJCxHIlhBPFNjQVBdRjZLN3I0cmQ/Z1BMOSckU1VkSCIlKGtoTWMtKWBrNkQqI0JCVyRPMV0iJmlBcWJ0X1AnPEtuKFVbLnBQQCg8aUBSYUFBTG4pMEdvPCU7K2ppVD44L0Q7QT9jJV1IYVpmPUc+alZqS0xjLSFBTz9dam84JVBWJSRKVllmPylhUmgkPUJwQShYN2NQQiY5OjZeMmpDOiFRaGBsdFkzYyYwP1dvRzsqMyJBdGJxOikoW1FCTygubVJMdDljKVhcWy0jNHEyUSY4TCgwK3BfTD06aU9URjZbcSNITzFkdEBzIV9WOzg5K0RBIkktJSUkaTxnITZZVUBYL2BFSFRIZj1dRlY1LHNnYWU+aDVVJVZEWjNkQnRSPWAiNF1uRFBhLC1Ocz04dUg7VS9QRzUzQ0pcJFlwR0k+Qis4M1RvNyFZWmEiR1ZkYyRQWiRUOltqM08lbENfKW9UJiheUiFkOC0wQDJVZlZNY1dpR19II2QvbjRAQ1FYLi5WayhyUj5aZUApYm5mKy0+VFlbWDdiV1NIZzREK2lbXT1jN1JtVFRScVMoIzQsYm90QVFYRk00JCFLMidiLDdZVCorOExYLz1sYlZRVEZVRiI+ZyRvR0w/IUczX2djMCEqPVpBVVYlI19aQHRnUGpOX0g/N3M0SVFOY1lObCswRj8wO1QtJyNtOV4+WFw3Ljh1bDAhcVgzTkNFTSc5WmxkODFHNz06VEA7P15TUCJjbEwtdCRMRzMvKmswPFw/XU9YYldfY2MuOVsmNmYkNC5PKSlrZ1ZGKktwPk5KKWlVa051akNyT05mXkVhPSlFbFVMcCxabmw8OyViYGhdW0h1LFRwWWIzQUY6J04zPENvV1M+RGpoV0siWTRsNS1aJUNtRytUYTxVZERwcT9jTGdxX0E6JUoiUy0jO2k9LWdlOXVwKDNPIVojJFVUPDVfYS1DRzJEL00mI2hhVk8vSShUdXBkOiNiNEA1bEZVSEdFW1ttTktHdUppZltgY0FcZVxELiNFXlJTIi5DW1ptMj4mVUsmakE5VUVPZlY3KlJeImoiLiE/O01OUSJaLEthIktNWjM6VVomRTAkOFo+KlxuV2dMLCMrMSc0OygnKEp1XUwlS09LTGlLU0E+JT9RQjMuajFbNnRmbW0iYGVSZm5gTyVcVyhsKW41JCRGbFAtKjdBIlBBblJHaD1UMitIXDlcIlxiNUYiYG5zJjV1LTIhQC9QKyt1KihKMlZebFFRRU5edEJlV1RSTzhPI09VaksnPWRqW005LGxQVC5gMklGQz5jW1o5J1omLzU0UisjQyMnIy1iJ2VvWEpbK1w3X0N0K0wqV1FkRD9CYyVFPkhFPDtUdUVoJ2U9RS8vNDFbYVYnJCJOQ2k+PGloaFkyUzE1JTgsK3JRVkU/RTR1IkNodGonVk42RGpRKFlDUFNFRFUoKnE4QSlEN15hSkhAPm5nRW9ubCVwN1o8Q2ZsM0w6bEFEdVYuYj1UQzxHLXE2WXJbbCVvOUYoW0N0JXJ0RUJgT2RPKFhqVkVFMnJRVmVwPGdnMF5NMFpeU29iZCtBQUpNV0JeYmZdPDdaNnEyMl9WLmMocmBYLy5PMGo+PlNhLyJVam9gMSdCYnJtLSxtUyN0SVVCJWojZlsobC5SXiJlYGQkckdWOCwrUWxQX1JDO1YrLVA5aCtZYUpQZmZ0TD1pXywxKlRzUDlNQ1kqTj5jTDJuYXEhTT4/NFFFZ2hpQD9lPlwyU0dxU0xAT1dTcitQIVkjN1RGLlMlYVE0QUpdbEZudVsocGRjJWcxT00iMWBeOmo2TVIhPEttIWB1RVBgZ085OUpkayVXSTZgayQrW14lbDFpTSxjVmo8UVMvbHA9byc4KFJKYTVGQCVfUXBFZzJ1SmU7QGo4VG9tYzhPRTpJQDxxZCcvZTxTOCM1WD4kc3JdTWMyLzRhNzoxMWs4VjIzOj9yIiNaTEBLc3NUXDBhSChHXjg8KUY+bChwWGo7c2ZCNCw6VlZWW14ncVlBOGJ0PSZdRG5MJmJUalguIy8qP1ZzYWNqRCUwWUc4NDstO2UoJFFXWFpyZGxmZjxcZVtAKjRnVDElNzxtKlI6bWxPLklQdDdgaEddLDddVlxPZF9vNiZVU3Aybic4cXBuWmY1SDEkTTdXNCNCZj1AV1ksM0BRYlVgOlNvUlRkQlgoPE8kUCoqPlFbcVtJLnRaQSRLRW42ZGJfQCJVcWItcnE1MXFiblBFLjcpKlFfJy51X2o6OTtrMFpFZUojal9MTmlnQ2VGZTJiRENiO2w7cDtoVDReKjpYMihlL1YqYmQ7PkYmZUFRMS5iW0pZZ3FuSl5XSE4kQ1hCLD9lRGBkJ1leZG1xLTtqWE9ndXJhUTM6VilPWkxPNlpDRFNMQDZgI3FXNW9cMk1BUVVWZVdZLSdFTUUvWXRTNm5HNTI2XUhLTmk8bFhIbCQ1bTUkYFBBNDlhNykvJCQ6UW5uKilmSicuKiI+JlpXdDNER1pdaVo2XUEqJ2Y/RWs5QHQwQEJdX2E/RlQuUEJ+PmVuZHN0cmVhbQplbmRvYmoKMTIgMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggMTU2MQo+PgpzdHJlYW0KR2IhI1w5MmpTOSZBSWBkcVFzZzNjQ2MmZ3BQJy4mSD1MRiI5J3E+VStIPVZLOGBQYVQjbGZAIyxbMU5aKV9Yc2QoOTBXXz5NV1k5cj5cYj9uPF9eVWlzXTwsXzklSzdBSiErOzNsSFNfIXBAdFlwRU4hQkZoSj9CaXMxVD1KW2VIZzEha2lSXVJKVEU/LEQhQCFzYzJgcTFrYDEuXEY0Pz0xRC1yQ21UaGNeQCMqSGE7Rm8jWFk7R0Q6bkZpOjM0Oz1ELU8+NzVgMiw7YCY3czUjOyMta1dBWj1VUF5kK19ZOlVETU1ET0JTaD5rM1JLRnB1YldMY3VZSzxzWkI7a2I7QSdbX1dJbEVVYVs0aCcxZDRYaGFaVVg4XVUwPTddbk9dV2RcOnFMVXEhUE47dUxGK0AqNW5MWTdXbzlmIVYpXC0lWilqYTtoQ291LEQuWFMnYi0/RT1TUls8UzJeYj9OInJlNCFOYl1fQDtlIWYtSz4tcHQqQSIsZU1KbktSXCRVYTpAMiQtQ0NhIjRtOUBFXGhkWkleM19eNkVAZT8jPHRyazByb2BIbGBRdUc6JD1rJENMPFFSKk9rTSg0QTBDMTs5XFRNLzo8KUJlKj0sNWpmUi9pM0VqUCVQRDtJSkI8OF8iQD90c0BxJEtlWm5eXywmYkt0Pm4oMmVYZzpvISo2TVYjVitecHFDXERUQG9HNjRhR24uWktNPS4uLlFVKD05ZCE5USZVM2wjY2RWOWtWXUBCITZYTUYtRzVHYS47MWdyW01VbjJSUi1PLlhLNyo4KEB0cmA5ZEJRLXRONUgmNEFyV0M2Sig8YHJKYjE8KjNoR2xdQzVSQWxmRC41VTwrcTIxUy5uPiplUWEqbTVyZ3UjVDhSOyRkL1JWblNOJEBIcVpyOU1PTkdXTEUva09FKDxnQlJhKjYmVTc7J29zZDhwVTJEcnJGc2Y4MU40cSRcL3BOME9NWWgnSVpOMidyVnJTN3E7STNxW3Q4PU9cRStyT29VLHIsUEMha1BQVThRJjEtcTxxSS0qRVcxLlg+ND9BT2NeQmk3MnA4QGY+bF1JNWYmY3EqQzBsZmBGRTRXK2EsRSpGVXI7PTs7NEpTMzJDZWpYQSVENnJuXTk0ODZuXSJdJWpCaEoiLihoJSU+WiQ7YXRCQitkOkVFMS1VaEI1KTgxUy5cIzwpUzo9bGFnISRMZkdNPjwmUzxwbDZRTENBY0E/NV1VS3JpMzFRTXRvYF5MNlgtUURUYkk6JkdSbGxAZSk5M0xSPHVTXCI+NDk/QzQoVG1MLU0yclRZZXNGPzhLVFJtOHVmQ3Usc20wMCc+PCd0OzJQZCJIQyolR2snLitlMkxBNmQyTi1gYmBgYSpsP0VPTGpnW3IvKW1OdDZfNUBUYkxRV2ZjTFRdOklxSG9dM0I4MnFBJDJJNjknRjUyUCNZWT8/aDxMSTxCbTMlJlhMSyFfN1c8TDlJOiM2W1peKDF0SVorPE5GUj5URFhmcHJbZCFoWDJeZHJ0UV8ucTFcQUMhKEBaWHBdN1wwN1FGJzA0a2IlRE9QKDI3QEddSlEwVXIuaGw3Yl8ra1hDKFxZN09rMVRzTnJBalVaUms0V2VROFUwck9HVClSPj9hKVslY2BhLDZCXF9EMzBpSGlDLWYvYl1XTWxTZXMwLSJLSkIpalg8PmxaOVIpUVQmP2ppLFglJyUwXDBFbFFaJC50L1Q5RDxHN0lEWmp0V1ltLHJSc0htWWJYU3JFNGA2VVg2aGc1OFdxKXFkcEdLdHVkMDh0I1MlRXVmRTtRR1Y7VzFyayVuKj1McHB0dUNdMD5TRnJFSWp0azZWSU44UjJ1bTFzPSh0bSUpIzNCO2krSS5YImtUMUkpa2ssPWYwcVFDJChkQkpjOT1WdSlqKU09Vlw4aFswN0FyYHJcVkwsITRgW083WilsPC9xZDJEV1k3KVtpaidCXGImaTVdJ15HR2RjW1JPaSZEPUttSztYPShyIXIwKkR1I1B0NGRNI3JQcGteWCVGOltmMyJQL0ZgOjJoJUhcXmcxTUteUHJGbUFOckIydWAhYnJ+PmVuZHN0cmVhbQplbmRvYmoKeHJlZgowIDEzCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDA2MSAwMDAwMCBuIAowMDAwMDAwMTAyIDAwMDAwIG4gCjAwMDAwMDAyMDkgMDAwMDAgbiAKMDAwMDAwMDMyMSAwMDAwMCBuIAowMDAwMDAwNTE2IDAwMDAwIG4gCjAwMDAwMDA3MzkgMDAwMDAgbiAKMDAwMDAwMDkzNCAwMDAwMCBuIAowMDAwMDAxMTU3IDAwMDAwIG4gCjAwMDAwMDEyMjYgMDAwMDAgbiAKMDAwMDAwMTUzNiAwMDAwMCBuIAowMDAwMDAxNjAyIDAwMDAwIG4gCjAwMDAwMDQ5MDUgMDAwMDAgbiAKdHJhaWxlcgo8PAovSUQgCls8YWMzNmFkODE3Y2IwYTczN2EwMzQ2NTIyNDgyYjU0NmY+PGFjMzZhZDgxN2NiMGE3MzdhMDM0NjUyMjQ4MmI1NDZmPl0KJSBSZXBvcnRMYWIgZ2VuZXJhdGVkIFBERiBkb2N1bWVudCAtLSBkaWdlc3QgKG9wZW5zb3VyY2UpCgovSW5mbyA5IDAgUgovUm9vdCA4IDAgUgovU2l6ZSAxMwo+PgpzdGFydHhyZWYKNjU1OAolJUVPRgo=" download="Monwelito_Bolandres_Resume.pdf">Download resume (PDF) ↓</a>
+        </div>
+      </aside>
     </div>
   </div>
 </section>
@@ -695,10 +858,12 @@ footer{padding:40px 0 48px}
     </div>
     <div class="faq-list">
       <div class="faq rv"><button type="button" aria-expanded="false">Do I need a big ad budget to start?<span class="pm">+</span></button><div class="ans"><div><p>No. I start with a small, controlled test budget (the dental clinic campaign above began at just ₱100/day) to find what works before putting more money behind it.</p></div></div></div>
-      <div class="faq rv"><button type="button" aria-expanded="false">How quickly will I see leads?<span class="pm">+</span></button><div class="ans"><div><p>Once a campaign is live, leads can start coming in within the first few days of testing. Results vary by business, offer, and audience, which is why we begin with a short test window and review the numbers together.</p></div></div></div>
-      <div class="faq rv"><button type="button" aria-expanded="false">What kinds of businesses do you work with?<span class="pm">+</span></button><div class="ans"><div><p>Mostly dental clinics, coaches and consultants, insurance agents, local businesses, international businesses, and on-demand or digital services. If you need a steady flow of qualified leads, we can talk.</p></div></div></div>
-      <div class="faq rv"><button type="button" aria-expanded="false">What happens on the free strategy call?<span class="pm">+</span></button><div class="ans"><div><p>A relaxed 20-minute online call. I review your current ads or lead flow, share the audience and offer I'd test first, and outline a realistic starting budget and test plan. You get honest advice, even if we're not the right fit.</p></div></div></div>
-      <div class="faq rv"><button type="button" aria-expanded="false">Will I understand what my money is doing?<span class="pm">+</span></button><div class="ans"><div><p>Yes. Reporting is clear and jargon-free, so you always see your cost per lead, cost per booking, and return on ad spend, with every peso tracked to a result.</p></div></div></div>
+      <div class="faq rv"><button type="button" aria-expanded="false">How quickly will I see leads?<span class="pm">+</span></button><div class="ans"><div><p>Once a campaign is live, leads can start coming in within the first few days of testing. Results vary by business, offer and audience, which is why we begin with a short test window and review the numbers together.</p></div></div></div>
+      <div class="faq rv"><button type="button" aria-expanded="false">What services do you offer?<span class="pm">+</span></button><div class="ans"><div><p>Meta Ads and lead generation, bookkeeping (in QuickBooks or through manual processes), client support and CRM management, and operations support such as KPI reporting and team coaching. You can hire me for one service or combine them.</p></div></div></div>
+      <div class="faq rv"><button type="button" aria-expanded="false">Can you do bookkeeping if I don't use QuickBooks?<span class="pm">+</span></button><div class="ans"><div><p>Yes. I'm QuickBooks-certified, but I can also keep clean records through a manual process, such as a ledger and spreadsheet, whichever suits your business and your budget.</p></div></div></div>
+      <div class="faq rv"><button type="button" aria-expanded="false">What kinds of businesses do you work with?<span class="pm">+</span></button><div class="ans"><div><p>Mostly dental clinics, coaches and consultants, insurance agents, local businesses, international businesses, and on-demand or digital services. If you need a steady flow of leads or dependable back-office support, we can talk.</p></div></div></div>
+      <div class="faq rv"><button type="button" aria-expanded="false">What happens on the free strategy call?<span class="pm">+</span></button><div class="ans"><div><p>A relaxed 20-minute online call. I review your current ads, books or support flow, share what I'd tackle first, and outline a realistic scope and starting budget. You get honest advice, even if we're not the right fit.</p></div></div></div>
+      <div class="faq rv"><button type="button" aria-expanded="false">Will I understand what my money is doing?<span class="pm">+</span></button><div class="ans"><div><p>Yes. Reporting is clear and jargon-free. For ads you see cost per lead, cost per booking and return on ad spend, and for bookkeeping you get organized records and simple summaries, with every peso tracked to a result.</p></div></div></div>
     </div>
   </div>
 </section>
@@ -708,17 +873,17 @@ footer{padding:40px 0 48px}
   <div class="wrap">
     <div class="final-box rv">
       <div>
-        <h2>Ready to turn ad spend into booked appointments?</h2>
-        <p>Book a free 20-minute strategy call. No pressure, just a look at what's possible for your business.</p>
+        <h2>Ready for more leads and less busywork?</h2>
+        <p>Book a free 20-minute call. Tell me where you need help, whether that's ads, bookkeeping or customer support, and I'll share how I'd approach it.</p>
         <a class="btn btn-primary" href="https://calendly.com/monbolandres-metaads/new-meeting" target="_blank" rel="noopener">Book My Free Strategy Call →</a>
         <div class="mail">Prefer email? <a href="mailto:monbolandres.onlinejob@gmail.com">monbolandres.onlinejob@gmail.com</a></div>
       </div>
       <div class="get">
         <h4>On your free call, you'll get</h4>
         <ul>
-          <li><span class="tick">✓</span>A quick review of your current ads or lead flow</li>
-          <li><span class="tick">✓</span>The audience and offer I'd test first for your business</li>
-          <li><span class="tick">✓</span>A realistic starting budget and test plan</li>
+          <li><span class="tick">✓</span>A quick review of your current ads, books or support flow</li>
+          <li><span class="tick">✓</span>The first area I'd tackle for your business, and why</li>
+          <li><span class="tick">✓</span>A realistic scope, budget and starting plan</li>
           <li><span class="tick">✓</span>Honest advice, even if we're not the right fit</li>
         </ul>
       </div>
@@ -730,9 +895,10 @@ footer{padding:40px 0 48px}
 
 <footer>
   <div class="wrap foot">
-    <div><b style="color:var(--ink)">Monwelito Bolandres</b><br>Meta Ads &amp; lead generation</div>
+    <div><b style="color:var(--ink)">Monwelito Bolandres</b><br>Meta Ads, bookkeeping &amp; client support</div>
     <div class="links">
       <a href="mailto:monbolandres.onlinejob@gmail.com">monbolandres.onlinejob@gmail.com</a>
+      <a href="data:application/pdf;base64,JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUgo+PgplbmRvYmoKMiAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYSAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjEgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iagozIDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhLUJvbGQgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YyIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKNCAwIG9iago8PAovQSA8PAovUyAvVVJJIC9UeXBlIC9BY3Rpb24gL1VSSSAoaHR0cHM6Ly9tb253ZWxpdG8uZ2l0aHViLmlvL21vbndlbGl0by1zaXRlLykKPj4gL0JvcmRlciBbIDAgMCAwIF0gL1JlY3QgWyAxMzcuODg1NSA3MDcuNDc1NCAyNzEuODgzMSA3MTguMDM1NCBdIC9TdWJ0eXBlIC9MaW5rIC9UeXBlIC9Bbm5vdAo+PgplbmRvYmoKNSAwIG9iago8PAovQW5ub3RzIFsgNCAwIFIgXSAvQ29udGVudHMgMTEgMCBSIC9NZWRpYUJveCBbIDAgMCA1OTUuMjc1NiA4NDEuODg5OCBdIC9QYXJlbnQgMTAgMCBSIC9SZXNvdXJjZXMgPDwKL0ZvbnQgMSAwIFIgL1Byb2NTZXQgWyAvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJIF0KPj4gL1JvdGF0ZSAwIAogIC9UcmFucyA8PAoKPj4gL1R5cGUgL1BhZ2UKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL0EgPDwKL1MgL1VSSSAvVHlwZSAvQWN0aW9uIC9VUkkgKGh0dHBzOi8vbW9ud2VsaXRvLmdpdGh1Yi5pby9tb253ZWxpdG8tc2l0ZS8pCj4+IC9Cb3JkZXIgWyAwIDAgMCBdIC9SZWN0IFsgMjAwLjI4MjMgNDk5LjM5NTQgMzQwLjM3MDcgNTEwLjQzNTQgXSAvU3VidHlwZSAvTGluayAvVHlwZSAvQW5ub3QKPj4KZW5kb2JqCjcgMCBvYmoKPDwKL0Fubm90cyBbIDYgMCBSIF0gL0NvbnRlbnRzIDEyIDAgUiAvTWVkaWFCb3ggWyAwIDAgNTk1LjI3NTYgODQxLjg4OTggXSAvUGFyZW50IDEwIDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAKICAvVHJhbnMgPDwKCj4+IC9UeXBlIC9QYWdlCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9QYWdlTW9kZSAvVXNlTm9uZSAvUGFnZXMgMTAgMCBSIC9UeXBlIC9DYXRhbG9nCj4+CmVuZG9iago5IDAgb2JqCjw8Ci9BdXRob3IgKE1vbndlbGl0byBBLiBCb2xhbmRyZXMpIC9DcmVhdGlvbkRhdGUgKEQ6MjAyNjEwMTYxMTQ0NDQrMDgnMDAnKSAvQ3JlYXRvciAoXCh1bnNwZWNpZmllZFwpKSAvS2V5d29yZHMgKCkgL01vZERhdGUgKEQ6MjAyNjEwMTYxMTQ0NDQrMDgnMDAnKSAvUHJvZHVjZXIgKFJlcG9ydExhYiBQREYgTGlicmFyeSAtIFwob3BlbnNvdXJjZVwpKSAKICAvU3ViamVjdCAoXCh1bnNwZWNpZmllZFwpKSAvVGl0bGUgKE1vbndlbGl0byBBLiBCb2xhbmRyZXMgXDIwNCBSZXN1bWUpIC9UcmFwcGVkIC9GYWxzZQo+PgplbmRvYmoKMTAgMCBvYmoKPDwKL0NvdW50IDIgL0tpZHMgWyA1IDAgUiA3IDAgUiBdIC9UeXBlIC9QYWdlcwo+PgplbmRvYmoKMTEgMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggMzIxMQo+PgpzdHJlYW0KR2IiLyk+QmVkbCZxODAxVzJDVWpAcT1ESDQ+IlE0Ykpeamk0KG1ecl5HSmdqKkQ6LkEkXWF1NURjTzdsS09ZRUgtRjgwUmpJRmtZXi9UTidxbDE+PDlgL1wqSXRKVHJDXlInVigwRUlnaz90aVQkZSVgYzo+XkpIQjM7VihxKXBGZTo9alY+MEtjZ1dnNW1yRC0jMHBAbyppN2txOz1UXkBLK0hebnUuVC1kOTQwUitOKmE5U3I7Py9lKjVPRHJxK0VAUV1Bb1Q8W2okb3BkV1RzRy88a1xjYSgrdDlPaGFBYWxKIkMsKyRZOGkoUVRrI3VkRHJndEAsXWkwR3JTPTxDckknckphbTlqXmBccUVQU1tGV0NfYlNvJmBJLms0MVFSOW1APF0zbmFUZ0crKzFDdT1aaj9EV2x0XSY5IVppVkJFclJtKFEyOVFkP049ZVRDVlstU14zbDw7QDdocFBTL29eUmQsLT1WW2RTUjBzSS1sbF9IUF1lSWRWOnE6Jz4+U3BTYkxZVl4rV28xYkdjNnAsZ1ZXR3NaMnRrS2RNP11JbTE5Z1cqVCMlXiM1cDYucE1lNVcjYlFAWTtqSWZaXmd0Q2RfJzUkJylZLFs1bipgOERNLkU7JSRtTk5PKixcZz1OZ0UwXUxPOG1FRV89NzlPRHQrKCVGYVI5I25fJS9uMCYiajZBc1JZLywxaU5hWWo/aERxR0MiUm9JdW5GSCpILz0ocjdbclFaVVlUUD5pbmJubUEnaSRLYT09RUZWUjkrZCFxV2VjXDRGR3FhKWJsNGwnUj4/ZWVgcTs5c2IjWDZqLDJEZHRcT3FFPUJYRTZdKlUkcS1SLThSVm08LyZNcCYuT1xXTlMycSwkdSpBNmNkYVE9Wls5V3JyTVJBOk41NDBKX3JPPyVec2BrWzc/QHM8a2E1JixGPyhhaGNwUjtQTDdXdHJ0NltZXSI3MGZzNEQmYUwocUFcZTVCQ15XV3VmJGdURmVWWEE7QClTJDRgN2MkLF1Ib3BZJV9ROiQtbWI6YCg4PjVrMWZrRTBdJGIiWzI6aCwoPjkkVCdQKihgRF9bLThNbCRBMz9OIVRec1pyRWdDO1smcy41bVMzV19MLFYpbkdSSEVlNVM/bD1nYTQiaVI8a25jWTVoX1VzMWY9LVA7dXRaVSdmM0w1OEhHYWA3TjxGIS9lU2NbLmgjKyghcTBdXmpmLTEwcCRGO14pOVkicFs2RUsuK0QocVdiOD5wbkpcaCpnWkgiTlowaFNySkFcYlc1RSpGTystWXAtXG1YblBYTS0iPixlOV0pJSNWOTZQMWAlJVBvRlYtP2oyNDtQXCRNU1gqYDZKZEtsJ2tEVy1IKiRCQmIkMlwvKWhNMz08NDdCMD0/Zk5EUz8+OU1yQm9wPm8+dCNxVD1pXmtHO3IiX24wQVswIVInPV1qVSFsQDpPQSNqcyxyQWFQJC9STDoxIiYyPjVxWldZNVMlXlNYaTY1c2NiSlA+QmZvNDlEMGBLSiJkbkItUUIkX0ZBJjtNNihQTGtJWzkjb1xPXSUpOFBFOSVRbnNQayVyPXF1a0FdbzMraiZILUlGNilGPjJqSCEhSkVGYXBjQypOLy9IWUUlO1BjJDBNWGNfSlwsYVdbIj8oZEM1PDwqY0Q7Rj5oOzdYOkQ2NmE5KFFeVVpcK2tIc04oVWhxNHNRbExVWE1idUVUNDdcKEtBWigjJCxHIlhBPFNjQVBdRjZLN3I0cmQ/Z1BMOSckU1VkSCIlKGtoTWMtKWBrNkQqI0JCVyRPMV0iJmlBcWJ0X1AnPEtuKFVbLnBQQCg8aUBSYUFBTG4pMEdvPCU7K2ppVD44L0Q7QT9jJV1IYVpmPUc+alZqS0xjLSFBTz9dam84JVBWJSRKVllmPylhUmgkPUJwQShYN2NQQiY5OjZeMmpDOiFRaGBsdFkzYyYwP1dvRzsqMyJBdGJxOikoW1FCTygubVJMdDljKVhcWy0jNHEyUSY4TCgwK3BfTD06aU9URjZbcSNITzFkdEBzIV9WOzg5K0RBIkktJSUkaTxnITZZVUBYL2BFSFRIZj1dRlY1LHNnYWU+aDVVJVZEWjNkQnRSPWAiNF1uRFBhLC1Ocz04dUg7VS9QRzUzQ0pcJFlwR0k+Qis4M1RvNyFZWmEiR1ZkYyRQWiRUOltqM08lbENfKW9UJiheUiFkOC0wQDJVZlZNY1dpR19II2QvbjRAQ1FYLi5WayhyUj5aZUApYm5mKy0+VFlbWDdiV1NIZzREK2lbXT1jN1JtVFRScVMoIzQsYm90QVFYRk00JCFLMidiLDdZVCorOExYLz1sYlZRVEZVRiI+ZyRvR0w/IUczX2djMCEqPVpBVVYlI19aQHRnUGpOX0g/N3M0SVFOY1lObCswRj8wO1QtJyNtOV4+WFw3Ljh1bDAhcVgzTkNFTSc5WmxkODFHNz06VEA7P15TUCJjbEwtdCRMRzMvKmswPFw/XU9YYldfY2MuOVsmNmYkNC5PKSlrZ1ZGKktwPk5KKWlVa051akNyT05mXkVhPSlFbFVMcCxabmw8OyViYGhdW0h1LFRwWWIzQUY6J04zPENvV1M+RGpoV0siWTRsNS1aJUNtRytUYTxVZERwcT9jTGdxX0E6JUoiUy0jO2k9LWdlOXVwKDNPIVojJFVUPDVfYS1DRzJEL00mI2hhVk8vSShUdXBkOiNiNEA1bEZVSEdFW1ttTktHdUppZltgY0FcZVxELiNFXlJTIi5DW1ptMj4mVUsmakE5VUVPZlY3KlJeImoiLiE/O01OUSJaLEthIktNWjM6VVomRTAkOFo+KlxuV2dMLCMrMSc0OygnKEp1XUwlS09LTGlLU0E+JT9RQjMuajFbNnRmbW0iYGVSZm5gTyVcVyhsKW41JCRGbFAtKjdBIlBBblJHaD1UMitIXDlcIlxiNUYiYG5zJjV1LTIhQC9QKyt1KihKMlZebFFRRU5edEJlV1RSTzhPI09VaksnPWRqW005LGxQVC5gMklGQz5jW1o5J1omLzU0UisjQyMnIy1iJ2VvWEpbK1w3X0N0K0wqV1FkRD9CYyVFPkhFPDtUdUVoJ2U9RS8vNDFbYVYnJCJOQ2k+PGloaFkyUzE1JTgsK3JRVkU/RTR1IkNodGonVk42RGpRKFlDUFNFRFUoKnE4QSlEN15hSkhAPm5nRW9ubCVwN1o8Q2ZsM0w6bEFEdVYuYj1UQzxHLXE2WXJbbCVvOUYoW0N0JXJ0RUJgT2RPKFhqVkVFMnJRVmVwPGdnMF5NMFpeU29iZCtBQUpNV0JeYmZdPDdaNnEyMl9WLmMocmBYLy5PMGo+PlNhLyJVam9gMSdCYnJtLSxtUyN0SVVCJWojZlsobC5SXiJlYGQkckdWOCwrUWxQX1JDO1YrLVA5aCtZYUpQZmZ0TD1pXywxKlRzUDlNQ1kqTj5jTDJuYXEhTT4/NFFFZ2hpQD9lPlwyU0dxU0xAT1dTcitQIVkjN1RGLlMlYVE0QUpdbEZudVsocGRjJWcxT00iMWBeOmo2TVIhPEttIWB1RVBgZ085OUpkayVXSTZgayQrW14lbDFpTSxjVmo8UVMvbHA9byc4KFJKYTVGQCVfUXBFZzJ1SmU7QGo4VG9tYzhPRTpJQDxxZCcvZTxTOCM1WD4kc3JdTWMyLzRhNzoxMWs4VjIzOj9yIiNaTEBLc3NUXDBhSChHXjg8KUY+bChwWGo7c2ZCNCw6VlZWW14ncVlBOGJ0PSZdRG5MJmJUalguIy8qP1ZzYWNqRCUwWUc4NDstO2UoJFFXWFpyZGxmZjxcZVtAKjRnVDElNzxtKlI6bWxPLklQdDdgaEddLDddVlxPZF9vNiZVU3Aybic4cXBuWmY1SDEkTTdXNCNCZj1AV1ksM0BRYlVgOlNvUlRkQlgoPE8kUCoqPlFbcVtJLnRaQSRLRW42ZGJfQCJVcWItcnE1MXFiblBFLjcpKlFfJy51X2o6OTtrMFpFZUojal9MTmlnQ2VGZTJiRENiO2w7cDtoVDReKjpYMihlL1YqYmQ7PkYmZUFRMS5iW0pZZ3FuSl5XSE4kQ1hCLD9lRGBkJ1leZG1xLTtqWE9ndXJhUTM6VilPWkxPNlpDRFNMQDZgI3FXNW9cMk1BUVVWZVdZLSdFTUUvWXRTNm5HNTI2XUhLTmk8bFhIbCQ1bTUkYFBBNDlhNykvJCQ6UW5uKilmSicuKiI+JlpXdDNER1pdaVo2XUEqJ2Y/RWs5QHQwQEJdX2E/RlQuUEJ+PmVuZHN0cmVhbQplbmRvYmoKMTIgMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggMTU2MQo+PgpzdHJlYW0KR2IhI1w5MmpTOSZBSWBkcVFzZzNjQ2MmZ3BQJy4mSD1MRiI5J3E+VStIPVZLOGBQYVQjbGZAIyxbMU5aKV9Yc2QoOTBXXz5NV1k5cj5cYj9uPF9eVWlzXTwsXzklSzdBSiErOzNsSFNfIXBAdFlwRU4hQkZoSj9CaXMxVD1KW2VIZzEha2lSXVJKVEU/LEQhQCFzYzJgcTFrYDEuXEY0Pz0xRC1yQ21UaGNeQCMqSGE7Rm8jWFk7R0Q6bkZpOjM0Oz1ELU8+NzVgMiw7YCY3czUjOyMta1dBWj1VUF5kK19ZOlVETU1ET0JTaD5rM1JLRnB1YldMY3VZSzxzWkI7a2I7QSdbX1dJbEVVYVs0aCcxZDRYaGFaVVg4XVUwPTddbk9dV2RcOnFMVXEhUE47dUxGK0AqNW5MWTdXbzlmIVYpXC0lWilqYTtoQ291LEQuWFMnYi0/RT1TUls8UzJeYj9OInJlNCFOYl1fQDtlIWYtSz4tcHQqQSIsZU1KbktSXCRVYTpAMiQtQ0NhIjRtOUBFXGhkWkleM19eNkVAZT8jPHRyazByb2BIbGBRdUc6JD1rJENMPFFSKk9rTSg0QTBDMTs5XFRNLzo8KUJlKj0sNWpmUi9pM0VqUCVQRDtJSkI8OF8iQD90c0BxJEtlWm5eXywmYkt0Pm4oMmVYZzpvISo2TVYjVitecHFDXERUQG9HNjRhR24uWktNPS4uLlFVKD05ZCE5USZVM2wjY2RWOWtWXUBCITZYTUYtRzVHYS47MWdyW01VbjJSUi1PLlhLNyo4KEB0cmA5ZEJRLXRONUgmNEFyV0M2Sig8YHJKYjE8KjNoR2xdQzVSQWxmRC41VTwrcTIxUy5uPiplUWEqbTVyZ3UjVDhSOyRkL1JWblNOJEBIcVpyOU1PTkdXTEUva09FKDxnQlJhKjYmVTc7J29zZDhwVTJEcnJGc2Y4MU40cSRcL3BOME9NWWgnSVpOMidyVnJTN3E7STNxW3Q4PU9cRStyT29VLHIsUEMha1BQVThRJjEtcTxxSS0qRVcxLlg+ND9BT2NeQmk3MnA4QGY+bF1JNWYmY3EqQzBsZmBGRTRXK2EsRSpGVXI7PTs7NEpTMzJDZWpYQSVENnJuXTk0ODZuXSJdJWpCaEoiLihoJSU+WiQ7YXRCQitkOkVFMS1VaEI1KTgxUy5cIzwpUzo9bGFnISRMZkdNPjwmUzxwbDZRTENBY0E/NV1VS3JpMzFRTXRvYF5MNlgtUURUYkk6JkdSbGxAZSk5M0xSPHVTXCI+NDk/QzQoVG1MLU0yclRZZXNGPzhLVFJtOHVmQ3Usc20wMCc+PCd0OzJQZCJIQyolR2snLitlMkxBNmQyTi1gYmBgYSpsP0VPTGpnW3IvKW1OdDZfNUBUYkxRV2ZjTFRdOklxSG9dM0I4MnFBJDJJNjknRjUyUCNZWT8/aDxMSTxCbTMlJlhMSyFfN1c8TDlJOiM2W1peKDF0SVorPE5GUj5URFhmcHJbZCFoWDJeZHJ0UV8ucTFcQUMhKEBaWHBdN1wwN1FGJzA0a2IlRE9QKDI3QEddSlEwVXIuaGw3Yl8ra1hDKFxZN09rMVRzTnJBalVaUms0V2VROFUwck9HVClSPj9hKVslY2BhLDZCXF9EMzBpSGlDLWYvYl1XTWxTZXMwLSJLSkIpalg8PmxaOVIpUVQmP2ppLFglJyUwXDBFbFFaJC50L1Q5RDxHN0lEWmp0V1ltLHJSc0htWWJYU3JFNGA2VVg2aGc1OFdxKXFkcEdLdHVkMDh0I1MlRXVmRTtRR1Y7VzFyayVuKj1McHB0dUNdMD5TRnJFSWp0azZWSU44UjJ1bTFzPSh0bSUpIzNCO2krSS5YImtUMUkpa2ssPWYwcVFDJChkQkpjOT1WdSlqKU09Vlw4aFswN0FyYHJcVkwsITRgW083WilsPC9xZDJEV1k3KVtpaidCXGImaTVdJ15HR2RjW1JPaSZEPUttSztYPShyIXIwKkR1I1B0NGRNI3JQcGteWCVGOltmMyJQL0ZgOjJoJUhcXmcxTUteUHJGbUFOckIydWAhYnJ+PmVuZHN0cmVhbQplbmRvYmoKeHJlZgowIDEzCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDA2MSAwMDAwMCBuIAowMDAwMDAwMTAyIDAwMDAwIG4gCjAwMDAwMDAyMDkgMDAwMDAgbiAKMDAwMDAwMDMyMSAwMDAwMCBuIAowMDAwMDAwNTE2IDAwMDAwIG4gCjAwMDAwMDA3MzkgMDAwMDAgbiAKMDAwMDAwMDkzNCAwMDAwMCBuIAowMDAwMDAxMTU3IDAwMDAwIG4gCjAwMDAwMDEyMjYgMDAwMDAgbiAKMDAwMDAwMTUzNiAwMDAwMCBuIAowMDAwMDAxNjAyIDAwMDAwIG4gCjAwMDAwMDQ5MDUgMDAwMDAgbiAKdHJhaWxlcgo8PAovSUQgCls8YWMzNmFkODE3Y2IwYTczN2EwMzQ2NTIyNDgyYjU0NmY+PGFjMzZhZDgxN2NiMGE3MzdhMDM0NjUyMjQ4MmI1NDZmPl0KJSBSZXBvcnRMYWIgZ2VuZXJhdGVkIFBERiBkb2N1bWVudCAtLSBkaWdlc3QgKG9wZW5zb3VyY2UpCgovSW5mbyA5IDAgUgovUm9vdCA4IDAgUgovU2l6ZSAxMwo+PgpzdGFydHhyZWYKNjU1OAolJUVPRgo=" download="Monwelito_Bolandres_Resume.pdf">Download resume</a>
       <a href="https://calendly.com/monbolandres-metaads/new-meeting" target="_blank" rel="noopener">Book a free strategy call</a>
     </div>
     <div>© 2026 Monwelito Bolandres</div>
