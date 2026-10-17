@@ -372,107 +372,359 @@ ul.bul li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;ba
 @media(max-width:560px){.cta-pair{width:100%}.cta-pair .btn{width:100%}}
 @media(max-width:960px){.m-cta .btn{border-radius:999px;padding:15px 26px;font-size:16px;justify-content:center}.m-cta .btn-primary{color:#fff}.m-cta .btn-ghost{border:1.5px solid var(--line);background:#fff;color:var(--ink)}}
 @media(max-width:960px){.menu{bottom:auto;height:calc(100vh - 76px);height:calc(100dvh - 76px)}}
+
+/* ===== Sidebar + bento layout ===== */
+html{scroll-padding-top:24px}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(720px 520px at 100% 0,rgba(26,107,255,.10),transparent 60%),radial-gradient(620px 520px at 18% 100%,rgba(24,194,156,.10),transparent 60%)}
+.sb{position:fixed;left:0;top:0;bottom:0;width:272px;padding:30px 18px 20px;display:flex;flex-direction:column;z-index:150;overflow-y:auto}
+.sb-prof{text-align:center}
+.sb-av{width:128px;height:128px;border-radius:36px;background:var(--photo) 50% 22%/cover no-repeat,#cfd8e6;margin:0 auto 14px;box-shadow:var(--shadow-lg);border:3px solid #fff}
+.sb-name{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:21px;letter-spacing:-.02em}
+.sb-handle{font-size:13.5px;color:var(--muted);margin-top:2px}
+.sb-soc{display:flex;gap:9px;justify-content:center;margin:16px 0 24px}
+.soc{width:40px;height:40px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font-weight:700;font-size:14px;box-shadow:var(--shadow);transition:transform .2s,background .2s,color .2s}
+.soc svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.soc:hover{transform:translateY(-2px);background:var(--blue);color:#fff;border-color:var(--blue)}
+.sb-nav{list-style:none;display:grid;gap:4px}
+.sb-nav a{display:flex;align-items:center;gap:14px;padding:12px 14px;border-radius:14px;font-weight:500;font-size:16px;color:var(--ink-2);border:1px solid transparent;transition:background .15s}
+.sb-nav a svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none;color:var(--muted)}
+.sb-nav a:hover{background:rgba(255,255,255,.75)}
+.sb-nav a.on{background:#fff;border-color:var(--line);color:var(--ink);box-shadow:var(--shadow);font-weight:600}
+.sb-nav a.on svg{color:var(--blue)}
+.sb-cta{margin-top:18px;width:100%}
+.sb-foot{margin-top:18px;padding-top:18px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);line-height:1.5}
+.main{margin-left:272px;padding:34px 36px 36px 10px;min-width:0;max-width:1320px}
+.mbar,.scrim{display:none}
+
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:28px}
+.top h1{font-size:clamp(36px,4.4vw,58px);margin-bottom:14px}
+.top h1 em{font-style:italic;background:linear-gradient(120deg,var(--blue),var(--mint));-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.05em}
+.top .lead{font-size:18px;color:var(--ink-2);max-width:760px}
+.top .lead strong{color:var(--ink)}
+.top-cta{background:var(--navy);color:#fff;padding:12px 22px;font-size:15px;box-shadow:0 10px 24px -10px rgba(11,18,32,.6);flex:none;margin-top:6px}
+.top-cta:hover{transform:translateY(-2px)}
+
+.tools{display:flex;align-items:center;gap:18px;margin-top:26px;padding:12px 14px 12px 24px;border-radius:30px;background:rgba(255,255,255,.7);border:1px solid var(--line);box-shadow:var(--shadow)}
+.tools-l{flex:none;padding-right:18px;border-right:1px solid var(--line)}
+.tools-l small{display:block;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.tools-l b{font-size:17px}
+.mq{overflow:hidden;flex:1;min-width:0;border-radius:99px;background:#fff;border:1px solid var(--line);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mq-track{display:flex;gap:34px;width:max-content;padding:14px 20px;animation:mq 38s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+.tl-chip{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:600;color:var(--ink-2);white-space:nowrap}
+.tl-chip i{width:9px;height:9px;border-radius:3px;background:linear-gradient(135deg,var(--blue),var(--mint))}
+
+.bento-wrap{margin-top:22px;padding:14px;border-radius:36px;background:linear-gradient(160deg,rgba(26,107,255,.10),rgba(24,194,156,.10));border:1px solid rgba(26,107,255,.14)}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.bc{background:#fff;border:1px solid var(--line);border-radius:26px;padding:22px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px;min-height:226px;transition:transform .25s,box-shadow .25s,border-color .25s;min-width:0}
+a.bc:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:#c5d3cf}
+.s2{grid-column:span 2}
+.bc-h{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.07em;font-size:14.5px;text-transform:uppercase}
+.bc-i{width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,var(--blue),#4b8bff);color:#fff;display:grid;place-items:center;flex:none}
+.bc-i svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.bc .d{font-size:13.5px;color:var(--muted);line-height:1.5}
+.proj-in{display:grid;grid-template-columns:1fr 1.05fr;gap:20px;align-items:center;flex:1}
+.proj-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.mini-ro{background:var(--navy);color:#fff;border-radius:20px;padding:18px;position:relative;overflow:hidden}
+.mini-ro::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 100% 0%,rgba(26,107,255,.4),transparent 55%)}
+.mini-ro>*{position:relative}
+.mr-top{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px;color:#9fb0d0}
+.mr-big{font-family:'Fraunces',serif;font-size:50px;font-weight:600;line-height:1;margin:10px 0 2px;letter-spacing:-.03em}
+.mr-sub{font-size:12.5px;color:#9fb0d0;margin-bottom:12px}
+.mr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.mr-grid div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.09);border-radius:11px;padding:8px 10px}
+.mr-grid b{display:block;font-size:16px;font-weight:700}
+.mr-grid span{font-size:11px;color:#9fb0d0}
+.about-c{align-items:flex-start}
+.ab-av{width:100%;flex:1;min-height:96px;border-radius:18px;background:var(--photo) 50% 22%/cover no-repeat,#cfd8e6}
+.ab-t{font-size:14px;font-weight:600;line-height:1.35}
+.chips-s{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
+.chips-s span{padding:6px 12px;border-radius:99px;background:var(--bg);border:1px solid var(--line);font-size:12.5px;font-weight:600;color:var(--ink-2)}
+.cred{align-items:flex-start}
+.badge{width:78px;height:78px;border-radius:50%;margin:8px auto 0;background:linear-gradient(135deg,var(--blue),var(--mint));display:grid;place-items:center;box-shadow:0 0 0 8px rgba(26,107,255,.10),0 14px 28px -10px rgba(26,107,255,.5)}
+.badge svg{width:38px;height:38px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.badge-l{align-self:center;padding:6px 14px;border-radius:99px;background:var(--navy);color:#fff;font-size:12px;font-weight:700}
+.svc-list{list-style:none;display:grid;margin-top:2px}
+.svc-list li+li{border-top:1px solid var(--line)}
+.svc-list a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 6px;font-weight:600;font-size:15px;border-radius:10px;transition:background .15s,padding .15s}
+.svc-list a:hover{background:var(--bg);padding-left:12px}
+.svc-list em{font-style:normal;font-size:12.5px;color:var(--muted);font-weight:600}
+.talk .btn{width:100%}
+.talk .d{margin-bottom:4px}
+
+
+.top-l{max-width:980px}
+.top-l .pill{margin-bottom:0}
+.top h1{margin:20px 0 18px}
+.top .checks{margin:22px 0 26px}
+.top .cta-row{align-items:center}
+.top .cta-note{margin-top:22px}
+.tools-l b{font-size:16px;white-space:nowrap}
+.mqc{white-space:nowrap}
+.mq-track{gap:12px;padding:10px 14px}
+.bc-t{font-size:20px;line-height:1.2;margin-bottom:8px}
+.ap-t{font-size:15px;color:var(--ink-2);line-height:1.55}
+.edus{display:grid;gap:12px}
+.edus .edu-item b{display:block;font-size:14.5px;line-height:1.35}
+.edus .edu-item span{font-size:13px;color:var(--muted)}
+.proj .readout{padding:18px;border-radius:20px;box-shadow:none}
+.proj .ro-top{font-size:12px;margin-bottom:12px}
+.proj .ro-big{font-size:52px}
+.proj .ro-sub{margin-bottom:12px;font-size:12.5px}
+.proj .ro-grid{gap:8px}
+.proj .ro-grid div{padding:8px 10px;border-radius:11px}
+.proj .ro-grid b{font-size:16px}
+.proj .ro-grid span{font-size:11px}
+.proj .ro-foot{margin-top:12px;padding-top:12px;font-size:11.5px}
+.talk .d b{font-family:'Fraunces',Georgia,serif;font-size:19px;line-height:1.2;color:var(--ink);font-weight:600}
+.about-c .ab-av{flex:none;height:200px;min-height:0}
+.proj-in{grid-template-columns:.85fr 1.15fr}
+.proj .ro-grid div{padding:8px 8px}
+.proj .ro-grid span{font-size:10.5px;line-height:1.3;display:block}
+.ap-t{font-size:16px}
+.sb-nav a{padding:10px 14px}
+/* sidebar sub-links */
+.sb-nav .rowl{display:flex;align-items:center;gap:4px}
+.sb-nav .rowl>a{flex:1;min-width:0}
+.sb-nav .tg{flex:none;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;color:var(--muted)}
+.sb-nav .tg svg{width:10px;height:10px;transition:transform .2s}
+.sb-nav .tg:hover{background:rgba(255,255,255,.75)}
+.sb-nav .has-sub.open .tg svg{transform:rotate(180deg)}
+.sb-nav .sub{display:none;list-style:none;margin:2px 0 6px 34px;padding-left:14px;border-left:1px solid var(--line)}
+.sb-nav .has-sub.open .sub{display:grid;gap:1px}
+.sb-nav .sub a{padding:7px 10px;font-size:14px;gap:0;font-weight:500;color:var(--ink-2);border-radius:10px}
+
+
+/* ===== One-screen home + views + dropdown panels ===== */
+.vh{display:none!important}
+.top{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:22px;align-items:center}
+.top-l{max-width:none}
+.top h1{font-size:clamp(28px,3.1vw,42px);margin:12px 0 10px}
+.top .lead{font-size:15px;line-height:1.5;max-width:none}
+.top .cta-row{margin-top:14px;gap:10px}
+.top .btn{padding:10px 18px;font-size:14px}
+.top-r{background:rgba(255,255,255,.75);border:1px solid var(--line);border-radius:24px;padding:18px 20px;box-shadow:var(--shadow)}
+.top-r .checks{margin:0 0 14px;gap:8px}
+.top-r .checks li{font-size:14.5px}
+.top-r .cta-note{margin-top:0;font-size:13px}
+.top-r .avatar{width:44px;height:44px}
+.tools{margin-top:14px;padding:6px 10px 6px 18px}
+.mq-track{padding:6px 10px}
+.bento-wrap{margin-top:14px;padding:10px;border-radius:30px}
+.bento{gap:10px}
+.bc{min-height:0;padding:16px 18px;gap:8px;border-radius:22px}
+.bc-t{font-size:16px;margin-bottom:4px}
+.bc .d{font-size:12.5px}
+.bc-h{font-size:13px}
+.bc-i{width:30px;height:30px;border-radius:9px}
+.proj .readout{padding:14px}
+.proj .ro-big{font-size:42px;margin:2px 0}
+.proj .ro-sub{margin-bottom:8px}
+.proj .ro-foot{display:none}
+.proj .ro-top{margin-bottom:8px}
+.proj-links{margin-top:10px}
+.about-c .ab-av{height:118px}
+.ab-t{font-size:13px}
+.ap-t{font-size:13.5px;line-height:1.5}
+.svc-list a{padding:7px 6px;font-size:14px}
+.talk .btn{padding:8px 14px;font-size:13px}
+.talk .d{margin-bottom:0}
+.talk .d b{font-size:16px}
+.edus{gap:8px}
+.edus .edu-item b{font-size:13px}
+.edus .edu-item span{font-size:12px}
+.main{padding-top:22px;padding-bottom:22px}
+.proj-in{gap:14px}
+
+/* collapsible portfolio blocks */
+.main .pf-block{background:var(--bg);border:1px solid var(--line);border-radius:24px;padding:20px 24px}
+.main .pf-block+.pf-block{margin-top:14px}
+.main .pf-head{max-width:none;margin-bottom:22px;align-items:center;padding-right:52px;position:relative;cursor:pointer}
+.pf-head::after,.tl-item::after{content:"";position:absolute;right:0;top:50%;margin-top:-16px;width:32px;height:32px;border-radius:50%;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' fill='none' stroke='%230e1f23' stroke-width='1.8'%3E%3Cpath d='M1 3l4 4 4-4'/%3E%3C/svg%3E") center/11px no-repeat;border:1px solid var(--line);transition:transform .2s}
+.pf-block:not(.col) .pf-head::after,.tl-item:not(.col)::after{transform:rotate(180deg)}
+.pf-block.col .pf-head{margin-bottom:0}
+.pf-block.col>:not(.pf-head){display:none}
+.pf-block .wcard,.pf-block .pf-card{background:#fff}
+.pf-block .pf-cta{background:#fff}
+/* collapsible resume items */
+.tl-item{cursor:pointer;padding-right:68px}
+.tl-item::after{right:22px;top:34px;margin-top:0}
+.tl-item.col ul.bul{display:none}
+.tl-item.col .tl-org{margin-bottom:0}
+.tl-item h3{margin-bottom:4px}
+@media(max-width:1260px){.top{grid-template-columns:1fr}}
+@media(max-width:760px){.top-r{padding:16px}.main .pf-block{padding:16px 14px}.tl-item{padding-right:60px}.tl-item::after{right:16px}}
+
+
+@media(min-width:1261px){
+  .main{padding-top:14px;padding-bottom:10px}
+  .top{grid-template-columns:minmax(0,1.95fr) minmax(0,1fr);gap:18px}
+  .top .pill{font-size:12.5px;padding:5px 12px 5px 9px}
+  .top h1{font-size:34px;margin:10px 0 8px;line-height:1.08}
+  .top .lead{font-size:14px;line-height:1.45}
+  .top .cta-row{margin-top:12px;gap:8px;flex-wrap:nowrap}
+  .top .cta-row .cta-pair{flex-wrap:nowrap;gap:8px}
+  .top .btn{padding:9px 14px;font-size:13px}
+  .top-r{padding:14px 16px;border-radius:20px}
+  .top-r .checks{margin-bottom:10px;gap:6px}
+  .top-r .checks li{font-size:13.5px}
+  .top-r .tick{width:20px;height:20px}
+  .top-r .avatar{width:38px;height:38px}
+  .tools{margin-top:10px;padding:4px 8px 4px 16px;border-radius:22px}
+  .tools-l b{font-size:14.5px}
+  .mq-track{padding:5px 8px}
+  .mqc{padding:6px 14px;font-size:13px}
+  .bento-wrap{margin-top:10px;padding:8px;border-radius:26px}
+  .bento{gap:8px}
+  .bc{padding:14px 16px;gap:6px}
+  .proj-in{grid-template-columns:.98fr 1.02fr;gap:12px}
+  .proj-links{flex-wrap:nowrap;margin-top:8px}
+  .edus .edu-item+.edu-item{margin-top:0;padding-top:6px}
+  .top-r .checks{margin-bottom:8px}
+  .bc.cred .bc-h{white-space:nowrap;font-size:11.5px}
+  .bc.cred .bc-h .bc-i{display:none}
+  .proj .btn-sm{padding:7px 14px;font-size:12.5px}
+  .bc-t{font-size:15px}
+  .about-c .ab-av{height:92px}
+  .about-c .ab-t{font-size:12.5px}
+  .proj .readout{padding:10px 12px}
+  .proj .ro-big{font-size:32px;margin:0}
+  .proj .ro-top{margin-bottom:4px}
+  .proj .ro-main{font-size:11px}
+  .proj .ro-sub{margin-bottom:6px;font-size:12px}
+  .proj .ro-grid span{white-space:nowrap}
+  .proj .ro-grid div{padding:6px 8px}
+  .proj .ro-grid span{font-size:10px}
+  .svc-list a{padding:4px 6px;font-size:13.5px}
+  .bc-h{font-size:12.5px}
+  .bc .d{font-size:12px;line-height:1.4}
+  .edus{gap:6px}
+  .talk .btn{padding:7px 12px;font-size:12.5px}
+  .sb{padding-top:20px}
+  .sb-av{width:96px;height:96px;border-radius:28px;margin-bottom:8px}
+  .sb-soc{margin:10px 0 14px}
+  .sb-nav a{padding:8px 14px}
+  .sb-nav .tg{width:30px;height:30px}
+  .sb-cta{margin-top:10px}
+  .sb-foot{margin-top:10px;padding-top:10px}
+}
+
+/* Section panels */
+.main section{padding:0;margin-top:26px}
+.main .wrap{max-width:none;padding:0}
+.main #work,.main #services,.main #about,.main #faq,.main #process{border:1px solid var(--line);border-radius:32px;padding:44px;box-shadow:var(--shadow)}
+.main #work,.main #services,.main #about,.main #faq{background:#fff}
+.main #process{background:var(--navy);border-color:var(--navy)}
+.main .final{padding:0;margin-top:26px}
+.main .svc{background:var(--bg);box-shadow:none}
+.main .svc:hover{background:#fff}
+.main .about-grid{grid-template-columns:.7fr 1.3fr;gap:44px}
+.main .side{top:24px}
+.main .sec-head{margin-bottom:36px}
+.foot2{margin-top:30px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+.foot2 b{color:var(--ink)}
+.foot2 .links{display:flex;gap:18px;flex-wrap:wrap}
+.foot2 a:hover{color:var(--ink)}
+.final-box .cta-pair{gap:10px}
+
+@media(max-width:1260px){
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .bc.talk{order:4}.bc.svcs{order:5}
+  .main #work,.main #services,.main #about,.main #faq,.main #process{padding:36px}
+}
+@media(max-width:960px){
+  html{scroll-padding-top:80px}
+  .mbar{display:flex;position:fixed;top:0;left:0;right:0;height:64px;z-index:140;padding:0 16px;align-items:center;justify-content:space-between;background:rgba(241,245,244,.94);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+  .mb-brand{display:flex;align-items:center;gap:10px;font-size:15px}
+  .mbar .logo-mark{display:grid}
+  .burger{display:grid}
+  .sb{width:min(300px,86vw);background:var(--bg);transform:translateX(-102%);transition:transform .3s;box-shadow:var(--shadow-lg);padding-top:24px}
+  .sb.show{transform:none}
+  .scrim{position:fixed;inset:0;z-index:145;background:rgba(10,22,26,.5);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
+  .scrim.show{opacity:1;visibility:visible;display:block}
+  .main{margin-left:0;padding:84px 16px 28px}
+  .about-grid{grid-template-columns:1fr}
+  .main .about-grid .portrait{max-width:340px}
+}
+@media(max-width:760px){
+  .top{flex-direction:column;gap:14px}
+  .top .lead{font-size:16.5px}
+  .tools{flex-direction:column;align-items:stretch;gap:10px;padding:14px;border-radius:24px}
+  .tools-l{border-right:0;padding:0 4px}
+  .bento{grid-template-columns:1fr}
+  .s2{grid-column:auto}
+  .bc{min-height:0}
+  .proj-in{grid-template-columns:1fr}
+  .top .cta-row{width:100%}
+  .ab-av,.about-c .ab-av{height:240px}
+  .proj-in{grid-template-columns:1fr}
+  .bento-wrap{padding:10px;border-radius:28px}
+  .main #work,.main #services,.main #about,.main #faq,.main #process{padding:26px 18px;border-radius:26px}
+}
 </style>
 </head>
 <body>
 
-<header id="top">
-  <div class="wrap nav">
-    <a href="#home" class="logo" aria-label="Monwelito Bolandres home">
-      <div class="logo-mark">MB</div><span class="n">Monwelito Bolandres</span>
-    </a>
+<div class="mbar">
+  <a href="#home" class="mb-brand"><span class="logo-mark">MB</span><b>Monwelito Bolandres</b></a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
+</div>
+<div class="scrim" id="scrim"></div>
 
-    <ul class="menu" id="menu">
-      <li class="has-dd">
-        <button type="button" aria-expanded="false">Portfolio
-          <svg class="chev" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3l4 4 4-4"/></svg></button>
-        <ul class="dd">
-          <li><a href="#pf-ads"><span class="ic">01</span><span><b>Meta Ads case studies</b><small>Dental clinics and an insurance agent</small></span></a></li>
-          <li><a href="#pf-admin"><span class="ic">02</span><span><b>Admin &amp; operations tasks</b><small>Inbox, records, scheduling, CRM</small></span></a></li>
-          <li><a href="#pf-finance"><span class="ic">03</span><span><b>Bookkeeping &amp; finance tasks</b><small>QuickBooks or manual processes</small></span></a></li>
-        </ul>
-      </li>
-      <li class="has-dd">
-        <button type="button" aria-expanded="false">Services
-          <svg class="chev" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3l4 4 4-4"/></svg></button>
-        <ul class="dd">
-          <li><a href="#svc-1"><span class="ic">1</span><span><b>Meta Ads &amp; Lead Generation</b><small>Strategy, campaigns, optimization</small></span></a></li>
-          <li><a href="#svc-2"><span class="ic">2</span><span><b>Admin Support &amp; Operations</b><small>Records, scheduling, reporting</small></span></a></li>
-          <li><a href="#svc-3"><span class="ic">3</span><span><b>Bookkeeping &amp; Finance</b><small>QuickBooks or manual processes</small></span></a></li>
-          <li><a href="#svc-4"><span class="ic">4</span><span><b>Customer Support &amp; CRM</b><small>Email, chat and account handling</small></span></a></li>
-        </ul>
-      </li>
-      <li class="has-dd">
-        <button type="button" aria-expanded="false">Process
-          <svg class="chev" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3l4 4 4-4"/></svg></button>
-        <ul class="dd">
-          <li><a href="#step-1"><span class="ic">1</span><span><b>Discovery Call</b><small>Free, 20 minutes, online</small></span></a></li>
-          <li><a href="#step-2"><span class="ic">2</span><span><b>Plan &amp; Setup</b><small>Scope, tools and workflow</small></span></a></li>
-          <li><a href="#step-3"><span class="ic">3</span><span><b>Launch &amp; Deliver</b><small>A small, clearly scoped start</small></span></a></li>
-          <li><a href="#step-4"><span class="ic">4</span><span><b>Review &amp; Improve</b><small>Keep what works, refine the rest</small></span></a></li>
-        </ul>
-      </li>
-      <li class="has-dd">
-        <button type="button" aria-expanded="false">About
-          <svg class="chev" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3l4 4 4-4"/></svg></button>
-        <ul class="dd">
-          <li><a href="#about"><span class="ic">MB</span><span><b>Who I am</b><small>Background and what I bring</small></span></a></li>
-          <li><a href="#who"><span class="ic">→</span><span><b>Who I work with</b><small>Clinics, coaches, agents and more</small></span></a></li>
-          <li><a href="#about-metrics"><span class="ic">#</span><span><b>Numbers I track</b><small>CPL, cost per booking, ROAS</small></span></a></li>
-        </ul>
-      </li>
-      <li class="has-dd">
-        <button type="button" aria-expanded="false">Resume
-          <svg class="chev" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3l4 4 4-4"/></svg></button>
-        <ul class="dd">
-          <li><a href="#experience"><span class="ic">XP</span><span><b>Experience</b><small>7+ years in operations and support</small></span></a></li>
-          <li><a href="#skills"><span class="ic">SK</span><span><b>Skills &amp; tools</b><small>Ads, bookkeeping, CRM, Office</small></span></a></li>
-          <li><a href="#education"><span class="ic">ED</span><span><b>Education &amp; certifications</b><small>Financial Management, QuickBooks</small></span></a></li>
-          <li><a href="data:application/pdf;base64,JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUgo+PgplbmRvYmoKMiAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYSAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjEgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iagozIDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhLUJvbGQgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YyIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKNCAwIG9iago8PAovQSA8PAovUyAvVVJJIC9UeXBlIC9BY3Rpb24gL1VSSSAoaHR0cHM6Ly9tb253ZWxpdG8uZ2l0aHViLmlvL21vbndlbGl0by1zaXRlLykKPj4gL0JvcmRlciBbIDAgMCAwIF0gL1JlY3QgWyAxMzcuODg1NSA3MDcuNDc1NCAyNzEuODgzMSA3MTguMDM1NCBdIC9TdWJ0eXBlIC9MaW5rIC9UeXBlIC9Bbm5vdAo+PgplbmRvYmoKNSAwIG9iago8PAovQW5ub3RzIFsgNCAwIFIgXSAvQ29udGVudHMgMTEgMCBSIC9NZWRpYUJveCBbIDAgMCA1OTUuMjc1NiA4NDEuODg5OCBdIC9QYXJlbnQgMTAgMCBSIC9SZXNvdXJjZXMgPDwKL0ZvbnQgMSAwIFIgL1Byb2NTZXQgWyAvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJIF0KPj4gL1JvdGF0ZSAwIAogIC9UcmFucyA8PAoKPj4gL1R5cGUgL1BhZ2UKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL0EgPDwKL1MgL1VSSSAvVHlwZSAvQWN0aW9uIC9VUkkgKGh0dHBzOi8vbW9ud2VsaXRvLmdpdGh1Yi5pby9tb253ZWxpdG8tc2l0ZS8pCj4+IC9Cb3JkZXIgWyAwIDAgMCBdIC9SZWN0IFsgMjAwLjI4MjMgMzc5LjM5NTQgMzQwLjM3MDcgMzkwLjQzNTQgXSAvU3VidHlwZSAvTGluayAvVHlwZSAvQW5ub3QKPj4KZW5kb2JqCjcgMCBvYmoKPDwKL0Fubm90cyBbIDYgMCBSIF0gL0NvbnRlbnRzIDEyIDAgUiAvTWVkaWFCb3ggWyAwIDAgNTk1LjI3NTYgODQxLjg4OTggXSAvUGFyZW50IDEwIDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAKICAvVHJhbnMgPDwKCj4+IC9UeXBlIC9QYWdlCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9QYWdlTW9kZSAvVXNlTm9uZSAvUGFnZXMgMTAgMCBSIC9UeXBlIC9DYXRhbG9nCj4+CmVuZG9iago5IDAgb2JqCjw8Ci9BdXRob3IgKE1vbndlbGl0byBBLiBCb2xhbmRyZXMpIC9DcmVhdGlvbkRhdGUgKEQ6MjAyNjEwMTYxODQ3MzgrMDgnMDAnKSAvQ3JlYXRvciAoXCh1bnNwZWNpZmllZFwpKSAvS2V5d29yZHMgKCkgL01vZERhdGUgKEQ6MjAyNjEwMTYxODQ3MzgrMDgnMDAnKSAvUHJvZHVjZXIgKFJlcG9ydExhYiBQREYgTGlicmFyeSAtIFwob3BlbnNvdXJjZVwpKSAKICAvU3ViamVjdCAoXCh1bnNwZWNpZmllZFwpKSAvVGl0bGUgKE1vbndlbGl0byBBLiBCb2xhbmRyZXMgXDIwNCBSZXN1bWUpIC9UcmFwcGVkIC9GYWxzZQo+PgplbmRvYmoKMTAgMCBvYmoKPDwKL0NvdW50IDIgL0tpZHMgWyA1IDAgUiA3IDAgUiBdIC9UeXBlIC9QYWdlcwo+PgplbmRvYmoKMTEgMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggMzEzNQo+PgpzdHJlYW0KR2IhI10+QkFOPiZxODAxa2JmLUoiXilhTCZHcFEnW1dDKlJMJmJsUENtQT8zQmFoPyFMJDQtS29CVDNITiJFaVxRYFc0ZERsUF1dZGBjZl9oPlIiWC8yNlVUVj5fUlQhOVotdF08XTRdMFk3UzUwY1pRZF9yXjdAUVpuMicvRCczPWlIMExnW19RalFUI2kqWl1NJGFoXCoiWzJsWyVKUy1LK2xpR0xdYCJfa2slbWVPRztcWkNaXWwqUmpGMkw0P2dJY19rWExIYE49TFlzImxGcGNeQ2BFJVQ4Qj9rdSxxLTs+T00sYDxCNSMrVlMnOlZvZmQhLWNaUSFmWnFBSkZycVRKJjFJZjNwQUYtPyNTcmRcVzFOWmY0MFBucyRVRWktZSVhOmsoJGxjOj1vLVI/bG5WcG1SQVlLRk1LYVNfdD9qcCVmT2hFUjssZVRaOWxgNkJYJkpWYyo8UTpTdSVMUmtpWGBaOXVJQVI0MWV0Iy11SGQ3OHBfOS47PTN1Qy40RE1gQVM2KFJPSDhXYERRO2dKW1AwZzU8V0wjYkQ6JyxKUVtoP2NuOChzQGtfRDEyTE1PXm5wYT9jO25OcylaOU5ORiI0SGF1YCtbOGNPTEJldScxME5mR0sxTGxxSkMxQiNFRUhhbFxFPUFTXS8lU08jcSRoQjBPNWJwTGhKVF5LLEJ1MCgxbFBXcGJSTmQvZEBWUzBFaE0mZU1SY0xpQEI3VCg0ayRZNDsldCNlcVJENmFPMiV0KShFRnQyTjN0WE90MEtEKkRQYzhEZXE2MGYtOT80MTRoP2Nob24kZjE9QEdiMjFJS3U7SUMlU1hePTQxSDVKKFhcdCRhcFkkUzxnKyM2UT1bJz5fM1pDRGpoNGZiMnRFYG4zOm5HYD1vcE1DbXBeIWt0SyM+TSdZTUIkZyI5NSQmI2ckclRwRlpIISY4JThHNFIvWjoyVkVhbHRZT3JpNEdfVEtzQEEwWUFuWT4iOUVLLjdmRCVVXihkU3ItXlpiUDcxbVZjMmNyQzomZlcjb2RNTkluPCteKERrU2tvJFJyaSlNKiwpRS80KDdnUFAlLCloWjBATi1QOypAI0VnUVNKbXMzOk00Zj0qUD8/YjxbSjpmKCUuQjVfaSQ+WSNdNztXJUFDbkEkck1dbnRmVC46aSxZJT8nQC9wNyRhZUU0RyRRbmEyPTNiTUklNS5GTEFWUEE+InU7P3JBPTNtP2IxJ2o5PiIqUjlZWFEhWm5QVD5pPDZrMWtTWCM0LEpTP1s7JWgnTy1XQERBa0k9b2ZgWTxNcFtcZWhjL0ksciNiZkhFXEtbKVFfZElLZWlbXyRiTVU7TScxO00/cGpBJlU4LGVfTVhBcD1zcFIuSzU6NmEnME0iMFExTy4zLCxaciM7NmNfKGQrQGFFVWhYNj51ZTRQZWRJTDp1MktdbVg2YFdMbVklb1dgOEo1LGlCN1oibS04ZzZOIjxuISZaRXFHakpsRzBpKEQwKzszWCJBNltGTlBSSl4oR3A5NF5dWlNZZmo+ZEc/RTxnXiJHMS1LLDQzUm8oYVgnVkYlQmx0NVZdOVRLYlEjKjlFYnNYc0RPJ05qPnVWMWNFUlNlcGNTS1M8M2dESkhmTF90KnBZU11DUGBnSGklZC82RGFaX0VXJDs0I2o8ZSM+cHJKTmxtLWFWY1JHbClKNlRQLFgocTZvJD9yMXRZMV41W2Q9OGRNUUhwaT1mVCteSWh0ZDlbOSNxbVY0JHJSb1ZQU241RFpaXkFGJ2ZxUGU8Xi5zLVo0MC4sZHIscFcmaWRtYzwzI2EyaV8oaSVOXSs5ZU1GS2Y+c2lSbDxGQGJLL01cMzVoayRcREc4MitpX19SZHAzJjJfO0dDRzZrN1BLOWE3PEAuaC84KUg8TD1kZlEudGBSQWdrW2FLT145I0cyMWFvRi8yQSl1RGk8dFtiXCNgcHMmQi5TMDIrMUgkLT9WLXVAKS8+VjRMYEFFPT1KQSc1MV5bWzJaXDlPLTU3WiRqTUY0b1slMjFpUE46SilbOmpBakZfR2wuWitdXzE5YzohRmFFX0oiZj80IUk3Ri1xZWhqaEFAWCs7OEZfWzZVRURuRC9MUCVhdXJOMVldI2MtdERnNWVJXzBVNHRIXkU2YzNgOHBNKT0/akZjPDlLc2ktXD8nUnUqLCZBRDApOWAlI0czJ1gyPS1TSz9RWnVfT11cYkNRYTtGcmI8X2o2SGNSVFVSSCY2b001Ym1oWkNcPyJEQjdvZycuRi5LZiFIamU4NE9WYGdgKTgjMzU0U2pwPVZhZEJUTUJEZio2VzE3JUJuTjI+bEdQZ2xMPUBAL286bUJTLThiP2xIJD91ckVvSzxtWzRMYjoraC5qVXVpV1YuYiErQCFeczZLTzclciliYjomSDA6b1ZVN2wyMGE6N0NYNTFVPCM3RHFdMy1XX1hxO0JmI1p0KDg+clZRWXM8N0JEOyg9RG1SdXFUXz5oX1BIP1xXZD0iTydYIWlCLytVNyFxYCthNEldR2ttOTgiQEQ0M15aN1NNYWVQKzpZUEd1IiooQEVVMSllMilSPU9xaGVkWVomYlYocDAsKVJxZS1Nbj5QcS8ySGhZTSsvYXRiPzlmVipLMjBpP1ReUnNMZFxlLUJhS01WNzl0Q1RjOyNoayYyKGZzWU9cMC1iLTA6dUxcZ1w0czM4alk2XS4oZiokODZOMlhUSCFbRi1TKnI4aGZSMzVrKyU5OUFBRVpvRDtsSF1GSlc4TF4nNmBBaGc8JTBbTUo9IiRyWS8+IVtFa0lvJmg2aWAuMypyPnJpKWInUHQuTCZgOUVeMTY1cSMoJ1tbTEhWXjVANUw/L2IqTm1eRSMsIlZCYlA3XU9dRHA7J1cpN2xsKVNzTzhiOmspTFQvXnQzKiVCQmNYMVcwa21sNk1xJl9tST0vcyFRcyU6IitXXV41JERbIXJNLyUlUlVZMFwkc0k+ckRiMGg/bWA1PU5cTSZuMCwkVzloKVlyMi9pXUdWPUctUVorVV8vKE5wWF9CcyxgYVFYJHNSJDk4WC04O2BzSWdCU1JoaGlPcSldZEloR2E5PVwvSmVuSisnZUJRTk1VXjxsIiwxQ3VpQmBhXj9yITxMI2ksckU+aDxPPmBfRFgrXTBHVzhFQFFrXHVCbUMmRDBeI1JDYUxFLkZLWkZjXypadWZrK15JRnEjZ0hROEhJLD4xPistLF81UCNVam4oJCRaJGxrTDdMLEFmciYxJV5YMT0yN1UsIkxLOUdVPkFJSjdHb0VqdEJxWDI/VDAqNVNrTURlISIjSU1ZNiU1VyJKcVZyNXFdV1QvWlxUV2lbQV89QmFkPi5PXU9CODk0Oy1yP0I/UEQ7RGhUP2ldQT5bUidsQlxLLGQwMEE4LFZHYD82I3EjcUViNjVQcj1XcEY/SjgtUGtkXDhSPixhMFI0RE0tLz1UZ0hESWY7byZpKEZnTWJmb0UzVyYnQWgyWVNkMVpnV1FqRTpsXmEiWC1YXmNgcC9dMHRjYCVIbjY1UEosJUI9RTI8Z0BRKSE4MDtYK3JrTUhoOlxVdSJeSEtjNyErPHBybW1pTnJoLkZRMCksKXJwOEsoQV4kVzlKV2lPN2hbQC8qNjtxXWlzOVdXRTRqRiFfV042SlhrU1hfPyQrUT5DWjVDUVU+cmNjU1c3RTYoS2pkP1FTXkg0YEJMW1sjams/LWxtNydLQTUtc11ZISlDQyRfTDVSaExNYyg2W1dqOjhBNU1qUUZxRjxaYmZoNFhyLjZ0JGIyWTkuRTRaLXRaPCxTbzxJWTVEYDE4QjM/MW8iSiloMXAiZ2tMSF0uXGYuW2BxJ2lSWV5HVm11OEo+NyZNTVA5ZCtlQjdxJUleNGImRzk9Ly9BIkFZQlEiLGtVPClWOGZWL3BLODg3PCYjY3RNZiUralAkKiZFMSE4Ii9JX1owIm5kaCNpa1xNMFNBPEFMP1xGb0k1WmVEbWBQbTlYPXQwNy0uT0dMMU89QUY7SSZkUGZaJmRXY1ZSQEYpWi9hXFcjI1NjKG1cWClWYEdvJ0A/NWtPX1ZXTzFiYFJGZFRnVmI+PjEtIT9FLip1V0ZBWTVZKGY1cCdbK2lnaDJdajtAazsjTSI2YUIpUVFmUEFvWilCXTRtRywha0FcNUtycmAybFFjQn4+ZW5kc3RyZWFtCmVuZG9iagoxMiAwIG9iago8PAovRmlsdGVyIFsgL0FTQ0lJODVEZWNvZGUgL0ZsYXRlRGVjb2RlIF0gL0xlbmd0aCAxOTY1Cj4+CnN0cmVhbQpHYiIvKD8hJCNWJjpPOlNlQyxJT05ZRCRfWiM+TFRfW1spJ1JCblFcWnExP18sXGNVZTcwITNkLVAuTElPOmdaNyYkI3EwVFcsKio/MiVBNyhuZm9tOz51UFFKRmE9SV0qOSohS0ctJVVjJWBHNVFmNj9KT18wdThpcykxMFNvN2c7QlQ9K3MtQV5uYDxrZDtwKjZuKnEoTWpXcy02SjpMVkVFKyNbWHNiZmMjViVEYGphXjYncHA/SUdQJltQQW9QR2dvI0ErQy9bMFhGOUxqLjRfYCZdM2lIVy9FLHUnY2ZFMkxIMzpJbDYvUktNPzRYcDZYKTtbVlhsI18sLDc7PS9JWjo9ZltqZ3QvdGNuLGNPMG4uTEIwWkc2azUiYTxJX3EvWVMlTTJQXiJAYi5JcGNnWGplbCZQNSUySkBoXEhiJ1RSbCdlNDJDXXBcaFYqWzYxUlZTK1ExM3FZKEVsaDYwP3FlTyZNXlZpWiJpYShoOEwxcEdjXz4zZER0dCxFWzIzW1Y3T0wlIUVsLmxhbzpKQUBGP0ZDTllMMGZyTl9TPksmN3M7b11RMlYhSSFXTixwPz8+MFtqUGlwWTYiJEEvZnNibUkpLHFlSVgqWDQ/XENcPUxfbElBSlZ0XXVkdDExISpAO2w7SyU9bmJmb20sMWckbFo1KyFSblk4cTBHQ2MqNV1ZOGNwLkshN0xvbUtCIW9nbzFGS0gnNCtsNWJrTyFbSlMkZVFqVTNEYjY9WEVWL11KZEovUD9fQjlpIy4/R1sqV0xuOSdnTFJVbiNvJDA5JzdfMWZoaEc2Slk9ayNyLWwvNzZsYDxSO3UsLEZbZDRHLnNbVT1ZKDBvOmJuWChBXVZoN2s9TFU+UGdGYz9hVmtYUVI4QUc3WzBxQVM3TXUvQGAhW0psZUpkRFo/NmYqT2U7MS9XLFNRYjgwOG0yMC4pby1yMlAhREY4TVdMcTElW1ZkaTxKYUYxIV0/W2pnKCpaOE9aWyMjKmc/OEFRJygzLT4uKl5TcVEpKyNTV0F0J0tKJDpPZjwiQCJZWGEsUmEzc1thSnAjT0VrVjRFLTNLRT5iN0ZkIzsnQiFSSmw3S0VPdSFIMyVsPmFNVDkqQS0uPjwnZzAnSWxtUjNMMGgzRmBBTFBUWkZpNVJjUVxQNzxdXDtDVmouZydFXShtMUM4Z3EzKy1kKDhpIVBOZjVFLGtUai1Pcy4kWmZbQ1RKRDxZbjBfJUZzUWxuVkhBVC1WRzpPLUUra3RYczoqXzpJaE1cVkJdbTEsXW5xNyZiRHF0SHBGN1wsbUpsRDVxQSgiOm0mJmgiS1NRKS1yTltdJS8hXWQ5SGN0IWZTMV1sSFcscTdrOT1MZFRhNCNNMEk2cjk6WF5NZz43b0FCMik9OExURy8oWlprWT5OLSNuNF4sKCk3TDRiX2RaZEFFQURlc3JsaVlhK2g9QWBxN0c/S1xDI2owLS5GSikmJEc2aD4oKCUicilITXVNQmYmUktybjluWHJUXHVkdEYwJHRobm5NXjhmP29APE5LJCZBVCRDI3NvV0NVOlMmUUpKUic7YGUrO2xqbWU0Z3VWRFIndS5GW2YqMzhOSyJBUDwiXzBLRi9YbT86OVpoJVY8VidtPmJvSDlaaCotaWtCbVFFNzZJRGVRWDtlciInWE9BN0Q4TUNjVDo+Q2AmUXEtNSxXTHIuL0ZhJTBzZTMiSFFRQ2NuWy8qOEdbKHQ3Uk9cbiZvVFdsZzZyQCxBRWAiU1xkImw8SDkzPVdYUSdTQVdLT3NuSjdEJU5gclBRSjk+UnFDMUVBXiNLI0EoVTErY3FXaDknQ3A5PClfVE4iR1drPmZQSVlkckQoNGZwXU8oOkJWU3JBRVBZbk5oWTdbZV1HLDdEOClhNypfW14zVj1aTiE3IXU7MzdvOC1dZV8jPGM4RFZuMD0vZnU6K0AkSDhDNlJoM1RZRzMtYzc4L2VKLihcRi5rLy5OJ01fXjpVJ2YqVnRnJlpyZSo9ZyYkY0RQblZcRSxoW08+XXFKQiVLYSIvcE4lSE8oWF1XJEBGIj9jJSNNNU1famhrLFUnWCVQXzxpYmpdZThMP2puMik4ZlUzZ2xrPkRRJyFZRS5JNkBHZ186SWBabFhjajhdTXBKYCRKRE1LZ1dNL3FpUGtROj1rRltCNltAbSM/QUg0M1lJXFhMO0prJTdndHU3NG1AW25mWVZHKCs2bzE5TkpJTlpaLE9CU01KbGk2PzdCU1w9KjFDQD1DL0khJyYnLDkvIjBTWV0jdCVSbmIrN2dSPi80VyppQW44QG4jQjEpLmQrTllhOk9KRERuYW8qPS5eW2QoKmtOOllBPDBtPytdbiYhbjFpJmNtSlkhWyRzaSsmdDUpcyJNMUBzUVxqdWhXQi1YXTpEWD5uYWlySSkvKz9vLixNTzBcZEk5M2AlZjxxSlMjbV5VcmYtL1xIIVxEZi91c186Q090X1s9S1s7PToiPSYpIW5HITxpTUBjJmxVNi50Z0tGaUYvZFJxWVlmKlA8W1BPKms4S10zO0tqNUJKVVxXZURVOidbOydmXHQ/aGcvczdTPVlVQk5VYktvXFBKVThTJmwiLXJyRj9YKUkzfj5lbmRzdHJlYW0KZW5kb2JqCnhyZWYKMCAxMwowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwNjEgMDAwMDAgbiAKMDAwMDAwMDEwMiAwMDAwMCBuIAowMDAwMDAwMjA5IDAwMDAwIG4gCjAwMDAwMDAzMjEgMDAwMDAgbiAKMDAwMDAwMDUxNiAwMDAwMCBuIAowMDAwMDAwNzM5IDAwMDAwIG4gCjAwMDAwMDA5MzQgMDAwMDAgbiAKMDAwMDAwMTE1NyAwMDAwMCBuIAowMDAwMDAxMjI2IDAwMDAwIG4gCjAwMDAwMDE1MzYgMDAwMDAgbiAKMDAwMDAwMTYwMiAwMDAwMCBuIAowMDAwMDA0ODI5IDAwMDAwIG4gCnRyYWlsZXIKPDwKL0lEIApbPDI2Y2I5NDZkN2MzMzgzY2RjNjc0YjA3OThiY2ExNjI0PjwyNmNiOTQ2ZDdjMzM4M2NkYzY3NGIwNzk4YmNhMTYyND5dCiUgUmVwb3J0TGFiIGdlbmVyYXRlZCBQREYgZG9jdW1lbnQgLS0gZGlnZXN0IChvcGVuc291cmNlKQoKL0luZm8gOSAwIFIKL1Jvb3QgOCAwIFIKL1NpemUgMTMKPj4Kc3RhcnR4cmVmCjY4ODYKJSVFT0YK" download="Monwelito_Bolandres_Resume.pdf"><span class="ic">PDF</span><span><b>Download resume</b><small>Full resume as a PDF</small></span></a></li>
-        </ul>
-      </li>
-      <li class="has-dd">
-        <button type="button" aria-expanded="false">FAQ
-          <svg class="chev" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3l4 4 4-4"/></svg></button>
-        <ul class="dd">
-          <li><a href="#faq" data-faq="2"><span class="ic">?</span><span><b>What services do you offer?</b></span></a></li>
-          <li><a href="#faq" data-faq="3"><span class="ic">?</span><span><b>Can you do bookkeeping without QuickBooks?</b></span></a></li>
-          <li><a href="#faq" data-faq="0"><span class="ic">?</span><span><b>Do I need a big ad budget?</b></span></a></li>
-          <li><a href="#faq" data-faq="5"><span class="ic">?</span><span><b>What happens on the free call?</b></span></a></li>
-          <li><a href="#faq" data-faq="6"><span class="ic">?</span><span><b>Will I understand my results?</b></span></a></li>
-        </ul>
-      </li>
-      <li class="m-cta"><a class="btn btn-primary" href="https://calendly.com/monbolandres-metaads/new-meeting" target="_blank" rel="noopener">Book a Free Strategy Call</a><a class="btn btn-ghost" style="margin-top:10px" href="https://www.facebook.com/profile.php?id=61590516612789" target="_blank" rel="noopener">Message Me on Facebook</a></li>
-    </ul>
-
-    <a class="btn btn-primary btn-sm nav-cta" href="https://calendly.com/monbolandres-metaads/new-meeting" target="_blank" rel="noopener">Book a Free Strategy Call</a>
-    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span></button>
+<aside class="sb" id="sb">
+  <div class="sb-prof">
+    <div class="sb-av" role="img" aria-label="Monwelito Bolandres"></div>
+    <div class="sb-name">Monwelito Bolandres</div>
+    <div class="sb-handle">Meta Ads, admin support &amp; bookkeeping</div>
+    <div class="sb-soc">
+      <a class="soc" href="https://www.facebook.com/profile.php?id=61590516612789" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">f</a>
+      <a class="soc" href="https://www.linkedin.com/in/monwelito-bolandres-7b86b8385/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">in</a>
+      <a class="soc" href="https://calendly.com/monbolandres-metaads/new-meeting" target="_blank" rel="noopener" aria-label="Calendly" title="Calendly"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></a>
+      <a class="soc" href="mailto:monbolandres.onlinejob@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+    </div>
   </div>
-</header>
+  <ul class="sb-nav" id="sbnav"><li class="has-sub"><div class="rowl"><a href="#home" data-spy="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span>Home</span></a><button type="button" class="tg" aria-label="Show Home links" aria-expanded="false"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3l4 4 4-4"/></svg></button></div><ul class="sub"><li><a href="#problem">Sound familiar?</a></li><li><a href="#who">Who I work with</a></li></ul></li><li class="has-sub"><div class="rowl"><a href="#work" data-spy="work"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg><span>Portfolio</span></a><button type="button" class="tg" aria-label="Show Portfolio links" aria-expanded="false"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3l4 4 4-4"/></svg></button></div><ul class="sub"><li><a href="#pf-ads">Meta Ads case studies</a></li><li><a href="#pf-admin">Admin &amp; operations tasks</a></li><li><a href="#pf-finance">Bookkeeping &amp; finance tasks</a></li></ul></li><li class="has-sub"><div class="rowl"><a href="#services" data-spy="services"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg><span>Services</span></a><button type="button" class="tg" aria-label="Show Services links" aria-expanded="false"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3l4 4 4-4"/></svg></button></div><ul class="sub"><li><a href="#svc-1">Meta Ads &amp; Lead Generation</a></li><li><a href="#svc-2">Admin Support &amp; Operations</a></li><li><a href="#svc-3">Bookkeeping &amp; Finance</a></li><li><a href="#svc-4">Customer Support &amp; CRM</a></li></ul></li><li class="has-sub"><div class="rowl"><a href="#process" data-spy="process"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.5 6H14a3 3 0 013 3v6.5"/></svg><span>Process</span></a><button type="button" class="tg" aria-label="Show Process links" aria-expanded="false"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3l4 4 4-4"/></svg></button></div><ul class="sub"><li><a href="#step-1">Discovery Call</a></li><li><a href="#step-2">Plan &amp; Setup</a></li><li><a href="#step-3">Launch &amp; Deliver</a></li><li><a href="#step-4">Review &amp; Improve</a></li></ul></li><li class="has-sub"><div class="rowl"><a href="#resume" data-spy="resume"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 13h6M9 17h6"/></svg><span>Resume</span></a><button type="button" class="tg" aria-label="Show Resume links" aria-expanded="false"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3l4 4 4-4"/></svg></button></div><ul class="sub"><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills &amp; tools</a></li><li><a href="#education">Education &amp; certifications</a></li><li><a href="#resume">Download resume</a></li></ul></li><li class="has-sub"><div class="rowl"><a href="#about" data-spy="about"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg><span>About</span></a><button type="button" class="tg" aria-label="Show About links" aria-expanded="false"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3l4 4 4-4"/></svg></button></div><ul class="sub"><li><a href="#about">Who I am</a></li><li><a href="#who">Who I work with</a></li><li><a href="#about-metrics">Numbers I track</a></li></ul></li><li class="has-sub"><div class="rowl"><a href="#faq" data-spy="faq"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 114 2c-1 .7-1.5 1.2-1.5 2.5M12 17h.01"/></svg><span>FAQ</span></a><button type="button" class="tg" aria-label="Show FAQ links" aria-expanded="false"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 3l4 4 4-4"/></svg></button></div><ul class="sub"><li><a href="#faq" data-faq="2">What services do you offer?</a></li><li><a href="#faq" data-faq="3">Can you do bookkeeping without QuickBooks?</a></li><li><a href="#faq" data-faq="0">Do I need a big ad budget?</a></li><li><a href="#faq" data-faq="5">What happens on the free call?</a></li><li><a href="#faq" data-faq="6">Will I understand my results?</a></li></ul></li><li><a href="#book" data-spy="book"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>Contact</span></a></li></ul>
+  <a class="btn btn-primary btn-sm sb-cta" href="https://calendly.com/monbolandres-metaads/new-meeting" target="_blank" rel="noopener">Book a Free Strategy Call</a>
+  <div class="sb-foot">© 2026 Monwelito Bolandres</div>
+</aside>
 
-<main id="home">
-
-<!-- HERO -->
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
+<main class="main">
+  <div class="top" id="home" data-view="home">
+    <div class="top-l">
       <div class="pill"><span class="dot"></span> Meta Ads · Admin Support · Bookkeeping · Now accepting new clients</div>
       <h1>Reliable help to grow your business, from <em>lead generation</em> to the back office.</h1>
       <p class="lead">I'm Monwelito, a freelance Meta Ads specialist with a 7+ year background in operations, client support and team leadership. I help businesses bring in qualified leads, keep admin tasks moving, and keep their books and invoices in order, so you can focus on running the business. <strong>My latest dental campaign brought in 52 leads in 3 days at under ₱5 each.</strong></p>
+      <div class="cta-row"><div class="cta-pair"><a class="btn btn-primary" href="https://calendly.com/monbolandres-metaads/new-meeting" target="_blank" rel="noopener">Book My Free Strategy Call →</a><a class="btn btn-ghost" href="https://www.facebook.com/profile.php?id=61590516612789" target="_blank" rel="noopener">Message Me on Facebook</a></div><a class="btn btn-ghost" href="#services">See what I offer ↓</a><a class="btn btn-ghost" href="https://www.linkedin.com/in/monwelito-bolandres-7b86b8385/" target="_blank" rel="noopener">Connect on LinkedIn</a></div>
+    </div>
+    <div class="top-r">
       <ul class="checks">
         <li><span class="tick">✓</span>Ads, admin support and bookkeeping from one person</li>
         <li><span class="tick">✓</span>Clear, honest reporting</li>
         <li><span class="tick">✓</span>Start small, scale what's working</li>
       </ul>
-      <div class="cta-row">
-        <div class="cta-pair"><a class="btn btn-primary" href="https://calendly.com/monbolandres-metaads/new-meeting" target="_blank" rel="noopener">Book My Free Strategy Call →</a><a class="btn btn-ghost" href="https://www.facebook.com/profile.php?id=61590516612789" target="_blank" rel="noopener">Message Me on Facebook</a></div>
-        <a class="btn btn-ghost" href="#services">See what I offer ↓</a>
-      </div>
       <div class="cta-note"><div class="avatar" role="img" aria-label="Monwelito Bolandres"></div><span>Free 20-minute call with Monwelito.<br>No pressure, no obligation. You leave with a clear plan either way.</span></div>
     </div>
+  </div>
 
-    <div style="position:relative">
-      <div class="readout">
+  <div class="tools" id="who" data-view="home">
+    <div class="tools-l"><b>Who I work with</b></div>
+    <div class="mq"><div class="mq-track"><span class="chip mqc">Dental Clinics</span><span class="chip mqc">Coaches &amp; Consultants</span><span class="chip mqc">Insurance Agents</span><span class="chip mqc">Local Businesses</span><span class="chip mqc">International Businesses</span><span class="chip mqc">On-Demand &amp; Digital Services</span><span class="chip mqc">Dental Clinics</span><span class="chip mqc">Coaches &amp; Consultants</span><span class="chip mqc">Insurance Agents</span><span class="chip mqc">Local Businesses</span><span class="chip mqc">International Businesses</span><span class="chip mqc">On-Demand &amp; Digital Services</span></div></div>
+  </div>
+
+  <div class="bento-wrap" data-view="home"><div class="bento">
+
+    <div class="bc s2 proj">
+      <div class="bc-h"><span class="bc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></span>Portfolio</div>
+      <div class="proj-in">
+        <div>
+          <h3 class="bc-t">Meta Ads, admin tasks and bookkeeping, in action.</h3>
+          <p class="d">Real campaign results for Meta Ads, plus the admin and finance work I handle day to day. Pick the area you need help with.</p>
+          <div class="proj-links">
+            <button type="button" class="btn btn-primary btn-sm" data-case="0">View case study →</button>
+            <a class="btn btn-ghost btn-sm" href="#work">Portfolio</a>
+          </div>
+        </div>
+        <div class="readout">
         <div class="ro-top"><span><b>Featured Meta Ads result</b><br>Dental clinic · 3-day test</span><span class="tag">Live results</span></div>
         <div class="ro-main">Average cost per lead</div>
         <div class="ro-big">₱4.96</div>
@@ -484,28 +736,44 @@ ul.bul li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;ba
         </div>
         <div class="ro-foot"><span>Ad 2 delivered 39 of 52 leads</span><span>Instant Form · 3 fields</span></div>
       </div>
-      <div class="float"><i>↗</i>7+ years in ops &amp; client support</div>
+      </div>
     </div>
-  </div>
-</section>
 
-<!-- WHO -->
-<div class="who" id="who">
-  <div class="wrap">
-    <div class="who-box">
-      <span class="l">Who I work with</span>
-      <span class="chip">Dental Clinics</span>
-      <span class="chip">Coaches &amp; Consultants</span>
-      <span class="chip">Insurance Agents</span>
-      <span class="chip">Local Businesses</span>
-      <span class="chip">International Businesses</span>
-      <span class="chip">On-Demand &amp; Digital Services</span>
+    <a class="bc about-c" href="#about">
+      <div class="bc-h"><span class="bc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg></span>About</div>
+      <div class="ab-av" role="img" aria-label="Portrait of Monwelito Bolandres, Meta Ads specialist and operations professional"></div>
+      <p class="ab-t">Freelance Meta Ads, built on an operations background.</p>
+    </a>
+
+    <a class="bc" href="#problem">
+      <div class="bc-h"><span class="bc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>My approach</div>
+      <p class="ap-t"><strong>My approach:</strong> set up a simple system for each area, start small, track every number, and keep communication clear, so nothing slips through the cracks.</p>
+    </a>
+
+    <a class="bc cred" href="#education">
+      <div class="bc-h"><span class="bc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>Education &amp; certifications</div>
+      <div class="edus"><div class="edu-item"><b>BS Business Administration, Major in Financial Management</b><span>Foundation University, Dumaguete City · Graduate</span></div><div class="edu-item"><b>QuickBooks Bookkeeping</b><span>Certificate of Completion</span></div></div>
+    </a>
+
+    <div class="bc s2 svcs">
+      <div class="bc-h"><span class="bc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg></span>Services</div>
+      <p class="d">What I can do for you</p>
+      <ul class="svc-list">
+        <li><a href="#svc-1"><span>Meta Ads &amp; Lead Generation</span><em>01</em></a></li><li><a href="#svc-2"><span>Admin Support &amp; Operations</span><em>02</em></a></li><li><a href="#svc-3"><span>Bookkeeping &amp; Finance Support</span><em>03</em></a></li><li><a href="#svc-4"><span>Customer Support &amp; CRM Management</span><em>04</em></a></li>
+      </ul>
     </div>
-  </div>
-</div>
 
-<!-- PROBLEM -->
-<section id="problem">
+    <div class="bc talk">
+      <div class="bc-h"><span class="bc-i"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>Contact</div>
+      <p class="d"><b>Ready for more leads and less busywork?</b></p>
+      <a class="btn btn-primary btn-sm" href="https://calendly.com/monbolandres-metaads/new-meeting" target="_blank" rel="noopener">Book My Free Strategy Call →</a>
+      <a class="btn btn-ghost btn-sm" href="https://www.facebook.com/profile.php?id=61590516612789" target="_blank" rel="noopener">Message Me on Facebook</a>
+      <a class="btn btn-ghost btn-sm" href="https://www.linkedin.com/in/monwelito-bolandres-7b86b8385/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    </div>
+
+  </div></div>
+
+  <section data-view="problem" id="problem">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Sound familiar?</span>
@@ -523,9 +791,7 @@ ul.bul li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;ba
     </div>
   </div>
 </section>
-
-<!-- PORTFOLIO -->
-<section id="work">
+  <section data-view="work" id="work">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Portfolio</span>
@@ -572,8 +838,7 @@ ul.bul li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;ba
     </div>
   </div>
 </section>
-
-<div class="case-store" aria-hidden="true">
+  <div class="case-store" aria-hidden="true">
 <div data-store="0"><article class="case">
         <div class="case-meta">Case study 01 · Dental clinic · Philippines</div>
         <h3>Generating high-quality appointment leads for a local dental clinic</h3>
@@ -720,8 +985,8 @@ ul.bul li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;ba
   </div>
 </div>
 
-<!-- SERVICES -->
-<section id="services">
+
+  <section data-view="services" id="services">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Services</span>
@@ -764,9 +1029,7 @@ ul.bul li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;ba
     </div>
   </div>
 </section>
-
-<!-- PROCESS -->
-<section id="process">
+  <section data-view="process" id="process">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Process</span>
@@ -785,26 +1048,7 @@ ul.bul li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;ba
     </div>
   </div>
 </section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="wrap about-grid">
-    <div class="portrait rv" role="img" aria-label="Portrait of Monwelito Bolandres, Meta Ads specialist and operations professional"></div>
-    <div class="rv">
-      <span class="eyebrow">About</span>
-      <h2>Freelance Meta Ads, built on an operations background.</h2>
-      <p>I'm Monwelito Bolandres, a freelance Meta Ads specialist based in Valencia, Negros Oriental, Philippines. I run lead-generation campaigns for dental clinics and an insurance agent, starting lean and scaling only what the data supports.</p>
-      <p>Before freelancing, I spent 7+ years in operations, client support and team leadership, including an Elsevier support account at Straive, leading a team at SPI Global Technologies, and several years in customer service. That's where my KPI discipline, CRM skills and clear reporting come from, and why I can also handle your admin tasks.</p>
-      <p>I'm a Financial Management graduate and QuickBooks-certified, so I can keep your books in order too, in QuickBooks or through a simple manual process.</p>
-      <div class="metrics" id="about-background"><span>Freelance Meta Ads specialist</span><span>7+ years in operations &amp; support</span><span>QuickBooks certified</span><span>Financial Management graduate</span></div>
-      <div class="mlabel">Numbers I track on every campaign</div>
-      <div class="metrics" id="about-metrics"><span>Cost per lead</span><span>Cost per booking</span><span>Return on ad spend</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- RESUME -->
-<section id="resume">
+  <section data-view="resume" id="resume">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Resume</span>
@@ -900,9 +1144,22 @@ ul.bul li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;ba
     </div>
   </div>
 </section>
-
-<!-- FAQ -->
-<section id="faq">
+  <section data-view="about" id="about">
+  <div class="wrap about-grid">
+    <div class="portrait rv" role="img" aria-label="Portrait of Monwelito Bolandres, Meta Ads specialist and operations professional"></div>
+    <div class="rv">
+      <span class="eyebrow">About</span>
+      <h2>Freelance Meta Ads, built on an operations background.</h2>
+      <p>I'm Monwelito Bolandres, a freelance Meta Ads specialist based in Valencia, Negros Oriental, Philippines. I run lead-generation campaigns for dental clinics and an insurance agent, starting lean and scaling only what the data supports.</p>
+      <p>Before freelancing, I spent 7+ years in operations, client support and team leadership, including an Elsevier support account at Straive, leading a team at SPI Global Technologies, and several years in customer service. That's where my KPI discipline, CRM skills and clear reporting come from, and why I can also handle your admin tasks.</p>
+      <p>I'm a Financial Management graduate and QuickBooks-certified, so I can keep your books in order too, in QuickBooks or through a simple manual process.</p>
+      <div class="metrics" id="about-background"><span>Freelance Meta Ads specialist</span><span>7+ years in operations &amp; support</span><span>QuickBooks certified</span><span>Financial Management graduate</span></div>
+      <div class="mlabel">Numbers I track on every campaign</div>
+      <div class="metrics" id="about-metrics"><span>Cost per lead</span><span>Cost per booking</span><span>Return on ad spend</span></div>
+    </div>
+  </div>
+</section>
+  <section data-view="faq" id="faq">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Questions</span>
@@ -919,15 +1176,13 @@ ul.bul li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;ba
     </div>
   </div>
 </section>
-
-<!-- FINAL CTA -->
-<section class="final" id="book">
+  <section data-view="book" class="final" id="book">
   <div class="wrap">
     <div class="final-box rv">
       <div>
         <h2>Ready for more leads and less busywork?</h2>
         <p>Book a free 20-minute call, or message me on Facebook. Tell me where you need help, whether that's ads, admin tasks or bookkeeping, and I'll share how I'd approach it.</p>
-        <div class="cta-pair"><a class="btn btn-primary" href="https://calendly.com/monbolandres-metaads/new-meeting" target="_blank" rel="noopener">Book My Free Strategy Call →</a><a class="btn btn-ghost" href="https://www.facebook.com/profile.php?id=61590516612789" target="_blank" rel="noopener">Message Me on Facebook</a></div>
+        <div class="cta-pair"><a class="btn btn-primary" href="https://calendly.com/monbolandres-metaads/new-meeting" target="_blank" rel="noopener">Book My Free Strategy Call →</a><a class="btn btn-ghost" href="https://www.facebook.com/profile.php?id=61590516612789" target="_blank" rel="noopener">Message Me on Facebook</a><a class="btn btn-ghost" href="https://www.linkedin.com/in/monwelito-bolandres-7b86b8385/" target="_blank" rel="noopener">Connect on LinkedIn</a></div>
         <div class="mail">Prefer email? <a href="mailto:monbolandres.onlinejob@gmail.com">monbolandres.onlinejob@gmail.com</a></div>
       </div>
       <div class="get">
@@ -943,55 +1198,39 @@ ul.bul li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;ba
   </div>
 </section>
 
-</main>
-
-<footer>
-  <div class="wrap foot">
-    <div><b style="color:var(--ink)">Monwelito Bolandres</b><br>Meta Ads, admin support &amp; bookkeeping</div>
+  <footer class="foot2" data-view="problem work services process resume about faq book">
+    <div><b>Monwelito Bolandres</b><br>Meta Ads, admin support &amp; bookkeeping</div>
     <div class="links">
       <a href="mailto:monbolandres.onlinejob@gmail.com">monbolandres.onlinejob@gmail.com</a>
-      <a href="data:application/pdf;base64,JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUgo+PgplbmRvYmoKMiAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYSAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjEgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iagozIDAgb2JqCjw8Ci9CYXNlRm9udCAvSGVsdmV0aWNhLUJvbGQgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YyIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKNCAwIG9iago8PAovQSA8PAovUyAvVVJJIC9UeXBlIC9BY3Rpb24gL1VSSSAoaHR0cHM6Ly9tb253ZWxpdG8uZ2l0aHViLmlvL21vbndlbGl0by1zaXRlLykKPj4gL0JvcmRlciBbIDAgMCAwIF0gL1JlY3QgWyAxMzcuODg1NSA3MDcuNDc1NCAyNzEuODgzMSA3MTguMDM1NCBdIC9TdWJ0eXBlIC9MaW5rIC9UeXBlIC9Bbm5vdAo+PgplbmRvYmoKNSAwIG9iago8PAovQW5ub3RzIFsgNCAwIFIgXSAvQ29udGVudHMgMTEgMCBSIC9NZWRpYUJveCBbIDAgMCA1OTUuMjc1NiA4NDEuODg5OCBdIC9QYXJlbnQgMTAgMCBSIC9SZXNvdXJjZXMgPDwKL0ZvbnQgMSAwIFIgL1Byb2NTZXQgWyAvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJIF0KPj4gL1JvdGF0ZSAwIAogIC9UcmFucyA8PAoKPj4gL1R5cGUgL1BhZ2UKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL0EgPDwKL1MgL1VSSSAvVHlwZSAvQWN0aW9uIC9VUkkgKGh0dHBzOi8vbW9ud2VsaXRvLmdpdGh1Yi5pby9tb253ZWxpdG8tc2l0ZS8pCj4+IC9Cb3JkZXIgWyAwIDAgMCBdIC9SZWN0IFsgMjAwLjI4MjMgMzc5LjM5NTQgMzQwLjM3MDcgMzkwLjQzNTQgXSAvU3VidHlwZSAvTGluayAvVHlwZSAvQW5ub3QKPj4KZW5kb2JqCjcgMCBvYmoKPDwKL0Fubm90cyBbIDYgMCBSIF0gL0NvbnRlbnRzIDEyIDAgUiAvTWVkaWFCb3ggWyAwIDAgNTk1LjI3NTYgODQxLjg4OTggXSAvUGFyZW50IDEwIDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAKICAvVHJhbnMgPDwKCj4+IC9UeXBlIC9QYWdlCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9QYWdlTW9kZSAvVXNlTm9uZSAvUGFnZXMgMTAgMCBSIC9UeXBlIC9DYXRhbG9nCj4+CmVuZG9iago5IDAgb2JqCjw8Ci9BdXRob3IgKE1vbndlbGl0byBBLiBCb2xhbmRyZXMpIC9DcmVhdGlvbkRhdGUgKEQ6MjAyNjEwMTYxODQ3MzgrMDgnMDAnKSAvQ3JlYXRvciAoXCh1bnNwZWNpZmllZFwpKSAvS2V5d29yZHMgKCkgL01vZERhdGUgKEQ6MjAyNjEwMTYxODQ3MzgrMDgnMDAnKSAvUHJvZHVjZXIgKFJlcG9ydExhYiBQREYgTGlicmFyeSAtIFwob3BlbnNvdXJjZVwpKSAKICAvU3ViamVjdCAoXCh1bnNwZWNpZmllZFwpKSAvVGl0bGUgKE1vbndlbGl0byBBLiBCb2xhbmRyZXMgXDIwNCBSZXN1bWUpIC9UcmFwcGVkIC9GYWxzZQo+PgplbmRvYmoKMTAgMCBvYmoKPDwKL0NvdW50IDIgL0tpZHMgWyA1IDAgUiA3IDAgUiBdIC9UeXBlIC9QYWdlcwo+PgplbmRvYmoKMTEgMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggMzEzNQo+PgpzdHJlYW0KR2IhI10+QkFOPiZxODAxa2JmLUoiXilhTCZHcFEnW1dDKlJMJmJsUENtQT8zQmFoPyFMJDQtS29CVDNITiJFaVxRYFc0ZERsUF1dZGBjZl9oPlIiWC8yNlVUVj5fUlQhOVotdF08XTRdMFk3UzUwY1pRZF9yXjdAUVpuMicvRCczPWlIMExnW19RalFUI2kqWl1NJGFoXCoiWzJsWyVKUy1LK2xpR0xdYCJfa2slbWVPRztcWkNaXWwqUmpGMkw0P2dJY19rWExIYE49TFlzImxGcGNeQ2BFJVQ4Qj9rdSxxLTs+T00sYDxCNSMrVlMnOlZvZmQhLWNaUSFmWnFBSkZycVRKJjFJZjNwQUYtPyNTcmRcVzFOWmY0MFBucyRVRWktZSVhOmsoJGxjOj1vLVI/bG5WcG1SQVlLRk1LYVNfdD9qcCVmT2hFUjssZVRaOWxgNkJYJkpWYyo8UTpTdSVMUmtpWGBaOXVJQVI0MWV0Iy11SGQ3OHBfOS47PTN1Qy40RE1gQVM2KFJPSDhXYERRO2dKW1AwZzU8V0wjYkQ6JyxKUVtoP2NuOChzQGtfRDEyTE1PXm5wYT9jO25OcylaOU5ORiI0SGF1YCtbOGNPTEJldScxME5mR0sxTGxxSkMxQiNFRUhhbFxFPUFTXS8lU08jcSRoQjBPNWJwTGhKVF5LLEJ1MCgxbFBXcGJSTmQvZEBWUzBFaE0mZU1SY0xpQEI3VCg0ayRZNDsldCNlcVJENmFPMiV0KShFRnQyTjN0WE90MEtEKkRQYzhEZXE2MGYtOT80MTRoP2Nob24kZjE9QEdiMjFJS3U7SUMlU1hePTQxSDVKKFhcdCRhcFkkUzxnKyM2UT1bJz5fM1pDRGpoNGZiMnRFYG4zOm5HYD1vcE1DbXBeIWt0SyM+TSdZTUIkZyI5NSQmI2ckclRwRlpIISY4JThHNFIvWjoyVkVhbHRZT3JpNEdfVEtzQEEwWUFuWT4iOUVLLjdmRCVVXihkU3ItXlpiUDcxbVZjMmNyQzomZlcjb2RNTkluPCteKERrU2tvJFJyaSlNKiwpRS80KDdnUFAlLCloWjBATi1QOypAI0VnUVNKbXMzOk00Zj0qUD8/YjxbSjpmKCUuQjVfaSQ+WSNdNztXJUFDbkEkck1dbnRmVC46aSxZJT8nQC9wNyRhZUU0RyRRbmEyPTNiTUklNS5GTEFWUEE+InU7P3JBPTNtP2IxJ2o5PiIqUjlZWFEhWm5QVD5pPDZrMWtTWCM0LEpTP1s7JWgnTy1XQERBa0k9b2ZgWTxNcFtcZWhjL0ksciNiZkhFXEtbKVFfZElLZWlbXyRiTVU7TScxO00/cGpBJlU4LGVfTVhBcD1zcFIuSzU6NmEnME0iMFExTy4zLCxaciM7NmNfKGQrQGFFVWhYNj51ZTRQZWRJTDp1MktdbVg2YFdMbVklb1dgOEo1LGlCN1oibS04ZzZOIjxuISZaRXFHakpsRzBpKEQwKzszWCJBNltGTlBSSl4oR3A5NF5dWlNZZmo+ZEc/RTxnXiJHMS1LLDQzUm8oYVgnVkYlQmx0NVZdOVRLYlEjKjlFYnNYc0RPJ05qPnVWMWNFUlNlcGNTS1M8M2dESkhmTF90KnBZU11DUGBnSGklZC82RGFaX0VXJDs0I2o8ZSM+cHJKTmxtLWFWY1JHbClKNlRQLFgocTZvJD9yMXRZMV41W2Q9OGRNUUhwaT1mVCteSWh0ZDlbOSNxbVY0JHJSb1ZQU241RFpaXkFGJ2ZxUGU8Xi5zLVo0MC4sZHIscFcmaWRtYzwzI2EyaV8oaSVOXSs5ZU1GS2Y+c2lSbDxGQGJLL01cMzVoayRcREc4MitpX19SZHAzJjJfO0dDRzZrN1BLOWE3PEAuaC84KUg8TD1kZlEudGBSQWdrW2FLT145I0cyMWFvRi8yQSl1RGk8dFtiXCNgcHMmQi5TMDIrMUgkLT9WLXVAKS8+VjRMYEFFPT1KQSc1MV5bWzJaXDlPLTU3WiRqTUY0b1slMjFpUE46SilbOmpBakZfR2wuWitdXzE5YzohRmFFX0oiZj80IUk3Ri1xZWhqaEFAWCs7OEZfWzZVRURuRC9MUCVhdXJOMVldI2MtdERnNWVJXzBVNHRIXkU2YzNgOHBNKT0/akZjPDlLc2ktXD8nUnUqLCZBRDApOWAlI0czJ1gyPS1TSz9RWnVfT11cYkNRYTtGcmI8X2o2SGNSVFVSSCY2b001Ym1oWkNcPyJEQjdvZycuRi5LZiFIamU4NE9WYGdgKTgjMzU0U2pwPVZhZEJUTUJEZio2VzE3JUJuTjI+bEdQZ2xMPUBAL286bUJTLThiP2xIJD91ckVvSzxtWzRMYjoraC5qVXVpV1YuYiErQCFeczZLTzclciliYjomSDA6b1ZVN2wyMGE6N0NYNTFVPCM3RHFdMy1XX1hxO0JmI1p0KDg+clZRWXM8N0JEOyg9RG1SdXFUXz5oX1BIP1xXZD0iTydYIWlCLytVNyFxYCthNEldR2ttOTgiQEQ0M15aN1NNYWVQKzpZUEd1IiooQEVVMSllMilSPU9xaGVkWVomYlYocDAsKVJxZS1Nbj5QcS8ySGhZTSsvYXRiPzlmVipLMjBpP1ReUnNMZFxlLUJhS01WNzl0Q1RjOyNoayYyKGZzWU9cMC1iLTA6dUxcZ1w0czM4alk2XS4oZiokODZOMlhUSCFbRi1TKnI4aGZSMzVrKyU5OUFBRVpvRDtsSF1GSlc4TF4nNmBBaGc8JTBbTUo9IiRyWS8+IVtFa0lvJmg2aWAuMypyPnJpKWInUHQuTCZgOUVeMTY1cSMoJ1tbTEhWXjVANUw/L2IqTm1eRSMsIlZCYlA3XU9dRHA7J1cpN2xsKVNzTzhiOmspTFQvXnQzKiVCQmNYMVcwa21sNk1xJl9tST0vcyFRcyU6IitXXV41JERbIXJNLyUlUlVZMFwkc0k+ckRiMGg/bWA1PU5cTSZuMCwkVzloKVlyMi9pXUdWPUctUVorVV8vKE5wWF9CcyxgYVFYJHNSJDk4WC04O2BzSWdCU1JoaGlPcSldZEloR2E5PVwvSmVuSisnZUJRTk1VXjxsIiwxQ3VpQmBhXj9yITxMI2ksckU+aDxPPmBfRFgrXTBHVzhFQFFrXHVCbUMmRDBeI1JDYUxFLkZLWkZjXypadWZrK15JRnEjZ0hROEhJLD4xPistLF81UCNVam4oJCRaJGxrTDdMLEFmciYxJV5YMT0yN1UsIkxLOUdVPkFJSjdHb0VqdEJxWDI/VDAqNVNrTURlISIjSU1ZNiU1VyJKcVZyNXFdV1QvWlxUV2lbQV89QmFkPi5PXU9CODk0Oy1yP0I/UEQ7RGhUP2ldQT5bUidsQlxLLGQwMEE4LFZHYD82I3EjcUViNjVQcj1XcEY/SjgtUGtkXDhSPixhMFI0RE0tLz1UZ0hESWY7byZpKEZnTWJmb0UzVyYnQWgyWVNkMVpnV1FqRTpsXmEiWC1YXmNgcC9dMHRjYCVIbjY1UEosJUI9RTI8Z0BRKSE4MDtYK3JrTUhoOlxVdSJeSEtjNyErPHBybW1pTnJoLkZRMCksKXJwOEsoQV4kVzlKV2lPN2hbQC8qNjtxXWlzOVdXRTRqRiFfV042SlhrU1hfPyQrUT5DWjVDUVU+cmNjU1c3RTYoS2pkP1FTXkg0YEJMW1sjams/LWxtNydLQTUtc11ZISlDQyRfTDVSaExNYyg2W1dqOjhBNU1qUUZxRjxaYmZoNFhyLjZ0JGIyWTkuRTRaLXRaPCxTbzxJWTVEYDE4QjM/MW8iSiloMXAiZ2tMSF0uXGYuW2BxJ2lSWV5HVm11OEo+NyZNTVA5ZCtlQjdxJUleNGImRzk9Ly9BIkFZQlEiLGtVPClWOGZWL3BLODg3PCYjY3RNZiUralAkKiZFMSE4Ii9JX1owIm5kaCNpa1xNMFNBPEFMP1xGb0k1WmVEbWBQbTlYPXQwNy0uT0dMMU89QUY7SSZkUGZaJmRXY1ZSQEYpWi9hXFcjI1NjKG1cWClWYEdvJ0A/NWtPX1ZXTzFiYFJGZFRnVmI+PjEtIT9FLip1V0ZBWTVZKGY1cCdbK2lnaDJdajtAazsjTSI2YUIpUVFmUEFvWilCXTRtRywha0FcNUtycmAybFFjQn4+ZW5kc3RyZWFtCmVuZG9iagoxMiAwIG9iago8PAovRmlsdGVyIFsgL0FTQ0lJODVEZWNvZGUgL0ZsYXRlRGVjb2RlIF0gL0xlbmd0aCAxOTY1Cj4+CnN0cmVhbQpHYiIvKD8hJCNWJjpPOlNlQyxJT05ZRCRfWiM+TFRfW1spJ1JCblFcWnExP18sXGNVZTcwITNkLVAuTElPOmdaNyYkI3EwVFcsKio/MiVBNyhuZm9tOz51UFFKRmE9SV0qOSohS0ctJVVjJWBHNVFmNj9KT18wdThpcykxMFNvN2c7QlQ9K3MtQV5uYDxrZDtwKjZuKnEoTWpXcy02SjpMVkVFKyNbWHNiZmMjViVEYGphXjYncHA/SUdQJltQQW9QR2dvI0ErQy9bMFhGOUxqLjRfYCZdM2lIVy9FLHUnY2ZFMkxIMzpJbDYvUktNPzRYcDZYKTtbVlhsI18sLDc7PS9JWjo9ZltqZ3QvdGNuLGNPMG4uTEIwWkc2azUiYTxJX3EvWVMlTTJQXiJAYi5JcGNnWGplbCZQNSUySkBoXEhiJ1RSbCdlNDJDXXBcaFYqWzYxUlZTK1ExM3FZKEVsaDYwP3FlTyZNXlZpWiJpYShoOEwxcEdjXz4zZER0dCxFWzIzW1Y3T0wlIUVsLmxhbzpKQUBGP0ZDTllMMGZyTl9TPksmN3M7b11RMlYhSSFXTixwPz8+MFtqUGlwWTYiJEEvZnNibUkpLHFlSVgqWDQ/XENcPUxfbElBSlZ0XXVkdDExISpAO2w7SyU9bmJmb20sMWckbFo1KyFSblk4cTBHQ2MqNV1ZOGNwLkshN0xvbUtCIW9nbzFGS0gnNCtsNWJrTyFbSlMkZVFqVTNEYjY9WEVWL11KZEovUD9fQjlpIy4/R1sqV0xuOSdnTFJVbiNvJDA5JzdfMWZoaEc2Slk9ayNyLWwvNzZsYDxSO3UsLEZbZDRHLnNbVT1ZKDBvOmJuWChBXVZoN2s9TFU+UGdGYz9hVmtYUVI4QUc3WzBxQVM3TXUvQGAhW0psZUpkRFo/NmYqT2U7MS9XLFNRYjgwOG0yMC4pby1yMlAhREY4TVdMcTElW1ZkaTxKYUYxIV0/W2pnKCpaOE9aWyMjKmc/OEFRJygzLT4uKl5TcVEpKyNTV0F0J0tKJDpPZjwiQCJZWGEsUmEzc1thSnAjT0VrVjRFLTNLRT5iN0ZkIzsnQiFSSmw3S0VPdSFIMyVsPmFNVDkqQS0uPjwnZzAnSWxtUjNMMGgzRmBBTFBUWkZpNVJjUVxQNzxdXDtDVmouZydFXShtMUM4Z3EzKy1kKDhpIVBOZjVFLGtUai1Pcy4kWmZbQ1RKRDxZbjBfJUZzUWxuVkhBVC1WRzpPLUUra3RYczoqXzpJaE1cVkJdbTEsXW5xNyZiRHF0SHBGN1wsbUpsRDVxQSgiOm0mJmgiS1NRKS1yTltdJS8hXWQ5SGN0IWZTMV1sSFcscTdrOT1MZFRhNCNNMEk2cjk6WF5NZz43b0FCMik9OExURy8oWlprWT5OLSNuNF4sKCk3TDRiX2RaZEFFQURlc3JsaVlhK2g9QWBxN0c/S1xDI2owLS5GSikmJEc2aD4oKCUicilITXVNQmYmUktybjluWHJUXHVkdEYwJHRobm5NXjhmP29APE5LJCZBVCRDI3NvV0NVOlMmUUpKUic7YGUrO2xqbWU0Z3VWRFIndS5GW2YqMzhOSyJBUDwiXzBLRi9YbT86OVpoJVY8VidtPmJvSDlaaCotaWtCbVFFNzZJRGVRWDtlciInWE9BN0Q4TUNjVDo+Q2AmUXEtNSxXTHIuL0ZhJTBzZTMiSFFRQ2NuWy8qOEdbKHQ3Uk9cbiZvVFdsZzZyQCxBRWAiU1xkImw8SDkzPVdYUSdTQVdLT3NuSjdEJU5gclBRSjk+UnFDMUVBXiNLI0EoVTErY3FXaDknQ3A5PClfVE4iR1drPmZQSVlkckQoNGZwXU8oOkJWU3JBRVBZbk5oWTdbZV1HLDdEOClhNypfW14zVj1aTiE3IXU7MzdvOC1dZV8jPGM4RFZuMD0vZnU6K0AkSDhDNlJoM1RZRzMtYzc4L2VKLihcRi5rLy5OJ01fXjpVJ2YqVnRnJlpyZSo9ZyYkY0RQblZcRSxoW08+XXFKQiVLYSIvcE4lSE8oWF1XJEBGIj9jJSNNNU1famhrLFUnWCVQXzxpYmpdZThMP2puMik4ZlUzZ2xrPkRRJyFZRS5JNkBHZ186SWBabFhjajhdTXBKYCRKRE1LZ1dNL3FpUGtROj1rRltCNltAbSM/QUg0M1lJXFhMO0prJTdndHU3NG1AW25mWVZHKCs2bzE5TkpJTlpaLE9CU01KbGk2PzdCU1w9KjFDQD1DL0khJyYnLDkvIjBTWV0jdCVSbmIrN2dSPi80VyppQW44QG4jQjEpLmQrTllhOk9KRERuYW8qPS5eW2QoKmtOOllBPDBtPytdbiYhbjFpJmNtSlkhWyRzaSsmdDUpcyJNMUBzUVxqdWhXQi1YXTpEWD5uYWlySSkvKz9vLixNTzBcZEk5M2AlZjxxSlMjbV5VcmYtL1xIIVxEZi91c186Q090X1s9S1s7PToiPSYpIW5HITxpTUBjJmxVNi50Z0tGaUYvZFJxWVlmKlA8W1BPKms4S10zO0tqNUJKVVxXZURVOidbOydmXHQ/aGcvczdTPVlVQk5VYktvXFBKVThTJmwiLXJyRj9YKUkzfj5lbmRzdHJlYW0KZW5kb2JqCnhyZWYKMCAxMwowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwNjEgMDAwMDAgbiAKMDAwMDAwMDEwMiAwMDAwMCBuIAowMDAwMDAwMjA5IDAwMDAwIG4gCjAwMDAwMDAzMjEgMDAwMDAgbiAKMDAwMDAwMDUxNiAwMDAwMCBuIAowMDAwMDAwNzM5IDAwMDAwIG4gCjAwMDAwMDA5MzQgMDAwMDAgbiAKMDAwMDAwMTE1NyAwMDAwMCBuIAowMDAwMDAxMjI2IDAwMDAwIG4gCjAwMDAwMDE1MzYgMDAwMDAgbiAKMDAwMDAwMTYwMiAwMDAwMCBuIAowMDAwMDA0ODI5IDAwMDAwIG4gCnRyYWlsZXIKPDwKL0lEIApbPDI2Y2I5NDZkN2MzMzgzY2RjNjc0YjA3OThiY2ExNjI0PjwyNmNiOTQ2ZDdjMzM4M2NkYzY3NGIwNzk4YmNhMTYyND5dCiUgUmVwb3J0TGFiIGdlbmVyYXRlZCBQREYgZG9jdW1lbnQgLS0gZGlnZXN0IChvcGVuc291cmNlKQoKL0luZm8gOSAwIFIKL1Jvb3QgOCAwIFIKL1NpemUgMTMKPj4Kc3RhcnR4cmVmCjY4ODYKJSVFT0YK" download="Monwelito_Bolandres_Resume.pdf">Download resume</a>
+      <a href="#resume">Download resume</a>
       <a href="https://calendly.com/monbolandres-metaads/new-meeting" target="_blank" rel="noopener">Book a free strategy call</a>
       <a href="https://www.facebook.com/profile.php?id=61590516612789" target="_blank" rel="noopener">Message me on Facebook</a>
+      <a href="https://www.linkedin.com/in/monwelito-bolandres-7b86b8385/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
     <div>© 2026 Monwelito Bolandres</div>
-  </div>
-</footer>
+  </footer>
+</main>
 
 <script>
 (function(){
   var $=function(s,c){return (c||document).querySelector(s)}, $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
-  var header=$('header'), menu=$('#menu'), burger=$('#burger');
+  var sb=$('#sb'), burger=$('#burger'), scrim=$('#scrim');
+  var modal=$('#modal');
 
-  window.addEventListener('scroll',function(){header.classList.toggle('scrolled',window.scrollY>10)},{passive:true});
+  /* Mobile drawer */
+  function setDrawer(on){
+    sb.classList.toggle('show',on); scrim.classList.toggle('show',on);
+    burger.classList.toggle('on',on); burger.setAttribute('aria-expanded',on);
+    if(on)document.body.classList.add('lock'); else if(!modal.classList.contains('open'))document.body.classList.remove('lock');
+  }
+  function closeDrawer(){setDrawer(false)}
+  burger.addEventListener('click',function(e){e.stopPropagation();setDrawer(!sb.classList.contains('show'))});
+  scrim.addEventListener('click',closeDrawer);
+  $$('#sbnav a').forEach(function(a){a.addEventListener('click',closeDrawer)});
+  $$('.has-sub').forEach(function(li){var b=$('.tg',li);b.addEventListener('click',function(){var on=!li.classList.contains('open');li.classList.toggle('open',on);b.setAttribute('aria-expanded',on)})});
 
-  /* Dropdowns */
-  var ddItems=$$('.has-dd');
-  function closeAll(except){ddItems.forEach(function(li){if(li!==except){li.classList.remove('open');$('button',li).setAttribute('aria-expanded','false')}})}
-  ddItems.forEach(function(li){
-    var b=$('button',li);
-    b.addEventListener('click',function(e){
-      e.stopPropagation();
-      var open=!li.classList.contains('open');
-      closeAll(li);
-      li.classList.toggle('open',open);
-      b.setAttribute('aria-expanded',open);
-    });
-  });
-  document.addEventListener('click',function(){closeAll()});
-
-  function closeMenu(){menu.classList.remove('show');burger.classList.remove('on');burger.setAttribute('aria-expanded','false');if(!modal.classList.contains('open'))document.body.classList.remove('lock')}
-  burger.addEventListener('click',function(e){
-    e.stopPropagation();
-    var on=menu.classList.toggle('show');
-    burger.classList.toggle('on',on);
-    burger.setAttribute('aria-expanded',on);
-    document.body.classList.toggle('lock',on);
-  });
-  $$('.menu a').forEach(function(a){a.addEventListener('click',function(){closeAll();closeMenu()})});
-
-  /* Case study modal */
-  var modal=$('#modal'), body=$('#modal-body'), count=$('#modal-count'), current=0, opener=null;
+/* Case study modal */
+  var body=$('#modal-body'), count=$('#modal-count'), current=0, opener=null;
   function animateBars(p){
     $$('.fill',p).forEach(function(f){f.style.width='0';requestAnimationFrame(function(){requestAnimationFrame(function(){f.style.width=f.getAttribute('data-w')+'%'})})});
   }
@@ -1011,13 +1250,13 @@ ul.bul li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;ba
   }
   function closeModal(){
     modal.classList.remove('open');
-    if(!menu.classList.contains('show'))document.body.classList.remove('lock');
+    if(!sb.classList.contains('show'))document.body.classList.remove('lock');
     if(opener&&opener.focus)opener.focus();
   }
   $$('[data-case]').forEach(function(el){
     el.addEventListener('click',function(e){
       e.preventDefault();
-      closeAll();closeMenu();
+      closeDrawer();
       openCase(parseInt(el.getAttribute('data-case'),10),el);
     });
   });
@@ -1026,7 +1265,7 @@ ul.bul li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;ba
   $('#m-next').addEventListener('click',function(){render(current+1)});
   modal.addEventListener('click',function(e){if(e.target===modal)closeModal()});
   document.addEventListener('keydown',function(e){
-    if(e.key==='Escape'){if(modal.classList.contains('open'))closeModal();else{closeAll();closeMenu()}}
+    if(e.key==='Escape'){if(modal.classList.contains('open'))closeModal();else{closeDrawer()}}
     if(!modal.classList.contains('open'))return;
     if(e.key==='ArrowRight')render(current+1);
     if(e.key==='ArrowLeft')render(current-1);
@@ -1049,7 +1288,63 @@ ul.bul li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;ba
     });
   }
   faqs.forEach(function(f,i){$('button',f).addEventListener('click',function(){openFaq(i,false)})});
+  
+
+  
+  /* FAQ */
+  var faqs=$$('.faq');
+  function openFaq(i,only){faqs.forEach(function(f,k){var on=(k===i)?(only?true:!f.classList.contains('on')):false;f.classList.toggle('on',on);$('button',f).setAttribute('aria-expanded',on)})}
+  faqs.forEach(function(f,i){$('button',f).addEventListener('click',function(){openFaq(i,false)})});
   $$('[data-faq]').forEach(function(a){a.addEventListener('click',function(){openFaq(parseInt(a.getAttribute('data-faq'),10),true)})});
+
+  /* Collapsible portfolio blocks and resume items */
+  $$('.pf-block').forEach(function(bl,i){
+    var h=$('.pf-head',bl); bl.classList.add('col');
+    h.setAttribute('role','button');h.setAttribute('tabindex','0');h.setAttribute('aria-expanded',false);
+    function tg(){var c=bl.classList.toggle('col');h.setAttribute('aria-expanded',!c)}
+    h.addEventListener('click',tg);h.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();tg()}});
+  });
+  $$('.tl-item').forEach(function(it,i){
+    if(i>0)it.classList.add('col');
+    it.setAttribute('role','button');it.setAttribute('tabindex','0');it.setAttribute('aria-expanded',i===0);
+    function tg(){var c=it.classList.toggle('col');it.setAttribute('aria-expanded',!c)}
+    it.addEventListener('click',tg);it.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();tg()}});
+  });
+
+  /* View router: one view at a time, nothing to hunt for */
+  var vEls=$$('[data-view]'), links=$$('#sbnav a[data-spy]');
+  var navFor={problem:'home',work:'work',services:'services',process:'process',resume:'resume',about:'about',faq:'faq',book:'book',home:'home'};
+  var cur=null;
+  function showView(name){
+    cur=name;
+    vEls.forEach(function(el){el.classList.toggle('vh',el.getAttribute('data-view').split(' ').indexOf(name)<0)});
+    $$('.rv').forEach(function(el){el.classList.add('in')});
+    links.forEach(function(a){a.classList.toggle('on',a.getAttribute('data-spy')===navFor[name]||(name==='work'&&a.getAttribute('data-spy')==='work'))});
+    $$('#sbnav a[data-spy]').forEach(function(a){var t=a.getAttribute('data-spy');if(t==='home')a.classList.toggle('on',navFor[name]==='home')});
+    $$('.bar-row .fill').forEach(function(f){});
+  }
+  function go(id,push){
+    var t=id?document.getElementById(id):null;
+    if(!t){showView('home');window.scrollTo(0,0);return}
+    var host=t.hasAttribute('data-view')?t:t.closest('[data-view]');
+    var name=host?host.getAttribute('data-view').split(' ')[0]:'home';
+    if(id==='home')name='home';
+    showView(name);
+    var pb=t.closest('.pf-block')||(t.classList&&t.classList.contains('pf-block')?t:null);
+    if(pb&&pb.classList.contains('col')){pb.classList.remove('col');var ph=$('.pf-head',pb);if(ph)ph.setAttribute('aria-expanded','true')}
+    if(t.id==='experience'||t.id==='skills'||t.id==='education'||t.id==='about-metrics'||t.id==='who'||t.id.indexOf('svc-')===0||t.id.indexOf('step-')===0||t.id.indexOf('pf-')===0){
+      setTimeout(function(){t.scrollIntoView({behavior:'smooth',block:'start'})},30);
+    }else window.scrollTo(0,0);
+    if(push){try{history.pushState(null,'','#'+id)}catch(e){}}
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href^="#"]'); if(!a)return;
+    var id=a.getAttribute('href').slice(1); if(!id)return;
+    if(!document.getElementById(id))return;
+    e.preventDefault(); go(id,true);
+  });
+  window.addEventListener('popstate',function(){go(location.hash.slice(1),false)});
+  go(location.hash.slice(1),false);
 
   /* Reveal on scroll */
   var rv=$$('.rv');
